@@ -1,8 +1,9 @@
 <!doctype html>
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#172833">
-<meta name="description" content="Street Pastor: The Long Con — a satirical management game.">
-<title>Street Pastor — v0.9.6</title><style>
+<meta name="description" content="Street Pastor — a satirical, offline-friendly management game.">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Street Pastor"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#151c2e"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon-192.png">
+<title>Street Pastor — v0.9.7</title><style>
 :root{color-scheme:dark;--bg:#101a23;--panel:#1a2a36;--panel2:#223745;--border:#3a5361;--ink:#f5eedc;--muted:#a9bbc0;--gold:#f7c873;--teal:#83d1b8;--rose:#f29a87;--shadow:0 16px 55px #08101799;--r:15px;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 30% 8%,#253745 0,#121e29 60%,#101720 100%);color:var(--ink)}button,input{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.46}button:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:2px}.hidden{display:none!important}#app{height:100dvh;display:flex;flex-direction:column;overflow:hidden}main{flex:1;min-height:0;display:flex;padding:10px 13px 6px}.view{width:100%;min-height:0}.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:65px;padding:8px 18px;border-bottom:1px solid #385061;background:#121e29e8}.brand{display:flex;gap:10px;align-items:center;flex-shrink:0}.brand-mark{color:#1c2a35;background:var(--gold);height:39px;width:39px;border-radius:50%;display:grid;place-items:center;font-size:25px;border:4px solid #655944}.brand b{letter-spacing:.16em;font-size:16px;white-space:nowrap}.brand small{display:block;font-size:9px;color:var(--muted);letter-spacing:.2em;margin-top:2px}.hud{display:flex;gap:5px;align-items:center;justify-content:center}.hud-item{min-width:100px;padding:5px 12px;border:1px solid #3a5160;border-radius:10px;background:#22344180}.hud-item small{display:block;font-size:9px;letter-spacing:.14em;color:var(--muted);font-weight:750}.hud-item b{font-size:18px;font-variant-numeric:tabular-nums}.header-buttons{display:flex;gap:6px}.nav-btn,.circle-btn{background:#263a48;color:var(--ink);border:1px solid #526b75;border-radius:10px;min-height:35px;padding:6px 12px;font-weight:800}.nav-btn:hover,.circle-btn:hover{background:#345361}.footer{min-height:20px;padding:1px 17px 5px;color:#8ea6ad;display:flex;justify-content:space-between;gap:8px;font-size:9px;letter-spacing:.09em}.play-view{display:grid;grid-template-columns:minmax(0,1.75fr) minmax(300px,.90fr);gap:12px}.scene-side{border:1px solid #54626a;background:#1c2e37;border-radius:var(--r);padding:9px;display:flex;flex-direction:column;min-width:0;min-height:0}.scene-header{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:11px;letter-spacing:.09em;font-weight:800;color:#f9d99a;padding:2px 6px 9px}.faith-name{color:var(--muted);text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:50%}.canvas-wrap{flex:1;min-height:0;border-radius:10px;overflow:hidden;position:relative;background:#d9c4a1}.canvas-wrap canvas{width:100%;height:100%;display:block;object-fit:fill}.scene-overlay{position:absolute;inset:0;pointer-events:none;display:flex;justify-content:center;align-items:flex-start;padding:10px;color:white}.scene-overlay:empty{display:none}.bottom-scene{display:flex;align-items:center;gap:10px;padding:10px 4px 2px;font-size:10px;letter-spacing:.09em;font-weight:800;color:var(--muted)}.bottom-scene span:first-child{color:var(--gold);flex-shrink:0}.bottom-scene span:last-child{white-space:nowrap}.timeline{height:7px;border-radius:20px;background:#0c1821;flex:1;overflow:hidden}.timeline>div{height:100%;width:0;background:linear-gradient(90deg,#ad8c55,var(--gold));transition:width .12s linear}.action-side{border:1px solid #536878;background:linear-gradient(157deg,#293b48,#1b2a35);border-radius:var(--r);display:flex;flex-direction:column;min-height:0;overflow-y:auto;padding:12px;gap:9px;scrollbar-width:thin}.eyebrow{font-size:10px;color:var(--gold);letter-spacing:.2em;font-weight:900}.action-side h2,.page-inner h2,.town-content h2,.modal h2{font-size:clamp(20px,2vw,28px);line-height:1.1;margin:6px 0}.action-side p,.muted,.minor{color:var(--muted)}.action-side p{margin:0;font-size:12px;line-height:1.35}.plan-controls{display:grid;gap:7px}.plan-field{display:grid;grid-template-columns:97px 1fr;gap:8px;align-items:center}.plan-field label{font-size:11px;letter-spacing:.06em;color:#d5d9d5;font-weight:800}.plan-field select{min-width:0;width:100%;background:#10222d;border:1px solid #4a6570;color:var(--ink);padding:9px 10px;border-radius:9px;font-size:13px;font-weight:700}.mood-pill{background:#3b403b;color:#f8ddaa;padding:8px;border:1px solid #655a3e;border-radius:9px;font-size:11px;line-height:1.3}.predict{display:grid;grid-template-columns:1fr 1fr;gap:6px}.predict>div{border:1px solid #455b66;border-radius:10px;padding:8px;background:#132530}.predict small{font-size:9px;letter-spacing:.08em;color:var(--muted);display:block}.predict b{font-size:19px}.btn{border:1px solid #536d7b;border-radius:10px;background:#2f4959;color:var(--ink);padding:10px 14px;font-weight:850;line-height:1.15;transition:background .15s}.btn:hover{background:#405e6c}.btn.gold{background:var(--gold);color:#2c302e;border-color:#f4dfac;box-shadow:inset 0 -3px #bd8950}.btn.gold:hover{background:#ffdb94}.btn.subtle{background:#152937;color:var(--muted)}.btn.tiny{padding:7px 10px;font-size:11px}.btn.full{width:100%;display:block}.btn-row{display:flex;gap:7px}.btn-row>.btn{flex:1}.aside-tip{padding:8px;border-left:3px solid var(--teal);background:#17343a;border-radius:5px;color:#b9dfd4;font-size:11px;line-height:1.35}.feed{display:flex;flex-direction:column;gap:7px;min-height:0;overflow-y:auto;flex:1}.feed-entry{border-bottom:1px solid #3d5260;padding:6px 0;font-size:12px;line-height:1.35;color:#e7dcca}.feed-entry b{color:var(--gold)}.feed-entry.positive b{color:var(--teal)}.feed-entry.negative b{color:var(--rose)}.live-box{border:1px solid #4a6570;border-radius:10px;padding:9px;display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.live-box div{text-align:center}.live-box b{display:block;font-size:19px}.live-box small{font-size:9px;letter-spacing:.1em;color:var(--muted)}.page-inner{max-width:980px;margin:0 auto;height:100%;overflow-y:auto;padding:6px 5px 16px;scrollbar-width:thin}.page-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:10px}.page-head p{color:var(--muted);font-size:13px;margin:0}.report-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.report-tile{background:#1d303d;border:1px solid #4a6470;padding:14px 10px;border-radius:12px}.report-tile small{display:block;color:var(--muted);font-size:10px;letter-spacing:.1em}.report-tile strong{font-size:26px}.report-tile .plus{color:var(--teal)}.report-tile .minus{color:var(--rose)}.report-columns{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin:11px 0}.paper{background:#213745;border:1px solid #4c6570;border-radius:12px;padding:14px}.paper h3{margin:0 0 7px;font-size:16px}.paper p{font-size:12px;color:#bdcdd0;line-height:1.5}.paper ul{margin:7px 0;padding-left:18px;font-size:12px;color:#deded3}.paper li{margin-bottom:7px}.xp-list{display:grid;gap:8px}.xp-line{display:grid;grid-template-columns:110px 1fr 70px;align-items:center;gap:9px;font-size:12px}.xp-line b{color:var(--gold)}.bar{height:7px;border-radius:15px;background:#111f2a;overflow:hidden}.bar i{display:block;background:#e6b75c;height:100%;border-radius:15px}.town-shell{height:100%;min-height:0;display:grid;grid-template-columns:235px 1fr;gap:12px}.town-nav{background:#1e303e;border:1px solid #526974;border-radius:var(--r);padding:12px;display:flex;flex-direction:column;gap:8px;overflow-y:auto}.town-nav>h2{font-size:20px;margin:0 0 2px}.town-nav>p{font-size:11px;color:var(--muted);margin:0 0 7px}.town-tab{border:1px solid #526775;background:#1a2935;color:#d9e4e1;border-radius:10px;text-align:left;padding:12px;font-size:12px;font-weight:750}.town-tab small{display:block;color:#97abb2;font-weight:500;margin-top:4px}.town-tab.active{border-color:var(--gold);background:#4a4437;color:#fff1cd}.town-content{background:#1d303c;border:1px solid #526875;border-radius:var(--r);overflow-y:auto;padding:15px;scrollbar-width:thin}.town-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}.town-top p{margin:3px 0 13px;color:var(--muted);font-size:12px;max-width:630px}.stock-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.stock-card{background:#263d4b;border:1px solid #506977;border-radius:11px;padding:12px;display:flex;flex-direction:column;gap:7px;min-height:185px}.stock-card .icon{font-size:29px;line-height:1}.stock-card h3{font-size:14px;margin:0}.stock-card p{font-size:11px;color:#c0cdd0;line-height:1.4;flex:1;margin:0}.stock-card .tag{font-size:10px;color:var(--gold);line-height:1.3}.stock-card .btn{font-size:11px;padding:8px}.locked{opacity:.65}.note{background:#172c36;border:1px solid #476474;border-radius:10px;padding:11px;margin:9px 0;color:#b7d1d1;font-size:12px;line-height:1.45}.inventory-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.inv-row{display:flex;align-items:center;gap:10px;padding:9px;border:1px solid #506976;background:#253c48;border-radius:10px}.inv-row>span{font-size:23px}.inv-row>div{flex:1;min-width:0}.inv-row b{display:block;font-size:12px}.inv-row small{display:block;color:var(--muted);font-size:10px}.inv-row .btn{flex-shrink:0}.overlay{position:fixed;inset:0;background:#050c12c9;z-index:20;display:flex;align-items:center;justify-content:center;padding:12px;overflow:auto}.modal{width:min(980px,100%);background:linear-gradient(145deg,#2b3e4d,#192a35);border:1px solid #85919a;box-shadow:var(--shadow);border-radius:20px;padding:23px;color:var(--ink);max-height:calc(100dvh - 24px);overflow:auto}.intro-modal{width:min(900px,100%)}.intro-title{display:flex;gap:17px;align-items:center;margin-bottom:15px}.stamp{display:grid;place-items:center;border-radius:50%;background:#f2c374;color:#243540;border:7px solid #56635f;width:70px;height:70px;flex-shrink:0;font-size:35px}.intro-modal h1{margin:4px 0;font-size:clamp(25px,4vw,42px);line-height:1.05;letter-spacing:-.045em}.intro-modal em{font-style:normal;color:var(--gold)}.intro-title p{margin:6px 0 0;color:#bfccd2;font-size:13px}.deity-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.deity-card{background:#19303d;color:var(--ink);border:2px solid #56707a;border-radius:13px;padding:14px 10px;text-align:left;display:flex;flex-direction:column;gap:7px;min-height:165px}.deity-card.selected{background:#454237;border-color:var(--gold);box-shadow:0 0 0 2px #f7c87330}.deity-card .symbol{font-size:35px}.deity-card b{font-size:19px}.deity-card small{color:var(--muted);font-size:11px;line-height:1.4}.deity-card .base{color:#f1d69e;font-size:10px}.intro-bottom{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-top:16px}.chosen-detail{color:#bed2d4;font-size:13px;line-height:1.4;flex:1}.intro-bottom .btn{min-width:250px}.intro-note{color:#9baeb4;font-size:10px;margin-top:13px}.modal-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}.notebook-modal{max-width:750px}.modal-foot{display:flex;justify-content:space-between;gap:12px;padding-top:12px}.notebook-body{margin-top:10px;display:grid;gap:11px}.skill-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.skill-card{background:#1b313e;border:1px solid #526978;border-radius:10px;padding:10px}.skill-card .stat-title{display:flex;justify-content:space-between;font-size:12px;margin-bottom:6px}.skill-card p{margin:6px 0 0;font-size:10px;color:var(--muted)}.help-modal{max-width:680px}.help-copy{font-size:13px;line-height:1.5}.help-copy p{margin:13px 0}.event-modal{width:min(500px,100%)}.event-modal p{color:#c0cdd1;font-size:13px;line-height:1.5}.event-actions{display:flex;flex-direction:column;gap:7px}.toast{position:fixed;z-index:50;bottom:35px;left:50%;transform:translateX(-50%);background:#f5d59a;color:#1b2833;border-radius:10px;padding:12px 17px;font-weight:800;font-size:13px;box-shadow:var(--shadow);max-width:90vw;text-align:center}
 @media(max-width:900px){.topbar{gap:7px;padding:6px 10px;min-height:52px}.brand-mark{width:28px;height:28px;font-size:19px;border-width:2px}.brand b{font-size:11px}.brand small{font-size:7px}.hud-item{min-width:65px;padding:4px 6px}.hud-item b{font-size:14px}.hud-item small{font-size:8px}.nav-btn span{display:none}.play-view{grid-template-columns:minmax(0,1.65fr) minmax(260px,1fr);gap:7px}.action-side{padding:8px}.plan-field{grid-template-columns:70px 1fr;gap:4px}.plan-field select{padding:6px;font-size:11px}.plan-field label{font-size:10px}.scene-header{padding-bottom:5px}.bottom-scene{padding:6px 1px 0}.footer{font-size:8px}.town-shell{grid-template-columns:175px 1fr;gap:8px}.town-content,.town-nav{padding:9px}.stock-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.deity-card{padding:9px 7px;min-height:125px}.deity-card b{font-size:16px}.deity-card .symbol{font-size:26px}.modal{padding:14px}}
@@ -205,7 +206,7 @@ html[lang="zh-CN"] .plan-field label{letter-spacing:0}html[lang="zh-CN"] .action
 #hudWeek{font-size:clamp(11px,1.1vw,17px)}
 @media (orientation:portrait) and (max-width:780px){#hudWeek{font-size:10.5px}}
 .brand-portrait{overflow:hidden;padding:0}.brand-portrait img{display:block;width:100%;height:100%;object-fit:cover;border-radius:50%}
-/* v0.9.6 — city-revival visual pass: fixed game chrome with compact, accessible panes. */
+/* v0.9.7 — city-revival visual pass: fixed game chrome with compact, accessible panes. */
 :root{--bg:#141726;--panel:#202638;--panel2:#2a3546;--border:#667187;--ink:#fff3e2;--muted:#bbcad6;--gold:#ffc46b;--teal:#76d6b4;--rose:#f7a299;--r:13px;--shadow:0 8px 0 #080d1a85,0 18px 40px #0609147a}
 body{background:radial-gradient(ellipse at 60% 0,#47516d 0,#1d2335 45%,#101525 100%);font-family:system-ui,-apple-system,'Segoe UI',sans-serif}
 #app{height:100dvh;min-height:0;background:linear-gradient(130deg,#171b31,#20283a)}
@@ -256,7 +257,7 @@ main{min-height:0;min-width:0;display:grid;grid-template-columns:102px minmax(0,
 @media(max-width:400px) and (orientation:portrait){.header-buttons .nav-btn span{display:none}.header-buttons .nav-btn{font-size:12px}.brand small{display:none}.dock-item{font-size:8px}.dock-label{font-size:8px}}
 
 
-/* v0.9.6: real wardrobe and safe viewport containment */
+/* v0.9.7: real wardrobe and safe viewport containment */
 .scene-side{overflow:hidden;isolation:isolate;min-height:0;min-width:0;contain:layout paint}
 .canvas-wrap{min-width:0;min-height:0;overflow:hidden;flex:1 1 0;contain:paint}
 .action-side{position:relative;z-index:1;min-width:0}
@@ -272,13 +273,56 @@ main{min-height:0;min-width:0;display:grid;grid-template-columns:102px minmax(0,
 @media(orientation:landscape) and (max-height:600px){.dock-icon{width:20px;height:20px;flex-basis:20px}.dock-icon svg{width:19px;height:19px}.dock-label{font-size:9px}.dock-item{gap:1px}}
 @media(orientation:portrait) and (max-width:780px){.dock-icon{width:25px;height:25px;flex-basis:25px}.scene-side{overflow:hidden}.action-side{overflow-x:hidden}.play-view{grid-template-rows:minmax(145px,45%) minmax(0,1fr)}}
 
+
+/* v0.9.7 – crisp fixed-layout scene and responsive controls */
+html,body{overscroll-behavior:none}#app{height:100dvh;max-height:100dvh;overflow:hidden}
+.scene-side{position:relative;display:flex;flex-direction:column;overflow:hidden;isolation:isolate;min-width:0;min-height:0}
+.canvas-wrap{flex:1 1 auto;height:auto;min-height:0;max-height:100%;overflow:hidden;position:relative;border-radius:10px;contain:paint}
+.canvas-wrap canvas{height:100%;width:100%;display:block}
+.action-side{min-width:0;min-height:0;overflow-y:auto;overscroll-behavior:contain}
+.dock-item,.dock-icon,.dock-label{align-items:center;justify-content:center;text-align:center}
+.dock-icon{margin:0 auto;display:grid;place-items:center;min-height:24px}
+.dock-icon svg{width:22px;height:22px;vertical-align:middle;overflow:visible}
+.dock-label{min-height:12px;display:block;line-height:1.15;letter-spacing:0}
+.wardrobe-layout{display:grid;grid-template-columns:minmax(160px,.8fr) minmax(0,1.4fr);gap:12px;align-items:start}
+.wardrobe-portrait{border:1px solid #748295;background:linear-gradient(180deg,#6b858e,#c4bdab 76%,#6a6c65 76%);border-radius:12px;overflow:hidden;padding:8px}
+.wardrobe-portrait svg{display:block;width:100%;height:auto;max-height:290px}
+.wardrobe-slot-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+.wardrobe-slot{display:flex;align-items:center;gap:9px;text-align:left;min-width:0;padding:9px 10px;border:1px solid #637689;border-radius:10px;background:#1b3040;color:#fff1de;cursor:pointer}
+.wardrobe-slot.active{background:#43506a;border-color:#ffc46b;box-shadow:inset 0 0 0 1px #d7ad68}
+.wardrobe-slot .slot-symbol{font-size:22px;width:29px;text-align:center;flex-shrink:0}
+.wardrobe-slot strong{font-size:12px;display:block}.wardrobe-slot small{display:block;font-size:10px;color:#b8cad2;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.wardrobe-select{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:7px;margin:8px 0}
+.wardrobe-select button{display:flex;flex-direction:column;gap:4px;align-items:flex-start;text-align:left}
+.wardrobe-select button small{font-size:10px;font-weight:400;color:#c9d6d9}
+.wardrobe-panels{display:grid;gap:9px}.wardrobe-panels .paper{padding:11px}
+.travel-list{display:grid;gap:7px;margin:12px 0}.travel-check{padding:9px 11px;border:1px solid #51677a;border-radius:9px;display:flex;justify-content:space-between;gap:9px;background:#1a3140}.travel-check.ok{border-color:#4b8e75}.travel-check span:last-child{color:#b8d8cb}
+.save-tools{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:12px 0}
+.fullscreen-hint{font-size:11px;color:#c6d5db;line-height:1.5}
+@media(orientation:portrait) and (max-width:780px){
+ .play-view{grid-template-rows:minmax(0,40%) minmax(0,1fr)!important;gap:9px!important}
+ .scene-side{min-height:0;max-height:100%;padding:5px;box-shadow:none}
+ .scene-header{flex:0 0 auto;padding:4px 5px 5px}.canvas-wrap{flex:1;min-height:0;aspect-ratio:auto}
+ .bottom-scene{flex:0 0 auto;padding:5px 4px 2px}
+ .action-side{border-radius:12px;position:relative;z-index:0}
+ .wardrobe-layout{grid-template-columns:1fr}.wardrobe-portrait svg{height:230px}.wardrobe-slot-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .wardrobe-portrait{max-width:300px;width:100%;margin:0 auto}
+ .dock-icon{flex-basis:25px;width:25px;height:25px}.dock-icon svg{width:23px;height:23px}
+}
+@media(orientation:landscape) and (max-height:600px){
+ .play-view{overflow:hidden}.scene-side{min-height:0;box-shadow:none}.canvas-wrap{min-height:0}
+ .dock-icon{width:20px;height:20px;flex-basis:20px}.dock-icon svg{height:19px;width:19px}
+ .dock-label{font-size:9px;min-height:11px}.dock-item{gap:2px;min-height:0}
+ .wardrobe-portrait svg{max-height:170px}.notebook-modal{max-height:94dvh}
+}
+
 </style>
 </head><body>
 <div id="app" class="hidden">
 <header class="topbar">
- <div class="brand"><button type="button" class="brand-mark brand-portrait" data-act="stats" title="Open your character and skills" aria-label="Open character profile"><img src="data:image/webp;base64,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" alt=""/></button><div><b>STREET PASTOR</b><small>CEDAR FLATS TO NEW YORK · v0.9.6</small></div></div>
+ <div class="brand"><button type="button" class="brand-mark brand-portrait" data-act="stats" title="Open your character and skills" aria-label="Open character profile"><img src="data:image/webp;base64,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" alt=""/></button><div><b>STREET PASTOR</b><small>CEDAR FLATS TO NEW YORK · v0.9.7</small></div></div>
  <div class="hud"><div class="hud-item"><small>DATE</small><b id="hudWeek">Mon · Apr 6</b></div><button type="button" class="hud-item hud-click" data-act="funds" title="Open finances and your savings goal"><small>FUNDS ↗</small><b id="hudCash">$12.00</b></button><button type="button" class="hud-item hud-click" data-act="followers" title="Open congregation demographics and donations"><small>FOLLOWERS ↗</small><b id="hudFollowers">0</b></button><button type="button" class="hud-item hud-click" data-act="followers" title="See follower dedication"><small>DEDICATION ↗</small><b id="hudDedication">27%</b></button></div>
- <div class="header-buttons"><select id="headerLanguage" class="language-picker compact" aria-label="Choose game language"><option value="en">🇬🇧 EN</option><option value="zh">🇨🇳 中文</option></select><button class="nav-btn" data-act="settings" title="Display size and layout" aria-label="Display settings">⚙</button><button class="nav-btn" data-act="stats" title="Notebook">▤ <span>Notebook</span></button><button class="nav-btn" data-act="help" title="How to play">?</button></div>
+ <div class="header-buttons"><select id="headerLanguage" class="language-picker compact" aria-label="Choose game language"><option value="en">🇬🇧 EN</option><option value="zh">🇨🇳 中文</option></select><button class="nav-btn" data-act="settings" title="Display size and layout" aria-label="Display settings">⚙</button><button class="nav-btn" data-act="stats" title="Notebook">▤ <span>Notebook</span></button><button class="nav-btn" data-act="saveTransfer" title="Save export/import" aria-label="Back up or import career">⇄</button><button class="nav-btn" data-act="fullscreen" title="Full screen" aria-label="Toggle full screen">⛶</button><button class="nav-btn" data-act="help" title="How to play">?</button></div>
 </header>
 <main>
 <nav class="game-dock" aria-label="Game navigation">
@@ -302,6 +346,8 @@ main{min-height:0;min-width:0;display:grid;grid-template-columns:102px minmax(0,
 </main>
 <footer class="footer"><span id="saveStatus">● Saved on this device</span><span>FICTIONAL SATIRE · YOUR SAVE STAYS ON THIS DEVICE</span></footer>
 </div>
+<div id="travelGate" class="overlay hidden" role="dialog" aria-modal="true" aria-labelledby="travelGateTitle"><div class="modal travel-modal"><div class="eyebrow">YOUR NEXT CHAPTER</div><h2 id="travelGateTitle">Travel</h2><p id="travelGateIntro"></p><div id="travelGateChecklist" class="travel-list"></div><div class="btn-row"><button class="btn subtle" data-act="closeTravelGate">Not yet</button><button class="btn gold" id="travelGateGo" data-act="confirmTravelGate">Take the bus</button></div></div></div>
+<div id="saveTransfer" class="overlay hidden" role="dialog" aria-modal="true" aria-labelledby="saveTransferTitle"><div class="modal"><div class="eyebrow">CAREER BACKUP</div><h2 id="saveTransferTitle">Move your career between browsers</h2><p>Export a file before switching to the Home Screen app or another device. Import replaces the career saved in this browser; your old save will be backed up first if possible.</p><div class="save-tools"><button class="btn gold" data-act="exportSave">↓ Export save</button><button class="btn" data-act="chooseSave">↑ Import save</button></div><input type="file" id="saveImportFile" accept="application/json,.json" class="hidden"/><p class="fullscreen-hint">On iPhone, Share → Add to Home Screen → Open as Web App gives the most app-like experience. Standard fullscreen requests are unavailable in some Safari versions.</p><button class="btn subtle full" data-act="closeSaveTransfer">Close</button></div></div>
 <div id="welcome" class="overlay"><div class="modal welcome-modal"><div class="welcome-art">☔ 📺 ✈️</div><div class="language-row"><label for="welcomeLanguage">🌐 LANGUAGE / 语言</label><select id="welcomeLanguage" class="language-picker" aria-label="Choose game language"><option value="en">🇬🇧 English</option><option value="zh">🇨🇳 简体中文</option></select></div><span class="eyebrow">A SATIRICAL RAGS-TO-RICHES STORY</span><h1>STREET PASTOR</h1><p>One rainy night, a man with nothing sees a preacher with everything. He gets an idea. A terrible, lucrative idea.</p><button class="btn gold" data-act="newGame">▶ NEW GAME</button><small class="muted">Designed for phone and laptop browsers. Saves automatically.</small><small class="muted">The shelter helps with meals during your first four days. After that, food costs return to normal.</small></div></div>
 <div id="cinematic" class="overlay hidden"><div class="modal movie-modal"><div class="eyebrow">THE NIGHT EVERYTHING CHANGED</div><canvas id="movieCanvas" class="movie-screen" width="1000" height="500" role="img" aria-label="Animated rainy night outside an electronics shop with a televangelist on TV"></canvas><div class="movie-caption" id="movieCaption"></div><div class="movie-bottom"><button class="btn subtle tiny" data-act="skipMovie">SKIP INTRO</button><span class="eyebrow" id="movieStep">01 / 04</span><button class="btn gold" data-act="nextMovie">CONTINUE →</button></div></div></div>
 <div id="firstGuide" class="overlay hidden"><div class="modal first-guide-modal" role="dialog" aria-modal="true" aria-labelledby="firstGuideTitle">
@@ -330,7 +376,7 @@ main{min-height:0;min-width:0;display:grid;grid-template-columns:102px minmax(0,
  </div><div class="focused-skill-detail" id="focusedSkillDetail" aria-live="polite"></div></div>
  <div class="intro-bottom"><div class="name-entry"><label for="leaderName">YOUR PREACHING NAME</label><input id="leaderName" type="text" maxlength="24" value="Pastor Nobody" aria-label="Name your preacher"></div><div id="chosenDetail" class="chosen-detail"></div><button class="btn gold" id="beginBtn">BUILD YOUR PERSONAL BRAND →</button></div><div class="intro-note">Your myth is the theme. The audience is here for YOU.</div></div></div>
 <div id="notebook" class="overlay hidden"><div class="modal notebook-modal"><div class="modal-head"><div><span class="eyebrow">PASTOR'S NOTEBOOK</span><h2>Skills & field notes</h2></div><button class="circle-btn" data-act="closeNotebook">✕</button></div><div id="notebookContent"></div><div class="modal-foot"><button class="btn subtle" data-act="reset">Start new career</button><button class="btn" data-act="closeNotebook">Done</button></div></div></div>
-<div id="help" class="overlay hidden"><div class="modal help-modal"><div class="modal-head"><div><span class="eyebrow">HOW TO PLAY · v0.9.6</span><h2>Plan. Preach. React. Learn.</h2></div><button class="circle-btn" data-act="closeHelp">✕</button></div><div class="help-copy"><p><b>Plan a day:</b> Pick a subject, delivery, movement and fundraising approach. The predicted impact is deliberately hidden.</p><p><b>Two live decisions:</b> Every sermon pauses twice. Choose how to respond, with special options when you own a sign, donation cup or refreshments.</p><p><b>Observe and learn:</b> Your follower and cash totals change as the day progresses. Afterward, review the results. The Notebook now has a Preaching Journal with past sermon plans, what actually happened, and a seven-day income ledger. It does not predict future results.</p><p><b>Day and weather:</b> Rain, crowds and weekdays matter. Sunday mornings are quiet on street corners but can suit an established congregation.</p><p><b>Build a church:</b> You must first travel from Cedar Flats through Ashbrook to New York City before property becomes available. The Organisation menu will appear when you reach the city. At a hall or larger venue, choose which day and time your weekly main service runs. Other days are outreach.</p><p><b>Survive and grow:</b> Budget for meals and grooming. Early on, Town → Street Life → Rummage Bins offers free finds once a day. You can search quickly for less risk or thoroughly for better finds. Food is a common reward. Being spotted becomes more likely as your followers grow; it disappears when you are established. When you qualify for the $75 first journey and $225 journey to New York, a pop-up offers travel now or a seven-day reminder. Each journey has a short bus cutscene. The bigger towns have higher living costs as well as more visitors. Equipment does not stack in the same slot. Early equipment is deliberately affordable; keep an eye on your next bus fare savings goal.</p><p><b>Faster learning:</b> Experience from preaching and study is now 65% higher. <b>Study days:</b> In Town → Study & Media, spend a full day with a parody book or phone feed. Reading and streaming develop your abilities faster than daily practice, at the cost of a day of preaching. You still pay food, subscriptions and upkeep. Tap the character icon for your branching skill trees. Combined skill levels unlock an ability point at each five-level milestone.</p><p><b>Followers & funds:</b> Recruits are harder to win, but regular, devoted and affluent supporters contribute repeatedly. Tap FOLLOWERS to see the groups and their individual donation totals. Local wealth determines typical gifts, loyal supporters make a crowd seem convincing, and neglecting hygiene can drive people away.</p><p><b>Endgame:</b> Television advertising unlocks only in the megachurch. Buy your private jet to trigger a different divine reckoning for each god, then choose a permanent skill bonus and a different myth for your next life.</p></div><div class="btn-row"><button class="btn subtle" data-act="showGuide">QUICK START OVERVIEW</button><button class="btn gold" data-act="closeHelp">GOT IT</button></div></div></div>
+<div id="help" class="overlay hidden"><div class="modal help-modal"><div class="modal-head"><div><span class="eyebrow">HOW TO PLAY · v0.9.7</span><h2>Plan. Preach. React. Learn.</h2></div><button class="circle-btn" data-act="closeHelp">✕</button></div><div class="help-copy"><p><b>Plan a day:</b> Pick a subject, delivery, movement and fundraising approach. The predicted impact is deliberately hidden.</p><p><b>Two live decisions:</b> Every sermon pauses twice. Choose how to respond, with special options when you own a sign, donation cup or refreshments.</p><p><b>Observe and learn:</b> Your follower and cash totals change as the day progresses. Afterward, review the results. The Notebook now has a Preaching Journal with past sermon plans, what actually happened, and a seven-day income ledger. It does not predict future results.</p><p><b>Day and weather:</b> Rain, crowds and weekdays matter. Sunday mornings are quiet on street corners but can suit an established congregation.</p><p><b>Build a church:</b> You must first travel from Cedar Flats through Ashbrook to New York City before property becomes available. The Organisation menu will appear when you reach the city. At a hall or larger venue, choose which day and time your weekly main service runs. Other days are outreach.</p><p><b>Survive and grow:</b> Budget for meals and grooming. Early on, Town → Street Life → Rummage Bins offers free finds once a day. You can search quickly for less risk or thoroughly for better finds. Food is a common reward. Being spotted becomes more likely as your followers grow; it disappears when you are established. When you qualify for the $75 first journey and $225 journey to New York, a pop-up offers travel now or a seven-day reminder. Each journey has a short bus cutscene. The bigger towns have higher living costs as well as more visitors. Equipment does not stack in the same slot. Early equipment is deliberately affordable; keep an eye on your next bus fare savings goal.</p><p><b>Faster learning:</b> Experience from preaching and study is now 65% higher. <b>Study days:</b> In Town → Study & Media, spend a full day with a parody book or phone feed. Reading and streaming develop your abilities faster than daily practice, at the cost of a day of preaching. You still pay food, subscriptions and upkeep. Tap the character icon for your branching skill trees. Combined skill levels unlock an ability point at each five-level milestone.</p><p><b>Followers & funds:</b> Recruits are harder to win, but regular, devoted and affluent supporters contribute repeatedly. Tap FOLLOWERS to see the groups and their individual donation totals. Local wealth determines typical gifts, loyal supporters make a crowd seem convincing, and neglecting hygiene can drive people away.</p><p><b>Endgame:</b> Television advertising unlocks only in the megachurch. Buy your private jet to trigger a different divine reckoning for each god, then choose a permanent skill bonus and a different myth for your next life.</p></div><div class="btn-row"><button class="btn subtle" data-act="showGuide">QUICK START OVERVIEW</button><button class="btn gold" data-act="closeHelp">GOT IT</button></div></div></div>
 
 <div id="smite" class="overlay hidden"><div class="modal movie-modal smite-modal" role="dialog" aria-modal="true" aria-labelledby="smiteTitle">
  <span class="eyebrow">✈️ ENDGAME · THE BILL COMES DUE</span><h2 id="smiteTitle">THE GODS HAVE NOTICED</h2>
@@ -577,18 +623,33 @@ const BOOK_LINES=['I turn a damp page. That underlined sentence sounded profound
 const CAFE_LINES=['My phone flashes a 4% battery warning.', 'I hear the espresso machine hissing while my battery crawls upwards.', 'I whisper, “One more percentage. The algorithm can wait.”', 'Someone asks if this table is taken. I tell them I am doing important research.', 'I stare at my charging icon like it is a stock ticker.', 'My phone is charged. My bank account remains unimpressed.'];
 
 const defaultPlan=()=>({topic:'community',delivery:'conversational',movement:'roam',ask:'gentle'});
-const fresh=()=>({version:5,chosen:'venus',leader:'Pastor Nobody',started:false,day:1,week:1,money:12,followers:0,dedication:27,venue:'street',location:0,unlocked:['street'],inventory:[],equipped:{},books:[],staff:[],xp:{charisma:0,knowledge:0,showmanship:0,credibility:0},legacy:{charisma:0,knowledge:0,showmanship:0,credibility:0},rebirths:0,cohorts:{curious:0,regular:0,devoted:0,patron:0},tvCampaign:null,jetPurchased:false,nextForbiddenGod:null,plan:defaultPlan(),lastTopic:'',topicStreak:0,scavengedDay:0,washedDay:0,travelRemindDay:0,travelDeferredLocation:-1,foodPreparedDay:0,events:false,phase:'plan',townPage:'survival',sermonHistory:[],dailyLedger:[],eventLastDay:0,totalEarned:0,hygiene:42,clothesClean:28,grooming:24,hunger:0,serviceDay:6,serviceTime:'morning',lastMainServiceWeek:0,phoneBattery:0,dataPlan:'none',readCounts:{},studyHistory:{},studyLog:[],lastStudyDay:0,perks:[],recentMoments:[],congregationLedger:[],congregationDonations:{curious:0,regular:0,devoted:0,patron:0}});
+const fresh=()=>({version:5,chosen:'venus',leader:'Pastor Nobody',started:false,day:1,week:1,money:12,followers:0,dedication:27,venue:'street',location:0,unlocked:['street'],venueUpgrades:{hall:0,church:0,mega:0},inventory:[],equipped:{},books:[],staff:[],xp:{charisma:0,knowledge:0,showmanship:0,credibility:0},legacy:{charisma:0,knowledge:0,showmanship:0,credibility:0},rebirths:0,cohorts:{curious:0,regular:0,devoted:0,patron:0},tvCampaign:null,jetPurchased:false,nextForbiddenGod:null,plan:defaultPlan(),lastTopic:'',topicStreak:0,scavengedDay:0,washedDay:0,travelRemindDay:0,travelDeferredLocation:-1,foodPreparedDay:0,events:false,phase:'plan',townPage:'survival',sermonHistory:[],dailyLedger:[],eventLastDay:0,totalEarned:0,hygiene:42,clothesClean:28,grooming:24,hunger:0,serviceDay:6,serviceTime:'morning',lastMainServiceWeek:0,phoneBattery:0,dataPlan:'none',readCounts:{},studyHistory:{},studyLog:[],lastStudyDay:0,perks:[],recentMoments:[],congregationLedger:[],congregationDonations:{curious:0,regular:0,devoted:0,patron:0}});
 
 let g=fresh(),running=false,animTime=0,clock=0,lastFrame=0,people=[],speeches=[],sermonBubble=null,listenerBubble=null,report=null,runVisitors=[],spawnAt=0,spawnIndex=0,feed=[],toastTime=0,progress=0,selected='venus',nextSpeech=0,nextReaction=0;
 const canvas=$('scene'),ctx=canvas.getContext('2d'),W=900,H=490, RUN_SECS=21; const WEEKDAYS=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],DAYSHORT=['MON','TUE','WED','THU','FRI','SAT','SUN'], SERVICE_TIMES={morning:'Morning · 9 AM',afternoon:'Afternoon · 2 PM',evening:'Evening · 7 PM'}; const CAREER_EPOCH=Date.UTC(2026,3,6);const gameDate=(day=g.day)=>new Date(CAREER_EPOCH+(day-1)*86400000);const dateLabel=(day=g.day,short=false)=>gameDate(day).toLocaleDateString(window.SP_I18N?.language==='zh'?'zh-CN':'en-US',{month:'short',day:'numeric',...(short?{}:{year:'numeric'})});const dayIndex=()=>((g.day-1)%7),dayName=()=>WEEKDAYS[dayIndex()],weekNumber=()=>Math.ceil(g.day/7),isMainService=()=>g.venue!=='street'&&dayIndex()===Number(g.serviceDay),headerDate=()=>`${dayName()} · ${dateLabel()}`,dayKey=()=>g.day;
 const deity=()=>DEITIES.find(d=>d.id===g.chosen)||DEITIES[2],area=()=>LOCATIONS[g.location]||LOCATIONS[0],venue=()=>VENUES.find(v=>v.id===g.venue)||VENUES[0],vid=id=>VENUES.findIndex(v=>v.id===id),item=id=>ITEMS.find(i=>i.id===id),equipped=()=>Object.values(g.equipped).map(item).filter(Boolean),owned=id=>g.inventory.includes(id);
+// Street pitches have NO venue capacity. Only a dedicated hall or church has expansion tiers.
+const VENUE_EXPANSIONS={
+ hall:[{cost:100,add:120,label:'Extra seating'},{cost:260,add:220,label:'Open the side room'},{cost:700,add:400,label:'Community hall extension'}],
+ church:[{cost:1800,add:800,label:'Extra pews'},{cost:4600,add:1800,label:'Extended sanctuary'},{cost:12500,add:4300,label:'New auditorium wing'}],
+ mega:[{cost:40000,add:10000,label:'Additional sections'},{cost:155000,add:25000,label:'Second tier seating'},{cost:650000,add:60000,label:'Grand arena expansion'}]
+};
+function venueUpgradeLevel(id=g.venue){return Math.max(0,Math.min((VENUE_EXPANSIONS[id]||[]).length,Math.floor(Number(g.venueUpgrades?.[id])||0)));}
+function venueCapacity(id=g.venue){const v=VENUES.find(x=>x.id===id);if(!v||id==='street')return Infinity;return v.capacity+(VENUE_EXPANSIONS[id]||[]).slice(0,venueUpgradeLevel(id)).reduce((total,x)=>total+x.add,0);}
+
 const COHORTS={
  curious:{name:'Curious',description:'New, uncertain and quick to leave.'},
  regular:{name:'Regular',description:'Come back and chip in modest amounts.'},
  devoted:{name:'Devoted',description:'Attend reliably and often give.'},
  patron:{name:'Patrons',description:'Financially comfortable supporters; not necessarily devoted.'}
 };
-const MOCK_GIFTS=['Here’s fifty cents. Please stop describing my aura.','A dollar if you stop shouting at my sandwich.','This is for you to be quiet for a minute.','Take the change. Leave my dog out of your prophecy.'];
+const MOCK_GIFTS=[
+ {text:'I’ll give you a dollar to stop shouting at my sandwich.',amount:1},
+ {text:'Here’s fifty cents. Please stop describing my aura.',amount:.50},
+ {text:'I’ll give you a quarter to leave my dog out of your prophecy.',amount:.25},
+ {text:'Take seventy-five cents and leave me out of this.',amount:.75},
+ {text:'I’ll pay you two dollars to stop pointing at me.',amount:2}
+ ];
 const TV_PACKAGES=[
  {id:'local',name:'Local Cable Spot',price:25000,boost:.23,description:'A brief ad between late-night commercials. Small reach, manageable risk.'},
  {id:'regional',name:'Three-State TV Blitz',price:110000,boost:.58,description:'An expensive regional push for next week’s main service.'},
@@ -732,7 +793,7 @@ function unspentPoints(){return Math.max(0,earnedAbilityPoints()-(g.perks||[]).l
 function takePerk(id){const p=PERKS[id];if(!p||hasPerk(id)||unspentPoints()<=0||(p.requires&&!hasPerk(p.requires)))return;g.perks.push(id);save();notebook('tree');screenToast('Unlocked '+p.name+' — your next sermon will feel the effect.');}
 
 function save(){try{localStorage.setItem(SAVE,JSON.stringify(g));$('saveStatus').textContent='● Saved on this device';}catch(e){$('saveStatus').textContent='● Saving blocked by browser';}}
-function load(){try{const s=JSON.parse(localStorage.getItem(SAVE)||'null');if(s&&s.version===5&&(s.started||s.rebirths>0)){g={...fresh(),...s,xp:{...fresh().xp,...s.xp},legacy:{...fresh().legacy,...s.legacy},plan:{...defaultPlan(),...s.plan},equipped:{...s.equipped}};if(g.equipped?.outfit){const old=g.equipped.outfit,oldItem=item(old);if(oldItem){g.equipped[canonicalSlot(oldItem)]=old;}delete g.equipped.outfit;}g.chosen=({renenutet:'anubis',plutus:'zeus',abundantia:'venus',freyr:'odin'})[g.chosen]||g.chosen;g.phase=g.phase==='live'?'plan':g.phase;g.inventory=(g.inventory||[]).filter(id=>!!item(id));g.readCounts=g.readCounts||{};g.studyHistory=g.studyHistory||{};g.studyLog=g.studyLog||[];g.perks=Array.isArray(g.perks)?g.perks.filter(id=>!!PERKS[id]):[];g.recentMoments=Array.isArray(g.recentMoments)?g.recentMoments.slice(-8):[];g.congregationLedger=Array.isArray(g.congregationLedger)?g.congregationLedger.slice(-14):[];g.congregationDonations={...fresh().congregationDonations,...(g.congregationDonations||{})};g.phoneBattery=Number.isFinite(g.phoneBattery)?g.phoneBattery:0;if(!DATA_PLANS[g.dataPlan])g.dataPlan='none';g.unlocked=Array.from(new Set(g.unlocked||['street']));reconcileCohorts();if(!g.nextForbiddenGod)g.nextForbiddenGod=null;g.sermonHistory=Array.isArray(g.sermonHistory)?g.sermonHistory.filter(x=>x&&Number.isInteger(x.day)&&x.day>0&&TOPICS[x.topic]&&DELIVERY[x.delivery]).slice(0,42):[];g.dailyLedger=Array.isArray(g.dailyLedger)?g.dailyLedger.filter(x=>x&&Number.isInteger(x.day)&&x.day>0&&Number.isFinite(x.net)).slice(0,42):[];return true;}}catch(e){console.warn(e)}return false;}
+function load(){try{const s=JSON.parse(localStorage.getItem(SAVE)||'null');if(s&&s.version===5&&(s.started||s.rebirths>0)){g={...fresh(),...s,xp:{...fresh().xp,...s.xp},legacy:{...fresh().legacy,...s.legacy},plan:{...defaultPlan(),...s.plan},equipped:{...s.equipped}};if(g.equipped?.outfit){const old=g.equipped.outfit,oldItem=item(old);if(oldItem){g.equipped[canonicalSlot(oldItem)]=old;}delete g.equipped.outfit;}g.chosen=({renenutet:'anubis',plutus:'zeus',abundantia:'venus',freyr:'odin'})[g.chosen]||g.chosen;g.phase=g.phase==='live'?'plan':g.phase;g.inventory=(g.inventory||[]).filter(id=>!!item(id));g.readCounts=g.readCounts||{};g.studyHistory=g.studyHistory||{};g.studyLog=g.studyLog||[];g.perks=Array.isArray(g.perks)?g.perks.filter(id=>!!PERKS[id]):[];g.recentMoments=Array.isArray(g.recentMoments)?g.recentMoments.slice(-8):[];g.congregationLedger=Array.isArray(g.congregationLedger)?g.congregationLedger.slice(-14):[];g.congregationDonations={...fresh().congregationDonations,...(g.congregationDonations||{})};g.phoneBattery=Number.isFinite(g.phoneBattery)?g.phoneBattery:0;if(!DATA_PLANS[g.dataPlan])g.dataPlan='none';g.unlocked=Array.from(new Set(g.unlocked||['street']));g.venueUpgrades={hall:0,church:0,mega:0,...(g.venueUpgrades||{})};for(const id of ['hall','church','mega'])g.venueUpgrades[id]=venueUpgradeLevel(id);reconcileCohorts();if(!g.nextForbiddenGod)g.nextForbiddenGod=null;g.sermonHistory=Array.isArray(g.sermonHistory)?g.sermonHistory.filter(x=>x&&Number.isInteger(x.day)&&x.day>0&&TOPICS[x.topic]&&DELIVERY[x.delivery]).slice(0,42):[];g.dailyLedger=Array.isArray(g.dailyLedger)?g.dailyLedger.filter(x=>x&&Number.isInteger(x.day)&&x.day>0&&Number.isFinite(x.net)).slice(0,42):[];return true;}}catch(e){console.warn(e)}return false;}
 
 function phase(p){g.phase=p;for(const [id,type] of [['playView','plan'],['resultsView','results'],['townView','town']]){$(id).classList.toggle('hidden',id!==(p==='plan'||p==='live'?'playView':p==='results'?'resultsView':'townView'));}renderHUD();save();}
 function renderHUD(){$('hudWeek').textContent=gameDate().toLocaleDateString(window.SP_I18N?.language==='zh'?'zh-CN':'en-US',{weekday:'short',month:'short',day:'numeric'});$('hudCash').textContent=cash(g.money);$('hudFollowers').textContent=num(g.followers);$('hudDedication').textContent=Math.round(g.dedication)+'%';$('venueTag').textContent='📍 '+(g.venue==='street'?area().name:venue().name).toUpperCase();$('faithTag').textContent='✦ '+esc(g.leader).toUpperCase();document.querySelectorAll('.dock-item').forEach(b=>{let a=b.dataset.act;let active=(a==='street'&&(g.phase==='plan'||g.phase==='live'||g.phase==='results'))||(a==='town'&&g.phase==='town'&&g.townPage!=='learning')||(a==='learn'&&g.phase==='town'&&g.townPage==='learning');b.classList.toggle('dock-active',active);});}
@@ -836,9 +897,9 @@ function startDay(){if(running||g.phase!=='plan')return;running=true;pausedForCh
  const x=planModel(),c=conditions(),v=venue(),avg=g.venue==='street'?area().crowd:v.crowd;
  let crowd=Math.max(2,Math.round(avg*c.factor*rand(.82,1.18)));
  // larger indoor services benefit from an established local membership, while outreach is smaller
- if(c.main)crowd=Math.min(v.capacity,Math.round(crowd+getPresentFollowers()*.42));
- if(g.location===2&&g.venue!=='street')crowd=Math.min(v.capacity,Math.round(crowd*(g.venue==='mega'?1.55:g.venue==='church'?1.3:1.14))); 
- const tvReach=localTVReach();if(tvReach){crowd=Math.min(v.capacity,Math.round(crowd*(1+tvReach.boost)));tvReach.served=true;tvReach.expiresDay=g.day;}
+ if(c.main)crowd=Math.min(venueCapacity(),Math.round(crowd+getPresentFollowers()*.42));
+ if(g.location===2&&g.venue!=='street')crowd=Math.min(venueCapacity(),Math.round(crowd*(g.venue==='mega'?1.55:g.venue==='church'?1.3:1.14))); 
+ const tvReach=localTVReach();if(tvReach){crowd=g.venue==='street'?Math.round(crowd*(1+tvReach.boost)):Math.min(venueCapacity(),Math.round(crowd*(1+tvReach.boost)));tvReach.served=true;tvReach.expiresDay=g.day;}
  const startingFollowers=g.followers,attendees=getPresentFollowers(),initialPayout=recurringDonations(c.main);
  session={x,c,crowd,attendees,tvReach:tvReach?.name||null,mocked:0,hecklerGifts:0,loyalPayout:initialPayout,loyalDonations:initialPayout.total,processed:0,stopped:0,joined:0,gifts:0,startFollowers:startingFollowers,stopAdj:0,convAdj:0,giftAdj:1,riskAdj:0,devoteAdj:0,notes:[],xpgains:{charisma:0,knowledge:0,showmanship:0,credibility:0},cutShort:false,cutAt:0,choiceDetails:[],encounters:[],nuisance:baseNuisance(),authorityAttempted:false,authorityResolved:false};
  report=null;spawnIndex=0;spawnAt=.65;nextAmbientSpawn=1.3;animTime=0;progress=0;people=[];sermonBubble=null;listenerBubble=null;nextSpeech=2;nextReaction=3;feed=[];
@@ -915,6 +976,20 @@ const LIVE_ENCOUNTERS=[
  {id:'phone_video',stage:2,when:a=>a.stopped>0&&!!g.equipped.phone,title:'A sceptic is filming you',desc:'One of the listeners lifts a phone. A ridiculous clip could gain attention but cost you credibility.',options:[['humour','😄 Make a self-aware joke','Lower the tension'],['pitch','📣 Deliver a viral soundbite','Attract attention with risk'],['continue','➡️ Ignore the camera','Maintain your original approach']]},
  {id:'second_chance',stage:2,when:a=>a.stopped>0,title:'Your final minute is coming up',desc:'A small audience is listening, but they have not committed to anything yet.',options:[['question','💬 Answer the last question','Improve conviction'],['compliment','🤝 Thank them for their time','Feel more welcoming'],['continue','➡️ Finish the sermon','Stay consistent']]}
 ];
+LIVE_ENCOUNTERS.push(
+ {id:'pigeon_rebuttal',stage:1,when:a=>a.stopped===0,title:'A pigeon has become your entire audience',desc:'The bird looks unimpressed. A shopper just noticed you talking to it.',options:[['humour','😄 Make a joke about it','Keep the mood light'],['pitch','📣 Address the shopper instead','Try to attract attention'],['continue','➡️ Let the pigeon listen','Keep going']]},
+ {id:'new_sign_watch',stage:1,when:a=>!!g.equipped.sign,title:'Someone stops to read your sign',desc:'They read the board, but have not decided whether to listen.',options:[['handbill','🪧 Point to your message','Draw a few more glances'],['smile','🙂 Give a friendly nod','Create a warmer first impression'],['continue','➡️ Let the sign speak','Stick to the plan']]},
+ {id:'work_shift',stage:1,when:a=>a.c.day==='Monday'||a.c.day==='Tuesday',title:'The morning shift is in a hurry',desc:'People are heading to work. A short opening may be your best chance.',options:[['story','📖 Keep it personal and brief','Better connection with listeners'],['wave','👋 Greet them as they pass','A little extra attention'],['continue','➡️ Stick to your opening','No change']]},
+ {id:'post_office',stage:1,when:a=>a.stopped===0&&g.location<2,title:'A resident waits for the post office to open',desc:'They glance at your sign while checking the time.',options:[['smile','🙂 Acknowledge them politely','Improve first impressions'],['pitch','📣 Deliver a sharp one-liner','More reach, some nuisance'],['continue','➡️ Give them space','No change']]},
+ {id:'thrift_coat',stage:1,when:a=>!!g.equipped.jacket,title:'A passer-by notices your coat',desc:'Your appearance is drawing a second look. It could help or distract.',options:[['humour','😄 Make a joke about your outfit','Ease the mood'],['story','📖 Explain your humble beginnings','Build a connection'],['continue','➡️ Return to your message','Stay focused']]},
+ {id:'first_notebook',stage:1,when:a=>a.stopped>=1,title:'Someone is taking notes',desc:'A listener seems to be writing down your words. You cannot tell whether they agree.',options:[['question','💬 Ask what interests them','Engage a real listener'],['reassure','🤝 Explain your beliefs calmly','Increase trust'],['continue','➡️ Continue teaching','Keep momentum']]},
+ {id:'old_neighbour',stage:2,when:a=>a.stopped>0,title:'A familiar face stops again',desc:'Someone thinks they heard you yesterday and wonders if your story has changed.',options:[['story','📖 Share something new','Improve the connection'],['humour','😄 Acknowledge the repetition','Relieve tension'],['continue','➡️ Repeat your key message','Stay consistent']]},
+ {id:'weekend_shoppers',stage:2,when:a=>a.c.day==='Saturday'&&a.stopped>0,title:'The Saturday shoppers linger',desc:'A few shoppers have time to stop, but nearby businesses are getting busy.',options:[['invite','🤝 Invite them back next week','Build a following'],['askquiet','🤫 Keep the gathering calm','Reduce nuisance'],['continue','➡️ Finish as planned','Keep your rhythm']]},
+ {id:'loyalty_test',stage:2,when:a=>a.attendees>=2,title:'Two regular faces are listening',desc:'Your regular supporters know your opening by heart. They want something worth returning for.',options:[['thanks','🙏 Thank your supporters','Increase loyalty'],['story','📖 Share a new story','Offer something fresh'],['continue','➡️ Keep preaching','Stay on message']]},
+ {id:'donation_hesitation',stage:2,when:a=>a.stopped>0,title:'A listener hesitates by the cup',desc:'Someone glances at your donation cup, then checks their own wallet. You cannot assume they will give.',options:[['share','🤝 Say donations are optional','Build trust'],['smile','🙂 Thank them for listening','Make a good impression'],['continue','➡️ Keep talking','Do not pressure them']]},
+ {id:'dusk_shadow',stage:2,when:a=>a.stopped===0,title:'The street is nearly empty',desc:'No one has stopped yet. You still have time to leave a useful impression.',options:[['pitch','📣 Try one clear final pitch','More attention'],['humour','😄 End with an upbeat joke','A friendlier finish'],['continue','➡️ Finish quietly','Keep it simple']]},
+ {id:'clear_sky',stage:2,when:a=>a.c.weather.startsWith('☀️')&&a.stopped>=1,title:'The weather is finally on your side',desc:'A sunny break has left your listeners in no hurry to find shelter.',options:[['story','📖 Tell a short story','Help people remember'],['invite','🤝 Suggest another gathering','Build a following'],['continue','➡️ End on your prepared line','Stay on plan']]}
+);
 function pickLiveEncounter(stage,a){
  const valid=LIVE_ENCOUNTERS.filter(e=>e.stage===stage&&e.when(a));
  const recent=g.recentMoments||[];
@@ -935,13 +1010,14 @@ function showMoment(stage){
  save();
 }
 function rollVisitor(){const a=session;if(!a)return;const x=a.x;
- const stops=Math.random()<clamp(x.stop+a.stopAdj,.02,.85),joins=stops&&Math.random()<clamp((x.conv+a.convAdj)*1.08,.01,.89)&&g.followers<venue().capacity;
+ const stops=Math.random()<clamp(x.stop+a.stopAdj,.02,.85),joins=stops&&Math.random()<clamp((x.conv+a.convAdj)*1.08,.01,.89);
  const gives=stops&&Math.random()<(g.venue==='street'?.38:session.c.main?.43:.28);
  let gift=0;if(gives){gift=pennies(rand(.11,.45)*x.donate*a.giftAdj*area().gift*1.05*1.05*(g.venue==='street'?1:g.venue==='hall'?1.8:g.venue==='church'?3.7:7));a.gifts=pennies(a.gifts+gift);g.money=pennies(g.money+gift);}
  if(!stops&&g.venue==='street'&&g.day<=16&&Math.random()<.18){gift=pennies(rand(.14,.32)*1.05);a.gifts=pennies(a.gifts+gift);g.money=pennies(g.money+gift);}
  if(!stops&&g.venue==='street'&&Math.random()<(g.plan.delivery==='shouting'?.055:.025)){
-  const tip=pennies(rand(.12,.72)*area().affluence*1.05);gift=pennies(gift+tip);a.hecklerGifts=pennies(a.hecklerGifts+tip);a.gifts=pennies(a.gifts+tip);g.money=pennies(g.money+tip);
-  if(a.mocked<1){a.mocked++;addFeed('negative','HECKLER',pick(MOCK_GIFTS)+' (+'+cash(tip)+', not a believer)');}
+  const offer=pick(MOCK_GIFTS),tip=offer.amount;
+   gift=pennies(gift+tip);a.hecklerGifts=pennies(a.hecklerGifts+tip);a.gifts=pennies(a.gifts+tip);g.money=pennies(g.money+tip);
+   a.mocked++;addFeed('negative','HECKLER',say(offer.text)+' (+'+cash(tip)+', not a believer)');
  }
  if(stops)a.stopped++;if(joins){a.joined++;recruitFollower();}
  a.processed++;
@@ -1004,7 +1080,11 @@ function finishDay(){if(!running)return;running=false;pausedForChoice=false;cons
  g.money=pennies(g.money+Math.max(0,a.loyalDonations-(a.paidLoyal||0)));
  const food=mealCost(),overhead=dailyCosts(),income=pennies(a.gifts+a.loyalDonations),expenses=pennies(food+overhead),profit=pennies(income-expenses);
  const funded=g.money+1e-6>=expenses;g.money=pennies(Math.max(0,g.money-expenses));g.hunger=funded?Math.max(0,g.hunger-1):Math.min(6,g.hunger+1);
- let devoteChange=clamp((x.devote+a.devoteAdj)/7,-1.2,.85)+(a.joined>0?.18:0)-(a.cutShort?1.5:0)-(funded?0:.65);
+ // A good sermon must visibly strengthen devotion; strong loyalty grows more slowly later.
+  const socialGain=(a.stopped>0?.16:0)+(a.joined>0?.27:0)+(a.attendees>0?.13:0);
+  let devoteChange=clamp((x.devote+a.devoteAdj)/4.4,-1.45,1.45)+socialGain
+   -(g.plan.ask==='hard'?.38:0)-(a.cutShort?1.55:0)-(funded?0:.65);
+  if(g.dedication>63&&devoteChange>0)devoteChange*=.56;
  g.dedication=clamp(g.dedication+devoteChange,8,93);
  const flock=maintainFlock({preached:true,joined:a.joined});let lost=flock.lost;
  if(g.plan.ask==='hard')lost+=loseFollowers(sampleDonationCount(g.cohorts.curious,.012));
@@ -1145,7 +1225,7 @@ function renderTown(){
  const washCost=groomingCost(.95),shaveCost=groomingCost(1.5),barberCost=groomingCost(4),laundryCost=groomingCost(2);
  const groups=TOWN_GROUPS.filter(gr=>groupTabs(gr[0]).length).map(([id,icon,label])=>`<button class="town-group ${group===id?'active':''}" data-town-group="${id}" aria-pressed="${group===id}">${icon} ${esc(label)}</button>`).join('');
  const subtabs=groupTabs(group).map(([id,icon,title])=>`<button class="town-subtab ${cur===id?'active':''}" data-town="${id}" aria-pressed="${cur===id}">${icon} ${esc(title)}</button>`).join('');
- $('townNav').innerHTML=`<span class="eyebrow">BETWEEN DAYS · ${esc(area().name.toUpperCase())}</span><h2>Explore Town</h2><p>Choose a section, then a place.</p><div class="town-group-list">${groups}</div><button class="btn gold full" data-act="nextDay">PLAN ${dateLabel(g.day,true).toUpperCase()} →</button>`;
+ $('townNav').innerHTML=`<span class="eyebrow">BETWEEN DAYS · ${esc(area().name.toUpperCase())}</span><h2>Explore Town</h2><p>Choose a section, then a place.</p><div class="town-group-list">${groups}</div><button class="btn" data-act="openTravelGate">🚌 Travel ${g.location<2?"· "+cash(busFare()):"· New York"}</button><button class="btn gold full" data-act="nextDay">PLAN ${dateLabel(g.day,true).toUpperCase()} →</button>`;
  let content='';
  if(cur==='survival')content=`<div class="town-top"><div><span class="eyebrow">KEEP YOURSELF GOING</span><h2>🧼 Survival & grooming</h2><p>Food is paid automatically each day. Meals and grooming cost more in larger cities, but there are also more people to attract. The soup kitchen remains an affordable option.</p></div></div><div class="status-grid"><div><small>BODY CLEANLINESS</small><strong>${Math.round(g.hygiene)}%</strong></div><div><small>CLOTHING CONDITION</small><strong>${Math.round(g.clothesClean)}%</strong></div><div><small>HAIR & SHAVE</small><strong>${Math.round(g.grooming)}%</strong></div></div><div class="stock-grid survival-grid"><div class="stock-card"><span class="icon">🥣</span><h3>Soup Kitchen</h3><p>Queue for a free meal; food for today costs only ${cash(pennies(.12*locationLivingMultiplier()))}.</p><div class="tag">Free · once a day</div><button class="btn" data-survive="food" ${g.foodPreparedDay===g.day?'disabled':''}>${g.foodPreparedDay===g.day?'Meal arranged':'Get a meal'}</button></div><div class="stock-card"><span class="icon">🚿</span><h3>Public Washroom</h3><p>Soap, a sink and a fresh start. Available once every three days.</p><div class="tag"> ${cash(washCost)} · +50 hygiene, +10 clothes</div><button class="btn" data-survive="wash" ${(g.day-g.washedDay<3&&g.washedDay>0)||g.money<washCost?'disabled':''}>${g.washedDay>0&&g.day-g.washedDay<3?'Come back later':`Wash up · ${cash(washCost)}`}</button></div><div class="stock-card"><span class="icon">🪒</span><h3>Basic Shave</h3><p>Remove the week's stubble. Beard appearance changes on your character.</p><div class="tag"> ${cash(shaveCost)} · +52 grooming</div><button class="btn" data-survive="shave" ${g.money<shaveCost?'disabled':''}>Shave · ${cash(shaveCost)}</button></div><div class="stock-card"><span class="icon">💈</span><h3>Barber</h3><p>A proper haircut and shave gives you a fresher appearance.</p><div class="tag"> ${cash(barberCost)} · +85 grooming</div><button class="btn" data-survive="barber" ${g.money<barberCost?'disabled':''}>Visit barber · ${cash(barberCost)}</button></div><div class="stock-card"><span class="icon">🧺</span><h3>Launder Clothing</h3><p>Your clothes get grubby every week, even after you've upgraded them.</p><div class="tag"> ${cash(laundryCost)} · +55 clothes condition</div><button class="btn" data-survive="laundry" ${g.money<laundryCost?'disabled':''}>Do laundry · ${cash(laundryCost)}</button></div></div><div class="note">Hunger streak: ${g.hunger} · You can always preach or scavenge, even when money runs out. Basic grooming costs a little; the soup kitchen can help with meals.</div>`;
  else if(cur==='learning'){
@@ -1165,7 +1245,7 @@ function renderTown(){
  }
  else if(['charity','highstreet','online'].includes(cur)){
   const gated=cur==='online'&&vid(g.venue)<1;const list=ITEMS.filter(it=>it.store===cur&&availableShopItem(it)&&!owned(it.id)&&!g.books.includes(it.id));
-  const names={charity:['🧥 The Nearly-New Thrift Store',g.location===0?'Cedar Flats has the biggest selection of cheap second-hand clothing. All five wardrobe slots can be upgraded here.':'The thrift selection is smaller here, but the bookshelves are stronger. A study day can be a worthwhile investment.'],highstreet:['🏬 Main Street Outfitters',g.location===0?'Cedar Flats sells simple donation equipment and a few expensive aspirational clothes. Save for your bus before splurging.':g.location===1?'Ashbrook offers two distinct cult-leader and televangelist styles inspired by your chosen god. Each garment has four skill specializations.':'New York has your god’s most extravagant wardrobe collections, with larger base bonuses and four skill specializations.'],online:['📦 BlessBay Online','Online shopping unlocks after you get premises in New York City.']};
+  const names={charity:['🧥 The Nearly-New Thrift Store','The largest thrift selection is in Cedar Flats. Clothes occupy five independent slots; books are worth taking a study day for.'],highstreet:['🏬 Main Street Outfitters','In Cedar Flats, simple donation gear is sensible; polished clothes are expensive. Your god determines the themed collections in bigger cities.'],online:['📦 BlessBay Online','Online shopping unlocks after you get premises in New York City.']};
   content=`<div class="town-top"><div><span class="eyebrow">${cur==='charity'?'STOCK CHANGES DAILY':cur==='online'?'PREMISES REQUIRED':'UPGRADE YOUR KIT'}</span><h2>${names[cur][0]}</h2><p>${names[cur][1]}</p></div></div>${gated?'<div class="note">🔒 Unlock BlessBay after renting your first hall.</div>':`<div class="stock-grid">${renderStockCards(list)}</div>`}`;
  }
  else if(cur==='schedule'){
@@ -1173,15 +1253,15 @@ function renderTown(){
  }
  else if(cur==='properties'){
   const gated=g.location!==2;
-  content=`<div class="town-top"><div><span class="eyebrow">YOU MUST REACH NEW YORK CITY FIRST</span><h2>🏛️ The Property Office</h2><p>Only a city congregation can rent halls or buy churches. Expenses increase with every upgrade.</p></div></div>${gated?'<div class="note">🔒 Travel first to Ashbrook and then New York City. Your small town and market-town pitches cannot own premises.</div>':`<div class="stock-grid">${VENUES.map((v,i)=>{const unlocked=g.unlocked.includes(v.id),current=g.venue===v.id,prev=VENUES[i-1],nextLegal=i===0||g.unlocked.includes(prev.id),needs=[g.week>=v.week,g.followers>=v.followers,g.dedication>=v.dedication,g.money>=v.price,nextLegal],can=needs.every(Boolean);return `<div class="stock-card ${!can&&!unlocked?'locked':''}"><span class="icon">${v.icon}</span><h3>${esc(v.name)}</h3><p>${esc(v.detail)}</p><div class="tag">Capacity ${num(v.capacity)} · Overhead ${cash(v.upkeep)}/week<br>Week ${v.week}+ · ${num(v.followers)} followers · dedication ${v.dedication}% · ${cash(v.price)}</div><button class="btn" data-property="${v.id}" ${current||(!unlocked&&!can)?'disabled':''}>${current?'✓ Current venue':unlocked?'Return here':can?'Rent / buy '+cash(v.price):'Requirements not met'}</button></div>`;}).join('')}</div>`}`;
+  content=`<div class="town-top"><div><span class="eyebrow">YOU MUST REACH NEW YORK CITY FIRST</span><h2>🏛️ The Property Office</h2><p>Only after acquiring your own premises in New York can you expand audience capacity. Street preaching has no venue cap. Building upgrades increase the potential crowd for each service, never your total followers.</p></div></div>${gated?'<div class="note">🔒 Travel first to Ashbrook and then New York City. Your small town and market-town pitches cannot own premises.</div>':`<div class="stock-grid">${VENUES.map((v,i)=>{const unlocked=g.unlocked.includes(v.id),current=g.venue===v.id,prev=VENUES[i-1],nextLegal=i===0||g.unlocked.includes(prev.id),needs=[g.week>=v.week,g.followers>=v.followers,g.dedication>=v.dedication,g.money>=v.price,nextLegal],can=needs.every(Boolean);return `<div class="stock-card ${!can&&!unlocked?'locked':''}"><span class="icon">${v.icon}</span><h3>${esc(v.name)}</h3><p>${esc(v.detail)}</p><div class="tag">${v.id==='street'?'Open street · No venue cap':'Audience capacity '+num(venueCapacity(v.id))} · Overhead ${cash(v.upkeep)}/week<br>Week ${v.week}+ · ${num(v.followers)} followers · dedication ${v.dedication}% · ${cash(v.price)}</div><button class="btn" data-property="${v.id}" ${current||(!unlocked&&!can)?'disabled':''}>${current?'✓ Current venue':unlocked?'Return here':can?'Rent / buy '+cash(v.price):'Requirements not met'}</button></div>`;}).join('')}</div>${g.venue==='street'?'':(()=>{const id=g.venue,level=venueUpgradeLevel(id),next=VENUE_EXPANSIONS[id]?.[level],capacity=venueCapacity(id);return `<div class="paper venue-extension"><h3>🪑 Expand: ${esc(venue().name)}</h3><p>Premises upgrades increase the maximum number of potential visitors at a single service. They never limit your total followers or recurring donations.</p><div class="profile-numbers"><div><small>CURRENT AUDIENCE CAPACITY</small><b>${num(capacity)}</b></div><div><small>EXPANSION STAGE</small><b>${level} / ${(VENUE_EXPANSIONS[id]||[]).length}</b></div></div>${next?`<p>Next project: <b>${esc(next.label)}</b> · +${num(next.add)} potential visitors · ${cash(next.cost)}.</p><button class="btn gold" data-expand-venue="${id}" ${g.money<next.cost?'disabled':''}>Expand premises · ${cash(next.cost)}</button>`:'<div class="note">Maximum expansion for this property reached. To host even bigger events, move to a larger venue.</div>'}</div>`;})()}`}`;
  }
  else if(cur==='staff'){
   content=`<div class="town-top"><div><span class="eyebrow">PEOPLE COST MONEY</span><h2>🤝 Employment Agency</h2><p>Staff increase income or conversions, but weekly wages apply. One person per role.</p></div></div>${vid(g.venue)===0?'<div class="note">🔒 Rent a hall to hire staff.</div>':''}<div class="stock-grid">${STAFF.map(st=>{const hired=g.staff.includes(st.id),req=vid(g.venue)<vid(st.requires),afford=g.money>=st.cost;return `<div class="stock-card ${req?'locked':''}"><span class="icon">${st.icon}</span><h3>${esc(st.name)}</h3><p>${esc(st.desc)}</p><div class="tag">Hire ${cash(st.cost)} · Wage ${cash(st.wage)}/week</div><button class="btn" data-hire="${st.id}" ${hired||req||!afford?'disabled':''}>${hired?'✓ Hired':req?'Premises needed':!afford?'Not enough cash':'Hire for '+cash(st.cost)}</button></div>`;}).join('')}</div>`;
  }
- else if(cur==='inventory'){
-  content=`<div class="town-top"><div><span class="eyebrow">NO STACKING</span><h2>🎒 Equipment</h2><p>Five separate clothing slots are visible on your preacher. Swap shirts, jackets, trousers, shoes and gloves individually.</p></div></div><div class="inventory-list">${g.inventory.length?g.inventory.map(id=>{const it=item(id);if(!it)return '';const active=g.equipped[canonicalSlot(it)]===id;const condition=it.durability?` · ${g.durability?.[id]??it.durability} weeks left`:'';return `<div class="inv-row"><span>${it.icon}</span><div><b>${esc(it.name)}</b><small>${esc(SLOT_LABEL[canonicalSlot(it)]||'Item')}${condition}</small></div><button class="btn tiny ${active?'subtle':''}" data-equip="${id}" ${active?'disabled':''}>${active?'Equipped':'Equip'}</button></div>`;}).join(''):'<div class="note">Your pockets are empty. Search the dumpsters or check the thrift store.</div>'}</div><div class="note">Overheads ${cash(weeklyCosts())}/week, plus food ${cash(mealCost())}. Books owned ${g.books.length}. Each clothing piece has its own slot: shirt, coat, trousers, shoes and gloves.</div>`;
- }
- else if(cur==='legacy'){
+   else if(cur==='inventory'){
+   content=`<div class="town-top"><div><span class="eyebrow">YOUR LOADOUT</span><h2>🎒 Wardrobe & equipment</h2><p>Choose an owned item from a slot; the preacher and street props update immediately.</p></div></div>${wardrobeHTML()}`;
+  }
+else if(cur==='legacy'){
   let late='';
   if(g.venue!=='mega')late='<div class="note">🔒 The future is not for sale yet. Build a megachurch before you can dream of television campaigns and a private jet.</div>';
   else{
@@ -1242,6 +1322,34 @@ function survive(id){if(g.phase!=='town'||g.townPage!=='survival')return;
   screenToast(id==='shave'?'Freshly shaved!':id==='barber'?'New haircut!':'Clothes are clean again.');
  }
  renderTown();renderHUD();save();maybeOfferTravel();}
+function travelSteps(){
+ if(g.location>=2)return [];
+ const n=g.location+1,needed=n===1?5:9;
+ return [
+  {label:'Bus fare',detail:cash(g.money)+' / '+cash(busFare()),ok:g.money>=busFare()},
+  {label:'Experience',detail:'Week '+g.week+' / '+needed,ok:g.week>=needed},
+  {label:'Body cleanliness',detail:Math.round(g.hygiene)+'% / 65%',ok:g.hygiene>=65},
+  {label:'Clean clothing',detail:Math.round(g.clothesClean)+'% / 60%',ok:g.clothesClean>=60},
+  {label:'Grooming',detail:Math.round(g.grooming)+'% / 58%',ok:g.grooming>=58},
+  {label:'Suitable clothing',detail:g.equipped.shirt||g.equipped.jacket?'Ready':'Wear a shirt or coat',ok:!!(g.equipped.shirt||g.equipped.jacket)}
+ ];
+}
+function openTravelGate(){
+ if(running||studySession){screenToast('Finish the current activity before travelling.');return;}
+ if(g.location>=2){screenToast('You have arrived in New York. Your next goal is your own church.');return;}
+ const dest=LOCATIONS[g.location+1],steps=travelSteps();
+ $('travelGateTitle').textContent='Bus to '+dest.name;
+ $('travelGateIntro').textContent='Fare '+cash(busFare())+'. Travel is always accessible here; meet every requirement to leave town.';
+ $('travelGateChecklist').innerHTML=steps.map(v=>`<div class="travel-check ${v.ok?'ok':''}"><b>${v.ok?'✓':'○'} ${esc(v.label)}</b><span>${esc(v.detail)}</span></div>`).join('');
+ $('travelGateGo').disabled=!steps.every(x=>x.ok);
+ $('travelGateGo').textContent=steps.every(x=>x.ok)?'Take the bus · '+cash(busFare()):'Requirements not met';
+ $('travelGate').classList.remove('hidden');
+}
+function confirmTravelGate(){
+ if(!travelSteps().every(x=>x.ok)||running||studySession)return;
+ $('travelGate').classList.add('hidden');$('notebook').classList.add('hidden');
+ phase('town');g.townPage='survival';travel();
+}
 function maybeOfferTravel(){
  if(running||studySession||g.phase!=='town'||g.venue!=='street')return;
  const check=busCheck();if(!check.eligible)return;
@@ -1249,7 +1357,7 @@ function maybeOfferTravel(){
  const current=LOCATIONS[g.location],next=LOCATIONS[check.next];
  if(!next||!current)return;
  $('travelOfferTitle').textContent='Ready for '+next.name+'?';
- $('travelOfferDescription').textContent='Your clothes are clean, your grooming is good and you have the $75 fare. You can leave '+current.name+' now, or keep building your savings and try again next week.';
+ $('travelOfferDescription').textContent='Your clothes are clean, your grooming is good and you have the '+cash(busFare())+' fare. You can leave '+current.name+' now, or keep building your savings and try again next week.';
  const foodNow=pennies(.43*.90*locationLivingMultiplier(g.location));
  const foodNext=pennies(.43*.90*locationLivingMultiplier(check.next));
  $('travelOfferForecast').innerHTML=`<div><small>TYPICAL PASSERS-BY</small><b>${current.crowd} → ${next.crowd}</b><span>People counted in a day, not all drawn on screen</span></div><div><small>ORDINARY DAILY FOOD</small><b>${cash(foodNow)} → ${cash(foodNext)}</b><span>Food and grooming cost more in larger places</span></div><div><small>BASIC SHAVE</small><b>${cash(groomingCost(1.5))} → ${cash(pennies(1.5*locationLivingMultiplier(check.next)))}</b><span>More visitors could mean higher income, but nothing is guaranteed</span></div>`;
@@ -1340,11 +1448,18 @@ function buy(id){const it=item(id);if(!it||g.phase!=='town'||!['charity','highst
  if(it.book){g.books.push(id);screenToast('Added '+it.name+' to your bag. Spend a full day reading it in Study & Media to earn experience.');}
  else{g.inventory.push(id);g.equipped[canonicalSlot(it)]=id;if(it.slot==='phone')g.phoneBattery=Math.max(g.phoneBattery,48);if(['shirt','jacket','trousers','shoes','gloves'].includes(canonicalSlot(it)))g.clothesClean=94;if(it.durability){g.durability=g.durability||{};g.durability[id]=it.durability;}screenToast(it.name+' equipped. Previous '+SLOT_LABEL[it.slot].toLowerCase()+' bonuses replaced.');}
  renderHUD();renderTown();save();maybeOfferTravel();}
-function equip(id){const it=item(id);if(!it||!owned(id)||g.phase!=='town')return;g.equipped[canonicalSlot(it)]=id;if(it.slot==='phone')g.phoneBattery=Math.max(g.phoneBattery,25);screenToast(it.name+' equipped. Only one '+SLOT_LABEL[it.slot].toLowerCase()+' bonus applies.');renderTown();save();}
+function equip(id){const it=item(id);if(!it||!owned(id)||running||studySession)return;g.equipped[canonicalSlot(it)]=id;if(it.slot==='phone')g.phoneBattery=Math.max(g.phoneBattery,25);screenToast(it.name+' equipped; the change is visible in your character preview.');if(g.phase==='town')renderTown();if(!$('notebook').classList.contains('hidden'))notebook(notebookPage);renderHUD();save();}
 function buyVenue(id){const v=VENUES.find(x=>x.id===id);if(!v||g.phase!=='town'||g.venue===id||g.location!==2)return;
  if(g.unlocked.includes(id)){g.venue=id;screenToast('Moved back to '+v.name+'. Weekly overhead changed.');}
  else{const i=vid(id);if(i<1||!g.unlocked.includes(VENUES[i-1].id)||g.week<v.week||g.followers<v.followers||g.dedication<v.dedication||g.money<v.price)return;g.money-=v.price;g.venue=id;g.unlocked.push(id);screenToast('New premises: '+v.name+'! Remember the running costs.');}
  renderHUD();renderTown();save();}
+function expandVenue(id){
+ if(g.phase!=='town'||g.location!==2||g.venue==='street'||id!==g.venue||!g.unlocked.includes(id))return;
+ const level=venueUpgradeLevel(id),next=VENUE_EXPANSIONS[id]?.[level];if(!next||g.money<next.cost)return;
+ g.money=pennies(g.money-next.cost);g.venueUpgrades[id]=level+1;
+ screenToast(`${next.label} complete. ${venue().name} can now accommodate ${num(venueCapacity())} potential visitors per service; follower numbers remain unlimited.`);
+ renderTown();renderHUD();save();
+}
 function hire(id){const s=STAFF.find(x=>x.id===id);if(!s||g.phase!=='town'||g.staff.includes(id)||vid(g.venue)<vid(s.requires)||g.money<s.cost)return;g.money-=s.cost;g.staff.push(id);screenToast('Hired '+s.name+'. Weekly salary: '+cash(s.wage));renderTown();renderHUD();save();}
 let notebookPage='stats';
 const COHORT_TITLES={curious:'Curious newcomers',regular:'Regular believers',devoted:'Devoted followers',patron:'Wealthy patrons'};
@@ -1362,17 +1477,44 @@ function congregationHTML(){
 function financeHTML(){
  const ledger=(g.dailyLedger||[]).slice(0,7),income=pennies(ledger.reduce((a,b)=>a+(b.income||0),0)),out=pennies(ledger.reduce((a,b)=>a+(b.cost||0),0));
  return `<div class="paper"><h3>💵 Money and your next milestone</h3><div class="profile-numbers"><div><small>BALANCE</small><b>${cash(g.money)}</b></div><div><small>7-DAY REVENUE</small><b>${cash(income)}</b></div><div><small>7-DAY COSTS</small><b>${cash(out)}</b></div></div>
- ${g.location<2?`<h3>🚌 Save for ${esc(LOCATIONS[g.location+1].name)}</h3><p>The bus costs ${cash(busFare())}. You also need clean clothing, appropriate grooming and enough experience to leave town.</p><div class="savings-track"><i style="width:${Math.min(100,Math.round(g.money/busFare()*100))}%"></i></div><b>${cash(g.money)} / ${cash(busFare())}</b>`:'<p>You have arrived in New York. Premises now become part of your long-term goals.</p>'}
+ ${g.location<2?`<h3>🚌 Save for ${esc(LOCATIONS[g.location+1].name)}</h3><p>The bus costs ${cash(busFare())}. You also need clean clothing, appropriate grooming and enough experience to leave town.</p><div class="savings-track"><i style="width:${Math.min(100,Math.round(g.money/busFare()*100))}%"></i></div><b>${cash(g.money)} / ${cash(busFare())}</b><div style="margin-top:10px"><button class="btn gold full" data-act="openTravelGate">🚌 ${g.money>=busFare()?"CHECK TRAVEL REQUIREMENTS →":"VIEW JOURNEY & REQUIREMENTS →"}</button></div>`:'<p>You have arrived in New York. Premises now become part of your long-term goals.</p>'}
  <p>Daily food: ${cash(mealCost())} · Daily operating costs: ${cash(dailyCosts())}. Your existing congregation helps pay these even on study days.</p></div>${journalHTML()}`;
 }
-function characterHTML(){
- const total=totalSkillLevels(),next=(Math.floor(total/5)+1)*5;
- return `<div class="paper"><div class="character-summary"><div class="character-avatar">${deity().symbol}</div><div style="flex:1"><h3>🧍 ${esc(g.leader)}</h3><p>${deity().name} · ${esc(area().name)} · Born Again ×${g.rebirths}</p><p>Body ${Math.round(g.hygiene)}% · Clothing ${Math.round(g.clothesClean)}% · Grooming ${Math.round(g.grooming)}%</p></div></div>
- <div class="profile-numbers"><div><small>COMBINED SKILL LEVEL</small><b>${total}</b></div><div><small>TO NEXT MILESTONE</small><b>${next-total}</b></div><div><small>UNSPENT SKILL POINTS</small><b>${unspentPoints()}</b></div></div>
- <button class="btn gold full" data-notebook-page="tree">🌳 OPEN BRANCHING SKILL TREES · ${unspentPoints()} POINTS</button></div>
- <div class="skill-cards">${SKILLS.map(k=>{const x=xpProgress(g.xp[k]);return `<button class="skill-card" data-skill="${k}"><div class="stat-title"><b>${SKILL_INFO[k].icon} ${esc(SKILL_INFO[k].label)} ⓘ</b><b>Level ${skill(k)}</b></div><div class="bar"><i style="width:${x.pct}%"></i></div><p>${g.xp[k]} XP · ${Math.max(0,x.max-g.xp[k])} to next trained level. ${esc(SKILL_INFO[k].tag)}.</p></button>`}).join('')}</div>
- <div class="paper"><h3>🎒 Equipped</h3><p>${Object.entries(SLOT_LABEL).map(([slot,label])=>`<b>${esc(label)}</b>: ${esc(item(g.equipped[slot])?.name||'Empty')}`).join(' · ')}</p></div>`;
-}
+  let wardrobeSlot='shirt';
+  const WEAR_SLOTS=[['shirt','👕','Shirt / T-shirt'],['jacket','🧥','Coat / jacket'],['trousers','👖','Trousers'],['shoes','👞','Shoes'],['gloves','🧤','Gloves'],['accessory','🎒','Accessory']];
+  const STREET_SLOTS=[['platform','🪜','Platform'],['sign','🪧','Sign'],['collection','🥤','Collection cup'],['voice','📣','Amplification'],['welcome','☕','Hospitality'],['seating','🪑','Seating'],['phone','📱','Mobile phone'],['weather','☂️','Weather cover']];
+  function wardrobePreviewSVG(){
+   const color=(slot,fallback)=>item(g.equipped[slot])?.wardrobeColor||fallback;
+   const shirt=color('shirt','#ae947a'),jacket=color('jacket','#7a6955'),trousers=color('trousers','#5c6570'),shoes=color('shoes','#6c4e39'),gloves=color('gloves','#c3926b');
+   const hasCoat=!!g.equipped.jacket,hasGloves=!!g.equipped.gloves,hasAcc=!!g.equipped.accessory;
+   const scruffy=g.grooming<75,skin='#d5a179';
+   return `<svg viewBox="0 0 240 310" role="img" aria-label="Your preacher with current shirt, coat, trousers, shoes and gloves"><ellipse cx="120" cy="297" rx="75" ry="8" fill="#344551" opacity=".25"/><g stroke="#3a3433" stroke-width="3.5" stroke-linejoin="round">
+   <path d="M88 180 L85 269 L112 269 L121 221 L132 269 L158 269 L154 180Z" fill="${trousers}"/>
+   <path d="M83 262 L111 262 L115 286 Q105 292 78 287 Z M132 262 L159 262 L165 287 Q144 293 129 286 Z" fill="${shoes}"/>
+   <path d="M91 101 Q67 108 62 150 L52 199 L72 208 L94 157 L98 197 L146 197 L149 158 L172 207 L190 200 L181 145 Q173 112 149 101Z" fill="${shirt}"/>
+   ${hasCoat?`<path d="M90 100 Q76 106 71 126 L59 199 L72 205 L92 147 L101 197 L119 197 L113 117 L127 117 L124 197 L146 197 L151 147 L171 205 L185 200 L175 123 Q169 106 147 100Z" fill="${jacket}"/><path d="M111 104 L119 136 L127 104" fill="#e3ceb0"/>`:''}
+   <rect x="109" y="91" width="23" height="24" rx="8" fill="${skin}"/>
+   <path d="M88 59 Q85 21 121 21 Q160 21 156 64 L153 94 L139 110 L103 110 L90 96Z" fill="#514034"/>
+   <ellipse cx="121" cy="68" rx="31" ry="40" fill="${skin}"/>
+   <path d="M90 58 Q84 27 106 24 Q119 8 129 23 Q153 17 157 44 L150 61 Q138 42 129 39 Q113 59 90 58Z" fill="#594132"/>
+   ${scruffy?`<path d="M90 72 Q84 99 102 118 Q119 135 139 119 Q159 99 153 72 L142 93 L131 91 L120 100 L109 90Z" fill="#5a4030"/>`:`<path d="M100 87 Q120 112 143 87" stroke="#604635" fill="none" stroke-width="6"/>`}
+   <path d="M103 68 L113 68 M130 68 L140 68" stroke="#41372f" stroke-width="3.5"/><circle cx="109" cy="72" r="2" fill="#262e32" stroke="none"/><circle cx="134" cy="72" r="2" fill="#262e32" stroke="none"/>
+   <path d="M119 75 L117 85 M113 94 Q121 98 130 94" fill="none" stroke="#7c5847" stroke-width="2.3"/>
+   <circle cx="56" cy="201" r="9" fill="${hasGloves?gloves:skin}"/><circle cx="186" cy="200" r="9" fill="${hasGloves?gloves:skin}"/>
+   ${hasAcc?'<path d="M152 121 Q186 121 182 175 L151 184" stroke="#674e3b" fill="none" stroke-width="7"/>':''}
+   </g><text x="120" y="306" text-anchor="middle" font-size="10" fill="#2a3e40" font-weight="700">${esc(g.leader)}</text></svg>`;
+  }
+  function slotGrid(slots){return `<div class="wardrobe-slot-grid">${slots.map(([key,icon,label])=>{const it=item(g.equipped[key]);return `<button class="wardrobe-slot ${wardrobeSlot===key?'active':''}" data-wardrobe-slot="${key}"><span class="slot-symbol">${icon}</span><span style="min-width:0"><strong>${esc(label)}</strong><small>${esc(it?.name||'Empty slot')}</small></span></button>`;}).join('')}</div>`;}
+  function selectedWardrobe(){const info=[...WEAR_SLOTS,...STREET_SLOTS].find(s=>s[0]===wardrobeSlot)||WEAR_SLOTS[0],ownedItems=g.inventory.map(item).filter(it=>it&&canonicalSlot(it)===wardrobeSlot);return `<div class="paper"><h3>${info[1]} ${esc(info[2])}</h3><p>Tap an owned item to equip it. Clothing changes your character and the active buffs; street equipment changes the sermon scene.</p><div class="wardrobe-select">${ownedItems.length?ownedItems.map(it=>{const active=g.equipped[wardrobeSlot]===it.id;return `<button class="btn ${active?'subtle':'gold'}" data-equip="${it.id}" ${active?'disabled':''}><b>${it.icon} ${esc(it.name)}</b><small>${it.skillBoost?'+'+it.skillBoostAmount+' '+it.skillBoost+' · ':''}${it.stop?'+'+Math.round(it.stop*100)+'% stop · ':''}${it.conv?'+'+Math.round(it.conv*100)+'% conversion':''}</small><small>${active?'✓ Equipped':'Equip now'}</small></button>`}).join(''):'<div class="note">Nothing owned in this slot yet. Check the thrift store and Main Street shop.</div>'}</div></div>`;}
+  function wardrobeHTML(){return `<div class="wardrobe-layout"><div class="wardrobe-portrait">${wardrobePreviewSVG()}</div><div class="wardrobe-panels"><div class="paper"><h3>🧥 Wardrobe</h3>${slotGrid(WEAR_SLOTS)}</div><div class="paper"><h3>🪧 Street equipment</h3>${slotGrid(STREET_SLOTS)}</div></div></div>${selectedWardrobe()}`;}
+  function characterHTML(){
+   const total=totalSkillLevels(),next=(Math.floor(total/5)+1)*5;
+   return `<div class="paper"><div class="character-summary"><div class="character-avatar">${deity().symbol}</div><div style="flex:1"><h3>🧍 ${esc(g.leader)}</h3><p>${deity().name} · ${esc(area().name)} · Born Again ×${g.rebirths}</p><p>Body ${Math.round(g.hygiene)}% · Clothing ${Math.round(g.clothesClean)}% · Grooming ${Math.round(g.grooming)}%</p></div></div>
+   <div class="profile-numbers"><div><small>COMBINED SKILL LEVEL</small><b>${total}</b></div><div><small>TO NEXT MILESTONE</small><b>${next-total}</b></div><div><small>UNSPENT SKILL POINTS</small><b>${unspentPoints()}</b></div></div>
+   <button class="btn gold full" data-notebook-page="tree">🌳 OPEN BRANCHING SKILL TREES · ${unspentPoints()} POINTS</button></div>
+   ${wardrobeHTML()}
+   <div class="skill-cards">${SKILLS.map(k=>{const x=xpProgress(g.xp[k]);return `<button class="skill-card" data-skill="${k}"><div class="stat-title"><b>${SKILL_INFO[k].icon} ${esc(SKILL_INFO[k].label)} ⓘ</b><b>Level ${skill(k)}</b></div><div class="bar"><i style="width:${x.pct}%"></i></div><p>${g.xp[k]} XP · ${Math.max(0,x.max-g.xp[k])} to next trained level. ${esc(SKILL_INFO[k].tag)}.</p></button>`}).join('')}</div>`;
+  }
 function treeHTML(){
  return `<div class="paper"><h3>🌳 Skill Trees</h3><p>Every time your <b>combined effective skill levels</b> pass another multiple of 5, earn one ability point. Spend points on one of two branches within each skill. Higher-tier perks require the earlier perk in their branch.</p>
  <div class="profile-numbers"><div><small>CURRENT SKILL LEVEL TOTAL</small><b>${totalSkillLevels()}</b></div><div><small>POINTS EARNED</small><b>${earnedAbilityPoints()}</b></div><div><small>AVAILABLE</small><b>${unspentPoints()}</b></div></div></div>
@@ -1423,21 +1565,180 @@ function finishStudy(){if(!studySession)return;const a=studySession;studySession
  const food=mealCost(),overhead=dailyCosts(),due=pennies(food+overhead);const covered=g.money>=due;g.money=pennies(Math.max(0,g.money-due));g.hunger=covered?Math.max(0,g.hunger-1):Math.min(6,g.hunger+1);
  g.hygiene=clamp(g.hygiene-1.3,0,100);g.clothesClean=clamp(g.clothesClean-1.1,0,100);g.grooming=clamp(g.grooming-1.15,0,100);
  const flock=maintainFlock({preached:false});const lost=flock.lost;
- g.dedication=clamp(g.dedication-(g.followers>0?.12:0),8,93);
+ g.dedication=clamp(g.dedication-(g.followers>0?.095:0)+(g.followers>=15?.045:0),8,93);
  const spent=pennies(cashBefore+supporters.total-g.money);const outcome={isStudy:true,day:g.day,weekday:dayName(),title:a.title,subtitle:a.subtitle,kind:a.kind,xpgains:xp,cost:spent,donations:supporters.total,food,overhead,other:a.expense,balance:g.money,missing:!covered,lost,studyMessage:a.kind==='phone'?'You learned from parody clips instead of preaching. Your established supporters may still contribute.':a.kind==='book'?'Reading broadened your skills. No passer-by income or recruits today, but your supporters still help.':'The battery is full again. Existing supporters may still give while you charge.'};
  recordLedgerDay({day:outcome.day,kind:'study',net:pennies(supporters.total-a.expense-food-overhead),income:supporters.total,cost:pennies(a.expense+food+overhead)});g.day++;g.week=weekNumber();g.lastStudyDay=outcome.day;g.studyLog=[outcome.title,...(g.studyLog||[])].slice(0,8);report=outcome;phase('results');renderResults();save();
 }
 
+function exportSave(){
+ try{save();const data={format:'street-pastor-career',exported:new Date().toISOString(),saveVersion:g.version,career:g};
+ const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');
+ a.href=url;a.download='street-pastor-career-'+dateLabel(g.day,true).replace(/[^a-z0-9]/gi,'-')+'.json';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),10000);
+ screenToast('Save exported. Keep the JSON file safe.');}catch(e){screenToast('Could not export this save.');}
+}
+async function importSaveFile(file){
+ if(!file)return;
+ try{const raw=JSON.parse(await file.text()),career=raw?.format==='street-pastor-career'?raw.career:raw;
+ if(!career||career.version!==5||typeof career.money!=='number'||!career.xp||!career.equipped||!career.chosen||!career.started)throw Error('Invalid save file');
+ if(!confirm('Replace the current local career with the selected backup?'))return;
+ try{localStorage.setItem(SAVE+'-backup-before-import',localStorage.getItem(SAVE)||'');}catch(e){}
+ localStorage.setItem(SAVE,JSON.stringify(career));location.reload();
+ }catch(e){screenToast('That file is not a valid Street Pastor career backup.');}
+}
+async function toggleFullscreen(){
+ try{if(document.fullscreenElement){await document.exitFullscreen();return;}
+ if(document.documentElement.requestFullscreen){await document.documentElement.requestFullscreen();return;}
+ }catch(e){}
+ screenToast('On iPhone: Safari Share → Add to Home Screen → Open as Web App.');
+}
 function reset(){if(running||studySession)return;if(!window.confirm('Start a completely new career? This also erases Born Again bonuses from the current save.'))return;localStorage.removeItem(SAVE);g=fresh();report=null;people=[];running=false;selected='venus';$('notebook').classList.add('hidden');$('app').classList.add('hidden');$('intro').classList.add('hidden');$('welcome').classList.remove('hidden');renderDeities();}
 const coats=['#ae6653','#59928e','#7a81b0','#c6a163','#8576a2','#72976b','#9a6c57','#7f9393'],skins=['#f1c498','#dca57c','#af7459','#8e5842','#dfaf89'],hair=['#42332d','#7d4e35','#c09852','#31363f'];
-function rndPerson(v){return {x:rand(925,990),y:rand(436,470),size:rand(.60,.86),speed:rand(115,164),skin:pick(skins),hair:pick(hair),coat:pick(coats),longHair:Math.random()<.39,glasses:Math.random()<.22,beard:Math.random()<.23,hat:Math.random()<.16,bag:Math.random()<.25,wait:0,bubble:null,status:'walk',decision:v,checked:false,seen:0,stagger:rand(0,10)};}
-function say(line){return (window.SP_I18N?.t(line)||line).replace(/\{god\}/g,window.SP_I18N?.t(deity().name)||deity().name);}
+function rndPerson(v){return {x:rand(925,990),y:rand(436,470),size:rand(.60,.86),speed:rand(115,164),skin:pick(skins),hair:pick(hair),coat:pick(coats),longHair:Math.random()<.39,glasses:Math.random()<.22,beard:Math.random()<.23,hat:Math.random()<.23,bag:Math.random()<.34,wait:0,bubble:null,status:'walk',decision:v,checked:false,seen:0,stagger:rand(0,10)};}
+function say(line){return (window.SP_I18N?.language==='zh'&&EXTRA_ZH_LINES?.[line]||window.SP_I18N?.t(line)||line).replace(/\{god\}/g,window.SP_I18N?.t(deity().name)||deity().name);}
 const TOPIC_SPEECH={
  prosperity:['I could make something of myself. So could you.','Picture our future in first class.','A wealthy leader is an inspirational leader, right?'],
  community:['You belong here, and everyone will know my name!','Our movement starts with the people who show up.'],
  wonders:['I have seen a sign: it was a billboard with my face on it!','I had a miraculous vision of a very large audience!'],
  wisdom:['Great leaders listen before they take the microphone.','The wisest business is believing in yourself.'],
  charity:['Kindness is free. Branding, sadly, is not.','I believe in helping the town, starting with listening.']
+};
+// v0.9.7: new short, perspective-correct lines; repeated speech is randomized by subject.
+TOPIC_SPEECH.prosperity.push(
+ 'I used to count pennies. Now I count possibilities.',
+ 'I am not promising riches; I am presenting a very ambitious vision.',
+ 'I have plans bigger than this sidewalk, and perhaps bigger than my budget.',
+ 'If prosperity is a blessing, I intend to become exceptionally blessed.');
+TOPIC_SPEECH.community.push(
+ 'I know what it feels like to be overlooked. That changes today.',
+ 'I want to build a place where no one has to stand alone.',
+ 'I have only a few followers, but I have a spectacular amount of confidence.',
+ 'I am starting with a conversation, not a cathedral.');
+TOPIC_SPEECH.wonders.push(
+ 'I cannot promise a miracle today, but I can offer a convincing introduction.',
+ 'I saw a strange light last night. It may have been a traffic signal.',
+ 'I believe there is more to this world than my tiny bank balance.',
+ 'If you have seen the impossible, I would very much like to hear about it.');
+TOPIC_SPEECH.wisdom.push(
+ 'I have learned a great deal from books that cost less than a sandwich.',
+ 'I do not know everything. I am working on sounding like I do.',
+ 'I am collecting questions faster than I can find answers.',
+ 'I listened to a wise person once. I should try that again.');
+TOPIC_SPEECH.charity.push(
+ 'I would rather give someone hope than another empty promise.',
+ 'I know generosity matters more when your pockets are nearly empty.',
+ 'I am asking you to help your neighbor before you help my ambitions.',
+ 'I believe kindness should be useful, not just impressive.');
+AUDIENCE.push(
+ 'I have a question. Where would my donation actually go?',
+ 'I am interested, but I want to understand your beliefs first.',
+ 'I have walked past three times now. Why are you still here?',
+ 'If I joined, what would I actually do?',
+ 'I like the enthusiasm. Is there a quieter version?',
+ 'Do you have a meeting place, or is this it?',
+ 'I am curious about your symbol. What does it mean?',
+ 'I am listening, but I do not have much time.',
+ 'What makes your movement different from the others?',
+ 'Have you ever considered a less dramatic opening?');
+REJECT.push(
+ 'I am late for work. Please move your sign.',
+ 'I have enough subscriptions already!',
+ 'No thank you. I came out for a coffee.',
+ 'I liked the bit before you mentioned donations.',
+ 'I cannot tell whether this is a sermon or an audition.',
+ 'I am keeping my wallet right where it is.',
+ 'I would prefer to hear the traffic, actually.',
+ 'I came for groceries, not a personal revelation.');
+CONVERT.push(
+ 'I think I will come back tomorrow.',
+ 'You are strange, but I want to learn more.',
+ 'I like the part about looking after each other.',
+ 'I have been looking for somewhere to belong.',
+ 'I will bring a friend next time.',
+ 'I am not convinced yet, but I will listen again.',
+ 'I think your ideas are worth discussing.',
+ 'Count me in. For now.');
+DECLINE.push(
+ 'I am not ready to commit.',
+ 'I need to think about what you said.',
+ 'I like the message, but the donation pitch was too much.',
+ 'I will take a flyer, not a membership.',
+ 'I have somewhere to be. Maybe next time.',
+ 'I hope it works out for you, but I am passing.');
+SERMON_MIDDLES.push(
+ 'I have an answer, or at least a very determined question.',
+ 'I am not here to judge anyone. I am here to build a following.',
+ 'I appreciate every listener. I appreciate donors even more.',
+ 'I used to be ignored in silence. Now I am ignored with a microphone.',
+ 'I have a plan, and my plan has a surprisingly small budget.',
+ 'I welcome skeptics. They make the eventual applause more satisfying.',
+ 'I am learning every day, including from people who walk away.',
+ 'I can promise one thing: you will remember this sign.');
+const EXTRA_ZH_LINES={
+ 'I’ll give you a dollar to stop shouting at my sandwich.':'给你一美元，别再对着我的三明治喊了。',
+ 'Here’s fifty cents. Please stop describing my aura.':'给你五十美分，请别再描述我的气场了。',
+ 'I’ll give you a quarter to leave my dog out of your prophecy.':'给你二十五美分，别把我的狗扯进预言里。',
+ 'Take seventy-five cents and leave me out of this.':'拿着这七十五美分，别再扯上我了。',
+ 'I’ll pay you two dollars to stop pointing at me.':'我给你两美元，别再指着我了。',
+ 'I used to count pennies. Now I count possibilities.':'我以前数零钱，现在数的是机会。',
+ 'I am not promising riches; I am presenting a very ambitious vision.':'我不保证大家发财，但我的愿景确实很宏大。',
+ 'I have plans bigger than this sidewalk, and perhaps bigger than my budget.':'我的计划比这条人行道大，恐怕也比我的预算大。',
+ 'If prosperity is a blessing, I intend to become exceptionally blessed.':'如果富裕是一种祝福，那我打算得到特别多的祝福。',
+ 'I know what it feels like to be overlooked. That changes today.':'我知道被人忽视是什么感觉，从今天起要改变了。',
+ 'I want to build a place where no one has to stand alone.':'我想建立一个不让任何人孤单的地方。',
+ 'I have only a few followers, but I have a spectacular amount of confidence.':'我的信徒不多，但我的自信多得惊人。',
+ 'I am starting with a conversation, not a cathedral.':'我先从交谈开始，而不是从大教堂开始。',
+ 'I cannot promise a miracle today, but I can offer a convincing introduction.':'我今天不能保证有奇迹，但开场白一定有说服力。',
+ 'I saw a strange light last night. It may have been a traffic signal.':'昨晚我看见一道怪光，可能只是交通信号灯。',
+ 'I believe there is more to this world than my tiny bank balance.':'我相信世界远不止我那点可怜的存款。',
+ 'If you have seen the impossible, I would very much like to hear about it.':'如果你见过不可思议的事，我很想听听。',
+ 'I have learned a great deal from books that cost less than a sandwich.':'我从比三明治还便宜的书里学到了很多。',
+ 'I do not know everything. I am working on sounding like I do.':'我不是什么都懂，但我正在练习装得很懂。',
+ 'I am collecting questions faster than I can find answers.':'我收集问题的速度比找到答案还快。',
+ 'I listened to a wise person once. I should try that again.':'我曾听过智者讲话，也许该多听几次。',
+ 'I would rather give someone hope than another empty promise.':'比起空头承诺，我更愿意给别人希望。',
+ 'I know generosity matters more when your pockets are nearly empty.':'我知道口袋快空的时候，慷慨才更难得。',
+ 'I am asking you to help your neighbor before you help my ambitions.':'我请你先帮助邻居，再考虑支持我的野心。',
+ 'I believe kindness should be useful, not just impressive.':'我相信善意应该真正帮到人，而不只是好看。',
+ 'I have a question. Where would my donation actually go?':'我有个问题：我的捐款究竟会用到哪里？',
+ 'I am interested, but I want to understand your beliefs first.':'我有兴趣，但想先弄清楚你信什么。',
+ 'I have walked past three times now. Why are you still here?':'我已经路过三次了，你怎么还在这里？',
+ 'If I joined, what would I actually do?':'如果我加入，具体要做些什么？',
+ 'I like the enthusiasm. Is there a quieter version?':'我喜欢你的热情，但能不能小声一点？',
+ 'Do you have a meeting place, or is this it?':'你有固定聚会地点吗，还是就在这里？',
+ 'I am curious about your symbol. What does it mean?':'我很好奇你的标志是什么意思。',
+ 'I am listening, but I do not have much time.':'我在听，不过时间不多。',
+ 'What makes your movement different from the others?':'你的组织和其他的有什么不同？',
+ 'Have you ever considered a less dramatic opening?':'你考虑过没那么夸张的开场吗？',
+ 'I am late for work. Please move your sign.':'我上班快迟到了，请把牌子挪开。',
+ 'I have enough subscriptions already!':'我订阅的东西已经够多了！',
+ 'No thank you. I came out for a coffee.':'不了，谢谢，我只是出来买咖啡的。',
+ 'I liked the bit before you mentioned donations.':'你提捐款之前，我还挺喜欢的。',
+ 'I cannot tell whether this is a sermon or an audition.':'我分不清这是布道还是试镜。',
+ 'I am keeping my wallet right where it is.':'我的钱包可不会拿出来。',
+ 'I would prefer to hear the traffic, actually.':'说真的，我宁愿听车流声。',
+ 'I came for groceries, not a personal revelation.':'我是来买菜的，不是来接受启示的。',
+ 'I think I will come back tomorrow.':'我想明天还会再来。',
+ 'You are strange, but I want to learn more.':'你挺奇怪的，但我还想了解更多。',
+ 'I like the part about looking after each other.':'我喜欢你说的互相关照。',
+ 'I have been looking for somewhere to belong.':'我一直想找到一个归属。',
+ 'I will bring a friend next time.':'下次我会带朋友来。',
+ 'I am not convinced yet, but I will listen again.':'我还没被说服，但愿意再听一次。',
+ 'I think your ideas are worth discussing.':'我觉得你的想法值得讨论。',
+ 'Count me in. For now.':'算我一个，暂时的。',
+ 'I am not ready to commit.':'我还没准备好加入。',
+ 'I need to think about what you said.':'我得想想你说的话。',
+ 'I like the message, but the donation pitch was too much.':'理念不错，但劝捐有点过头了。',
+ 'I will take a flyer, not a membership.':'我可以拿张传单，但不会加入。',
+ 'I have somewhere to be. Maybe next time.':'我还有事，下次吧。',
+ 'I hope it works out for you, but I am passing.':'希望你顺利，但我就不参加了。',
+ 'I have an answer, or at least a very determined question.':'我有答案，至少也有一个很坚定的问题。',
+ 'I am not here to judge anyone. I am here to build a following.':'我不是来评判大家的，我是来发展信徒的。',
+ 'I appreciate every listener. I appreciate donors even more.':'我感谢每位听众，对捐款的人尤其感谢。',
+ 'I used to be ignored in silence. Now I am ignored with a microphone.':'以前大家安静地忽视我，现在我拿着话筒也一样。',
+ 'I have a plan, and my plan has a surprisingly small budget.':'我有个计划，可惜预算小得惊人。',
+ 'I welcome skeptics. They make the eventual applause more satisfying.':'我欢迎怀疑者，这会让将来的掌声更甜美。',
+ 'I am learning every day, including from people who walk away.':'我每天都在学习，包括向转身走掉的人学习。',
+ 'I can promise one thing: you will remember this sign.':'有一点我敢保证：你会记住这块牌子。'
 };
 function sermonText(){return say(Math.random()<.65?pick(TOPIC_SPEECH[g.plan.topic]):pick(SERMON_MIDDLES));}
 
@@ -1475,64 +1776,72 @@ function line(x1,y1,x2,y2,color,width){ctx.beginPath();ctx.moveTo(x1,y1);ctx.lin
 function text(str,x,y,size=16,color='#fff',weight=700,align='center'){ctx.fillStyle=color;ctx.font=`${weight} ${size}px system-ui,-apple-system,sans-serif`;ctx.textAlign=align;ctx.textBaseline='middle';ctx.fillText(window.SP_I18N?.t(str)||str,x,y);}
 function gradient(a,b,stopy=H){const g=ctx.createLinearGradient(0,0,0,stopy);g.addColorStop(0,a);g.addColorStop(1,b);return g;}
 function drawStreet(){
- const village=g.location===0,town=g.location===1;
- ctx.fillStyle=gradient(village?'#b8d5d5':town?'#aebac7':'#9ab9cb',village?'#f3dfb5':'#efceb1');ctx.fillRect(0,0,W,H);
- // More open, less cluttered shops; leave space between the character and passers-by.
- if(village){rr(0,148,260,208,5,'#be987e');rr(312,128,275,230,5,'#dcc2a2');rr(646,151,254,210,5,'#b59b8b');}
- else{rr(0,92,280,265,5,'#c8a185');rr(305,78,285,280,5,'#dfc5a5');rr(632,94,268,264,5,'#c1a38a');}
- // Painted graphic-novel texture: brickwork, shade, trim and storefront awnings.
- for(const [left,right,base] of [[0,259,'#ad725d'],[312,586,'#bea583'],[646,899,'#9b7464']]){
-  ctx.save();ctx.globalAlpha=village?.25:.19;ctx.strokeStyle=base;ctx.lineWidth=1.1;
-  for(let y=village?162:100;y<311;y+=19){ctx.beginPath();ctx.moveTo(left,y);ctx.lineTo(right,y);ctx.stroke();for(let x=left+(Math.floor(y/19)%2?0:24);x<right;x+=48){ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x,y+19);ctx.stroke();}}
+ const village=g.location===0,town=g.location===1,city=g.location===2;
+ const sky=ctx.createLinearGradient(0,0,0,370);sky.addColorStop(0,village?'#b5cfce':town?'#b3c9ce':'#a1bbc9');sky.addColorStop(1,village?'#e4dbc0':town?'#d6cec4':'#d5d0bf');ctx.fillStyle=sky;ctx.fillRect(0,0,900,490);
+ // Distant tree line and softened rooftops; the character remains the focus.
+ for(let i=0;i<13;i++){const x=i*80-20;ellipse(x,260+(i%4)*8,67,36,village?'#91a49b85':town?'#7e999b82':'#7390a09a');}
+ if(city){for(let i=0;i<13;i++){const x=i*77-17,h=70+(i%5)*17;rr(x,184-h,66,h,0,i%2?'#7a929a':'#718a93');for(let j=0;j<4;j++)for(let k=0;k<2;k++)rr(x+10+k*29,195-h+j*17,9,7,1,'#dbc9a788');}}
+ // Utility poles and wires are behind the buildings.
+ line(594,84,594,343,'#6f736c',5);line(571,111,618,111,'#6f736c',4);
+ ctx.save();ctx.strokeStyle='#6d7e7d88';ctx.lineWidth=1.6;ctx.beginPath();ctx.moveTo(0,97);ctx.bezierCurveTo(250,148,465,76,900,118);ctx.stroke();ctx.restore();
+ // Three separate structures, each with a different roofline, trim and facade.
+ const a=village?{wall:'#b98e77',dark:'#805c51',trim:'#665e54'}:town?{wall:'#b98f80',dark:'#946d5b',trim:'#665953'}:{wall:'#a38c83',dark:'#725e66',trim:'#66545e'};
+ const b=village?{wall:'#d3b69b',dark:'#aa7167',trim:'#72635a'}:town?{wall:'#c5ac96',dark:'#9c8a78',trim:'#685d53'}:{wall:'#bba7a2',dark:'#836d78',trim:'#655967'};
+ const d=village?{wall:'#b6a096',dark:'#81786e',trim:'#655e56'}:town?{wall:'#b6a49b',dark:'#806d64',trim:'#595c58'}:{wall:'#9c969c',dark:'#656d74',trim:'#4e5563'};
+ // Village store with worn parapet and deep inset entrance.
+ rr(0,122,268,230,0,a.wall);rr(0,113,268,17,0,a.dark);rr(0,108,268,6,0,a.trim);for(let x=13;x<260;x+=30)rr(x,120,19,4,0,'#cfb4a1');
+ // Diner roofline makes an entirely different silhouette.
+ rr(294,150,314,205,0,b.wall);rr(296,137,314,16,5,b.dark);rr(314,125,278,19,5,b.trim);rr(319,121,267,5,2,'#e1bfa0');
+ // Community building has arched windows and upper cornice.
+ rr(626,127,274,229,0,d.wall);rr(626,118,274,13,0,d.dark);rr(634,112,258,9,2,d.trim);for(let x=640;x<897;x+=33)rr(x,121,22,4,0,'#c8b3a3');
+ // Sparse brickwork; repeatable, muted marks rather than noisy image textures.
+ for(const [x0,x1,y0,wcolor] of [[0,267,137,'#805f5388'],[294,607,166,'#92735d55'],[626,900,146,'#776c6a80']]){
+  ctx.save();ctx.strokeStyle=wcolor;ctx.globalAlpha=.32;ctx.lineWidth=1;
+  for(let y=y0;y<290;y+=22){line(x0+6,y,x1-8,y,wcolor,1);for(let x=x0+((y-y0)/22%2?17:37);x<x1;x+=58)line(x,y,x,y+21,wcolor,1);}
   ctx.restore();
  }
- for(const [x,w] of [[21,227],[312,282],[641,245]]){
-  rr(x,295,w,13,2,'#72564b','#9e7c60',1);
-  for(let i=0;i<Math.floor(w/23);i++)rr(x+i*23,306,22,16,1,i%2?'#e8cbbb':'#aa5b57');
+ function windowPanel(x,y,w,h,lights=false){rr(x,y,w,h,5,'#536b72','#47545c',4);rr(x+8,y+8,w-16,h-16,3,lights?'#bdc8b7':'#a8c9cb');
+   // Side glazing with subtle reflection.
+   ctx.save();ctx.fillStyle='#e6e8d144';ctx.beginPath();ctx.moveTo(x+12,y+12);ctx.lineTo(x+w*.45,y+12);ctx.lineTo(x+w*.24,y+h-12);ctx.lineTo(x+12,y+h-12);ctx.fill();ctx.restore();
+   line(x+w*.52,y+8,x+w*.52,y+h-9,'#68818a',3);
  }
- for(const [x,y,w,h] of [[43,178,90,114],[174,178,67,114],[353,155,91,112],[482,156,75,112],[679,177,75,116],[795,179,76,113]]){rr(x,y,w,h,4,'#829aa6','#4f6370',5);rr(x+11,y+11,w-22,h-22,3,'#c2d3d3');line(x+w*.52,y+9,x+w*.52,y+h-9,'#647d83',4);}
- rr(0,345,900,145,0,'#bcb2a0');rr(0,345,900,9,0,'#938b80');rr(0,455,900,4,0,'#dbccae');
- rr(27,318,215,32,5,'#49645f');text(village?'VILLAGE STORE':town?'LOCAL BAKERY':'NEW YORK CAFE',134,335,15,'#fff0c8',850);
- rr(328,319,230,30,5,'#607c75');text(village?'DINER':town?'NEARLY NEW':'CITY MARKET',443,334,15,'#fff0c8',800);
- rr(640,318,244,31,5,'#526b72');text(village?'CEDAR FLATS':town?'ASHBROOK':'MIDTOWN NYC',763,334,17,'#ffe0a7',850);
- rr(812,360,9,84,2,'#64746c');rr(787,353,60,22,5,'#455e62');text('BUS',817,365,12,'#ffe5ad',850);
- if(g.location===2&&g.venue==='street'){
-   // Distant city silhouettes, deliberately not individual simulated visitors.
-   for(let i=0;i<5;i++){
-     const x=115+i*165+Math.sin(clock*.33+i*1.7)*7;
-     ellipse(x,353,8,3,'#66717844');circle(x,337,5,'#62717b99');
-     rr(x-5,343,10,15,3,i%2?'#78888a88':'#526d7988');
-   }
- }
- for(let x=0;x<900;x+=175)line(x,372,x-19,480,'#a09789',1.2);
- // Graphic-novel dressing: shadows, neon/hand-painted signs, trees and a living street.
- ctx.save();ctx.globalAlpha=.20;ctx.fillStyle='#343d4d';ctx.beginPath();ctx.ellipse(480,470,330,35,-.1,0,Math.PI*2);ctx.fill();ctx.restore();
- for(const x of [70,365,698]){
-  rr(x,258,79,33,4,'#4e3934','#dcb66c',2);
-  text(g.location===0?'OPEN':g.location===1?'SALE':'24 HR',x+40,274,15,'#ffdf8c',900);
- }
- if(g.location===0){
-  // Faded diner marquee, Kansas water tower and dusty roadside humor.
-  circle(737,61,38,'#b6a88c88');rr(709,60,58,13,4,'#8c917f');line(718,74,718,146,'#777968',4);line(761,74,761,149,'#777968',4);
-  text('CEDAR',738,62,12,'#4a4a42',900);text('FLATS',738,76,11,'#4a4a42',900);
-  rr(347,299,199,16,2,'#a64744');text('MEL’S DINER',444,307,14,'#ffe5a0',900);
-  text('TRY THE PIE',443,243,11,'#596b69',800);
-  line(835,95,835,341,'#5b6467',4);line(830,119,885,119,'#5b6467',3);
- } else if(g.location===1){
-  rr(318,291,257,23,3,'#49695e');text('SECOND CHANCE',448,302,17,'#ffdf97',850);
-  text('THRIFT · BOOKS',448,255,12,'#43556a',850);
-  line(80,120,720,85,'#4e586e',2);for(const xx of [120,360,610])line(xx,100,xx+10,142,'#4e586e',2);
- } else {
-  // NYC: distant towers and illuminated advertisement, staged behind the playable pavement.
-  for(let i=0;i<7;i++){const x=8+i*135;rr(x,46+(i%3)*22,54,118,0,'#526b75a8');for(let v=0;v<6;v++)rr(x+12+(v%2)*22,62+v*16,7,8,0,'#f4d99d99');}
-  rr(355,280,206,33,3,'#4a2e54','#e2b7d9',2);text('BIG CITY · BIGGER DREAMS',458,298,14,'#ffdca7',900);
-  for(const xx of [50,665,805]){rr(xx,90,6,260,1,'#485b66');rr(xx-9,82,28,13,4,'#edbe7a');}
-  ctx.save();ctx.globalAlpha=.45;rr(610,130,82,69,3,'#273746');text('YOUR',651,149,14,'#fff5d5',900);text('FACE',651,175,17,'#ffd266',900);ctx.restore();
- }
- for(let i=0;i<4;i++){
-  const x=50+i*245;ellipse(x+50,455,11,4,'#525f5a47');
-  if(i%2===0){circle(x+55,444,3,'#fff5e1a1');line(x+52,445,x+55,449,'#8b7a64',1.2);}
- }
+ // Store: narrow door, different windows, visible second-hand display.
+ windowPanel(17,173,108,127);windowPanel(141,176,100,122);
+ rr(52,216,33,82,2,'#8f8978');rr(56,222,25,68,1,'#c1d0bf');circle(75,259,3,'#d8b982');
+ for(let k=0;k<4;k++){rr(145+k*21,277-(k%2)*19,11,18+(k%2)*19,2,['#a9a075','#856f67','#789398','#c3b19a'][k]);}
+ // Diner: horizontal front glazing, counter silhouettes, red entrance.
+ rr(306,179,290,119,8,'#6d7880','#6d5753',5);rr(313,185,277,106,5,'#a7bfb9');
+ for(let x=346;x<560;x+=53){line(x,185,x,290,'#645d5f',4);circle(x+22,232,7,'#71665baa');rr(x+16,241,18,19,3,'#7d665a8c');}
+ rr(561,181,35,117,3,'#925e52','#684c48',3);circle(587,243,3,'#e6c785');
+ rr(297,293,311,11,2,'#b47a6e');rr(310,302,284,14,1,'#d6c4aa');
+ // Community centre: a door, a notice board and old arched upper windows.
+ windowPanel(645,184,70,113);windowPanel(806,184,75,113);
+ rr(727,203,69,145,5,'#5d7070','#595552',4);rr(733,210,57,128,3,'#acbcb3');circle(780,281,3,'#b69b6e');
+ rr(740,167,43,27,4,'#b3aa94','#625f54',2);text('NOTICE',761,178,9,'#4f5752',800);line(743,185,780,185,'#746e5c',1);
+ // Awnings and storefront fascia each with distinct proportions.
+ rr(9,309,252,14,2,'#70594c');rr(8,319,254,24,1,'#6e8c7f');for(let i=0;i<10;i++)rr(9+i*25,310,23,10,0,i%2?'#e4c4a9':'#ae7165');
+ rr(297,311,308,33,3,'#ad6965');for(let i=0;i<15;i++)rr(301+i*20,314,18,9,0,i%2?'#d7c2a9':'#a76b67');
+ rr(625,307,275,37,2,'#778a87');for(let i=0;i<10;i++)rr(631+i*27,313,25,8,0,i%2?'#bba58e':'#738e8a');
+ text(village?'VILLAGE STORE':town?'LOCAL BAKERY':'CORNER MARKET',138,332,15,'#fff0d3',800);
+ text(village?'MEL’S DINER':town?'NEARLY NEW':'MIDTOWN DINER',451,329,16,'#fff1d8',900);
+ text(village?'COMMUNITY HALL':town?'ASHBROOK LIBRARY':'NEIGHBORHOOD OFFICE',760,332,13,'#f6f0d8',850);
+ // Diner rooftop lettered sign: simple and readable, not generated pseudo-text.
+ rr(370,112,155,26,6,'#82504d','#e2c6ad',3);text(village?'MEL’S DINER':town?'COFFEE & PIE':'MIDTOWN CAFE',447,124,16,'#fff1d6',900);
+ // The water tower is behind the foreground and just slightly detailed.
+ if(village){rr(720,69,69,28,12,'#aca798','#747b79',2);rr(729,93,50,5,0,'#8c918c');line(728,98,728,130,'#83897e',4);line(779,98,779,130,'#83897e',4);text('CEDAR',754,79,10,'#4c5f60',850);text('FLATS',754,90,9,'#4c5f60',850);}
+ else if(town){rr(725,79,87,28,7,'#8fa0a1','#67747a',2);text('ASHBROOK',768,93,10,'#40545a',850);}
+ // Street furniture and pavement: small, restrained environmental storytelling.
+ rr(0,348,900,142,0,'#c0b5a2');rr(0,349,900,9,0,'#898d83');rr(0,455,900,5,0,'#d8c9b2');
+ for(let x=30;x<900;x+=135){line(x,368,x-12,451,'#9f968a',1);line(x+6,465,x+4,485,'#a69d91',1);}
+ rr(780,352,8,94,2,'#637a76');rr(752,348,66,24,5,'#4d6b6b');text('BUS',784,361,13,'#f5e2b7',850);
+ rr(654,387,88,10,3,'#8c7861');line(663,398,663,432,'#7b6857',5);line(735,398,735,432,'#7b6857',5);
+ // Notice board / bin / flower pot, all kept away from the preacher's silhouette.
+ rr(839,379,34,55,3,'#657d79','#4f6463',2);rr(835,373,42,8,3,'#536f6b');
+ if(village){rr(876,385,19,44,4,'#b28a66');circle(885,379,15,'#789882');circle(875,377,10,'#96a885');}
+ if(town){rr(832,397,45,22,4,'#8e7770');for(const xx of [841,851,862])circle(xx,393,7,'#a1a97d');}
+ if(city){rr(660,201,96,41,3,'#536475','#b2bdc1',2);text('NEW YORK',709,213,12,'#ecebd0',800);text('NEVER SLEEPS',709,232,10,'#dfd6a0',650);}
+ // Slightly varied ground shade anchors the animated pedestrians and equipment.
+ ellipse(343,465,315,23,'#6d706722');
 }
 
 function drawHall(){ctx.fillStyle=gradient('#cad7d1','#c1b09a');ctx.fillRect(0,0,W,H);rr(0,320,900,170,0,'#ad9581');for(let x=0;x<900;x+=125)line(x,325,x-48,490,'#927967',2);rr(220,68,458,196,10,'#f4e4c6','#8a705b',9);rr(250,89,398,152,8,'#315a5c');text('COMMUNITY HALL',449,153,30,'#ffe7ac',900);text('ALL QUESTIONS WELCOME',449,193,18,'#e3ede3',800);for(let x=75;x<900;x+=150){rr(x,350,93,13,3,'#617e83');line(x+10,366,x+10,402,'#69707a',5);line(x+81,366,x+81,402,'#69707a',5);}rr(14,88,134,178,2,'#dce6db','#778b8a',6);line(80,92,80,265,'#879b95',5);}
@@ -1703,8 +2012,10 @@ document.addEventListener('click',e=>{
  if(target.dataset.town){if(g.phase!=='town')return;g.townPage=target.dataset.town;renderTown();save();return;}
  if(target.dataset.buy){buy(target.dataset.buy);return;}
  if(target.dataset.equip){equip(target.dataset.equip);return;}
+  if(target.dataset.wardrobeSlot){wardrobeSlot=target.dataset.wardrobeSlot;if(!$('notebook').classList.contains('hidden'))notebook(notebookPage);else if(g.phase==='town'&&g.townPage==='inventory')renderTown();return;}
  if(target.dataset.property){buyVenue(target.dataset.property);return;}
  if(target.dataset.hire){hire(target.dataset.hire);return;}
+ if(target.dataset.expandVenue){expandVenue(target.dataset.expandVenue);return;}
  if(target.dataset.eventChoice){applyEvent(target.dataset.eventChoice);return;}
  if(target.dataset.survive){survive(target.dataset.survive);return;}
  if(target.dataset.rebirth){rebirth(target.dataset.rebirth);return;}
@@ -1728,6 +2039,14 @@ document.addEventListener('click',e=>{
  case 'studySkip':if(studySession)finishStudy();break;
  case 'studySpeed':if(studySession){studyRate=studyRate===2?1:2;target.textContent=studyRate===2?'1× SPEED':'2× SPEED';}break;
  case 'settings':$('displaySettings').classList.remove('hidden');applyUiSize(displaySize);break;
+  case 'fullscreen':toggleFullscreen();break;
+  case 'saveTransfer':$('saveTransfer').classList.remove('hidden');break;
+  case 'closeSaveTransfer':$('saveTransfer').classList.add('hidden');break;
+  case 'exportSave':exportSave();break;
+  case 'chooseSave':$('saveImportFile').click();break;
+  case 'openTravelGate':openTravelGate();break;
+  case 'closeTravelGate':$('travelGate').classList.add('hidden');break;
+  case 'confirmTravelGate':confirmTravelGate();break;
  case 'closeSettings':$('displaySettings').classList.add('hidden');break;
  case 'help':$('help').classList.remove('hidden');break;
  case 'closeHelp':$('help').classList.add('hidden');break;
@@ -1748,6 +2067,7 @@ document.addEventListener('click',e=>{
  }
 });
 document.addEventListener('change',e=>{
+  if(e.target.id==='saveImportFile'){importSaveFile(e.target.files?.[0]);e.target.value='';return;}
  const key=e.target.dataset.plan;if(key&&g.phase==='plan'){const dict={topic:TOPICS,delivery:DELIVERY,movement:MOVEMENT,ask:ASK};if(dict[key]?.[e.target.value]){g.plan[key]=e.target.value;renderPlay();save();}}
  if(e.target.dataset.schedule&&g.venue!=='street'){if(e.target.dataset.schedule==='serviceDay'&&/^[0-6]$/.test(e.target.value))g.serviceDay=Number(e.target.value);if(e.target.dataset.schedule==='serviceTime'&&SERVICE_TIMES[e.target.value])g.serviceTime=e.target.value;save();renderTown();}
  if(e.target.id==='eventToggle'){g.events=e.target.checked;save();screenToast(g.events?'Optional events enabled.':'Optional events off.');}
@@ -1992,6 +2312,32 @@ for(const god of ['anubis','zeus','venus','odin'])for(const city of [1,2])for(co
  ZH[`${nameEN} ${slotEN} — ${specializationEN}`]=`${godStyleZh[god][style==='cult'?0:1]}${wardrobeSlotZh[slot]} · ${wardrobeSkillZh[k]}`;
 }
 
+Object.assign(ZH,{
+ 'Only after acquiring your own premises in New York can you expand audience capacity. Street preaching has no venue cap. Building upgrades increase the potential crowd for each service, never your total followers.':'只有在纽约拥有专用场地后，才可以扩建场地、提高单场活动的潜在观众人数。街头布道没有场地人数上限，扩建也永远不会限制信徒总数。',
+ 'Open street · No venue cap':'开放街道 · 无场地上限',
+ 'Audience capacity':'观众容量',
+ 'Expand your':'扩建你的',
+ 'Expand:':'扩建：',
+ 'Premises upgrades increase the maximum number of potential visitors at a single service. They never limit your total followers or recurring donations.':'场地扩建只提高每场活动的潜在观众人数上限，绝不会限制信徒总数或信徒的定期捐款。',
+ 'Premises upgrades increase the maximum number of potential visitors at a single service. They do not limit how many followers you can have or how many support you between sermons.':'场地扩建只会提高每场活动的潜在观众人数上限，不会限制信徒总数，也不会影响场外信徒的定期捐款。',
+ 'Premises upgrades increase the maximum number of potential visitors at a single service. They do':'场地扩建只会提高每场活动的潜在观众人数上限，但',
+ 'limit how many followers you can have or how many support you between sermons.':'不会限制信徒总数，也不会影响场外信徒的定期捐款。',
+ 'CURRENT AUDIENCE CAPACITY':'当前观众容量',
+ 'EXPANSION STAGE':'扩建进度',
+ 'Next project:':'下一项工程：',
+ 'potential visitors':'潜在观众',
+ 'Expand premises':'扩建场地',
+ 'Maximum expansion for this property reached. To host even bigger events, move to a larger venue.':'这个场地已经扩建到极限。如需举办更大活动，请迁入更大的场地。',
+ 'Extra seating':'增加座位',
+ 'Open the side room':'开放侧厅',
+ 'Community hall extension':'扩建社区礼堂',
+ 'Extra pews':'增加长椅',
+ 'Extended sanctuary':'扩建礼拜堂',
+ 'New auditorium wing':'新增礼堂侧翼',
+ 'Additional sections':'增加看台区域',
+ 'Second tier seating':'二层座席',
+ 'Grand arena expansion':'扩建大型会场'
+});
 const exact=new Map(Object.entries(ZH));
 const lower=new Map(Object.entries(ZH).map(([k,v])=>[k.toLowerCase(),v]));
 const fragments=Object.entries(ZH).filter(([k])=>k.length>=4).sort((a,b)=>b[0].length-a[0].length);
@@ -2003,22 +2349,6 @@ Object.assign(ZH, {
  "Two moments pause your sermon for decisions. If authorities interrupt, you will see the specific risk factors before the day ends. The full report reveals effectiveness afterward.":"布道中途将有两次决定。如果工作人员叫停布道，你会在结束前看到增加投诉风险的具体原因；之后的日报会解释布道效果。",
  "🚨 Your street sermon ended early after complaints. See the specific contributing choices in the interruption summary above.":"🚨 你的街头布道因投诉提前结束。请查看上方的详细原因。"
 });
-Object.assign(ZH,{
- 'Cedar Flats has the biggest selection of cheap second-hand clothing. All five wardrobe slots can be upgraded here.':'松谷镇的廉价二手服装最丰富，五个衣柜栏位都可以在这里升级。',
- 'The thrift selection is smaller here, but the bookshelves are stronger. A study day can be a worthwhile investment.':'这里的二手衣服少一些，但书更多更好。花一天学习也值得。',
- 'Cedar Flats sells simple donation equipment and a few expensive aspirational clothes. Save for your bus before splurging.':'松谷镇主要出售募捐装备，另有几件昂贵的漂亮衣服。买之前先想想车票钱。',
- 'Ashbrook offers two distinct cult-leader and televangelist styles inspired by your chosen god. Each garment has four skill specializations.':'灰溪镇根据你所选的神提供两种截然不同的服装风格：神秘教派领袖和电视布道明星。每件衣物均可选择四种技能专精。',
- 'New York has your god’s most extravagant wardrobe collections, with larger base bonuses and four skill specializations.':'纽约出售与你的神祇对应的最奢华服装，拥有更高的基础加成和四种技能专精。'
-});
-// Keep late additions synchronized with the dictionaries built above.
-Object.assign(ZH,{
- "CEDAR FLATS TO NEW YORK · v0.9.6":"从松谷镇到纽约 · v0.9.6",
- "HOW TO PLAY · v0.9.6":"玩法说明 · v0.9.6",
- "The first church turns your growing congregation into a serious ministry. The megachurch launches a media empire capable of funding the $20 million jet.":"第一间教堂让你的教众发展为真正赚钱的组织，超级教堂则开启足以攒下两千万美元私人飞机的媒体帝国。",
- "A decisive leap: substantial daily memberships, events and sponsor donations.":"重大突破：每日会员收入、活动与赞助人的捐款大幅增加。",
- "Mass media, premium giving, television audiences and exponential earning power.":"大众媒体、高额捐款和电视观众，让收入飞速增长。"
-});
-for(const [english,chinese] of Object.entries(ZH)){exact.set(english,chinese);lower.set(english.toLowerCase(),chinese);}
 let current=savedLanguage();
 const records=new WeakMap();
 const patterns=[
@@ -2032,7 +2362,7 @@ const patterns=[
  
  [/^Food (\$[\d,.]+)\/day · staff and venue costs (\$[\d,.]+)\/day\. Sunday street crowds are often quieter; a weekly main gathering can be scheduled after renting a hall\.$/,(m,food,costs)=>`餐食费 ${food}/天 · 员工和场地 ${costs}/天。周日街头人少，租到礼堂后可以安排每周主要礼拜。`],
  [/^Food (\$[\d,.]+) · Data and operating costs (\$[\d,.]+)(.*)$/,(m,food,data,rest)=>`餐食费 ${food} · 流量和运营费用 ${data}${rest}`],
- [/^I open “(.+)” to the first page\.$/,(m,name)=>{const title=t(name);return `我翻开${title.startsWith('《')?title:`《${title}》`}的第一页。`;}],
+ [/^I open “(.+)” to the first page\.$/,(m,name)=>`我翻开《${t(name)}》的第一页。`],
  [/^I finally put down my phone\. No sermon earnings today, but I gained (.+) experience\.$/,(m,sk)=>`我终于放下手机。今天没有布道收入，却获得了${t(sk)}经验。`],
  [/^You skipped a sermon today: no sermon income and no new followers\.(.*)$/,(m,tail)=>`今天没有布道，也没有布道收入或新信徒。${t(tail)}`],
  [/^Battery (\d+)%$/,(m,n)=>`电量 ${n}%`],
