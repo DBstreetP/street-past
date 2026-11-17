@@ -3,7 +3,7 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#172833">
 <meta name="description" content="Street Pastor — a satirical, offline-friendly management game.">
 <meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Street Pastor"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#151c2e"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon-192.png">
-<title>Street Pastor — Living World v1.2.22</title><style>
+<title>Street Pastor — Living World v1.2.24</title><style>
 :root{color-scheme:dark;--bg:#101a23;--panel:#1a2a36;--panel2:#223745;--border:#3a5361;--ink:#f5eedc;--muted:#a9bbc0;--gold:#f7c873;--teal:#83d1b8;--rose:#f29a87;--shadow:0 16px 55px #08101799;--r:15px;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 30% 8%,#253745 0,#121e29 60%,#101720 100%);color:var(--ink)}button,input{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.46}button:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:2px}.hidden{display:none!important}#app{height:100dvh;display:flex;flex-direction:column;overflow:hidden}main{flex:1;min-height:0;display:flex;padding:10px 13px 6px}.view{width:100%;min-height:0}.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:65px;padding:8px 18px;border-bottom:1px solid #385061;background:#121e29e8}.brand{display:flex;gap:10px;align-items:center;flex-shrink:0}.brand-mark{color:#1c2a35;background:var(--gold);height:39px;width:39px;border-radius:50%;display:grid;place-items:center;font-size:25px;border:4px solid #655944}.brand b{letter-spacing:.16em;font-size:16px;white-space:nowrap}.brand small{display:block;font-size:9px;color:var(--muted);letter-spacing:.2em;margin-top:2px}.hud{display:flex;gap:5px;align-items:center;justify-content:center}.hud-item{min-width:100px;padding:5px 12px;border:1px solid #3a5160;border-radius:10px;background:#22344180}.hud-item small{display:block;font-size:9px;letter-spacing:.14em;color:var(--muted);font-weight:750}.hud-item b{font-size:18px;font-variant-numeric:tabular-nums}.header-buttons{display:flex;gap:6px}.nav-btn,.circle-btn{background:#263a48;color:var(--ink);border:1px solid #526b75;border-radius:10px;min-height:35px;padding:6px 12px;font-weight:800}.nav-btn:hover,.circle-btn:hover{background:#345361}.footer{min-height:20px;padding:1px 17px 5px;color:#8ea6ad;display:flex;justify-content:space-between;gap:8px;font-size:9px;letter-spacing:.09em}.play-view{display:grid;grid-template-columns:minmax(0,1.75fr) minmax(300px,.90fr);gap:12px}.scene-side{border:1px solid #54626a;background:#1c2e37;border-radius:var(--r);padding:9px;display:flex;flex-direction:column;min-width:0;min-height:0}.scene-header{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:11px;letter-spacing:.09em;font-weight:800;color:#f9d99a;padding:2px 6px 9px}.faith-name{color:var(--muted);text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:50%}.canvas-wrap{flex:1;min-height:0;border-radius:10px;overflow:hidden;position:relative;background:#d9c4a1}.canvas-wrap canvas{width:100%;height:100%;display:block;object-fit:fill}.scene-overlay{position:absolute;inset:0;pointer-events:none;display:flex;justify-content:center;align-items:flex-start;padding:10px;color:white}.scene-overlay:empty{display:none}.bottom-scene{display:flex;align-items:center;gap:10px;padding:10px 4px 2px;font-size:10px;letter-spacing:.09em;font-weight:800;color:var(--muted)}.bottom-scene span:first-child{color:var(--gold);flex-shrink:0}.bottom-scene span:last-child{white-space:nowrap}.timeline{height:7px;border-radius:20px;background:#0c1821;flex:1;overflow:hidden}.timeline>div{height:100%;width:0;background:linear-gradient(90deg,#ad8c55,var(--gold));transition:width .12s linear}.action-side{border:1px solid #536878;background:linear-gradient(157deg,#293b48,#1b2a35);border-radius:var(--r);display:flex;flex-direction:column;min-height:0;overflow-y:auto;padding:12px;gap:9px;scrollbar-width:thin}.eyebrow{font-size:10px;color:var(--gold);letter-spacing:.2em;font-weight:900}.action-side h2,.page-inner h2,.town-content h2,.modal h2{font-size:clamp(20px,2vw,28px);line-height:1.1;margin:6px 0}.action-side p,.muted,.minor{color:var(--muted)}.action-side p{margin:0;font-size:12px;line-height:1.35}.plan-controls{display:grid;gap:7px}.plan-field{display:grid;grid-template-columns:97px 1fr;gap:8px;align-items:center}.plan-field label{font-size:11px;letter-spacing:.06em;color:#d5d9d5;font-weight:800}.plan-field select{min-width:0;width:100%;background:#10222d;border:1px solid #4a6570;color:var(--ink);padding:9px 10px;border-radius:9px;font-size:13px;font-weight:700}.mood-pill{background:#3b403b;color:#f8ddaa;padding:8px;border:1px solid #655a3e;border-radius:9px;font-size:11px;line-height:1.3}.predict{display:grid;grid-template-columns:1fr 1fr;gap:6px}.predict>div{border:1px solid #455b66;border-radius:10px;padding:8px;background:#132530}.predict small{font-size:9px;letter-spacing:.08em;color:var(--muted);display:block}.predict b{font-size:19px}.btn{border:1px solid #536d7b;border-radius:10px;background:#2f4959;color:var(--ink);padding:10px 14px;font-weight:850;line-height:1.15;transition:background .15s}.btn:hover{background:#405e6c}.btn.gold{background:var(--gold);color:#2c302e;border-color:#f4dfac;box-shadow:inset 0 -3px #bd8950}.btn.gold:hover{background:#ffdb94}.btn.subtle{background:#152937;color:var(--muted)}.btn.tiny{padding:7px 10px;font-size:11px}.btn.full{width:100%;display:block}.btn-row{display:flex;gap:7px}.btn-row>.btn{flex:1}.aside-tip{padding:8px;border-left:3px solid var(--teal);background:#17343a;border-radius:5px;color:#b9dfd4;font-size:11px;line-height:1.35}.feed{display:flex;flex-direction:column;gap:7px;min-height:0;overflow-y:auto;flex:1}.feed-entry{border-bottom:1px solid #3d5260;padding:6px 0;font-size:12px;line-height:1.35;color:#e7dcca}.feed-entry b{color:var(--gold)}.feed-entry.positive b{color:var(--teal)}.feed-entry.negative b{color:var(--rose)}.live-box{border:1px solid #4a6570;border-radius:10px;padding:9px;display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.live-box div{text-align:center}.live-box b{display:block;font-size:19px}.live-box small{font-size:9px;letter-spacing:.1em;color:var(--muted)}.page-inner{max-width:980px;margin:0 auto;height:100%;overflow-y:auto;padding:6px 5px 16px;scrollbar-width:thin}.page-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:10px}.page-head p{color:var(--muted);font-size:13px;margin:0}.report-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.report-tile{background:#1d303d;border:1px solid #4a6470;padding:14px 10px;border-radius:12px}.report-tile small{display:block;color:var(--muted);font-size:10px;letter-spacing:.1em}.report-tile strong{font-size:26px}.report-tile .plus{color:var(--teal)}.report-tile .minus{color:var(--rose)}.report-columns{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin:11px 0}.paper{background:#213745;border:1px solid #4c6570;border-radius:12px;padding:14px}.paper h3{margin:0 0 7px;font-size:16px}.paper p{font-size:12px;color:#bdcdd0;line-height:1.5}.paper ul{margin:7px 0;padding-left:18px;font-size:12px;color:#deded3}.paper li{margin-bottom:7px}.xp-list{display:grid;gap:8px}.xp-line{display:grid;grid-template-columns:110px 1fr 70px;align-items:center;gap:9px;font-size:12px}.xp-line b{color:var(--gold)}.bar{height:7px;border-radius:15px;background:#111f2a;overflow:hidden}.bar i{display:block;background:#e6b75c;height:100%;border-radius:15px}.town-shell{height:100%;min-height:0;display:grid;grid-template-columns:235px 1fr;gap:12px}.town-nav{background:#1e303e;border:1px solid #526974;border-radius:var(--r);padding:12px;display:flex;flex-direction:column;gap:8px;overflow-y:auto}.town-nav>h2{font-size:20px;margin:0 0 2px}.town-nav>p{font-size:11px;color:var(--muted);margin:0 0 7px}.town-tab{border:1px solid #526775;background:#1a2935;color:#d9e4e1;border-radius:10px;text-align:left;padding:12px;font-size:12px;font-weight:750}.town-tab small{display:block;color:#97abb2;font-weight:500;margin-top:4px}.town-tab.active{border-color:var(--gold);background:#4a4437;color:#fff1cd}.town-content{background:#1d303c;border:1px solid #526875;border-radius:var(--r);overflow-y:auto;padding:15px;scrollbar-width:thin}.town-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}.town-top p{margin:3px 0 13px;color:var(--muted);font-size:12px;max-width:630px}.stock-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.stock-card{background:#263d4b;border:1px solid #506977;border-radius:11px;padding:12px;display:flex;flex-direction:column;gap:7px;min-height:185px}.stock-card .icon{font-size:29px;line-height:1}.stock-card h3{font-size:14px;margin:0}.stock-card p{font-size:11px;color:#c0cdd0;line-height:1.4;flex:1;margin:0}.stock-card .tag{font-size:10px;color:var(--gold);line-height:1.3}.stock-card .btn{font-size:11px;padding:8px}.locked{opacity:.65}.note{background:#172c36;border:1px solid #476474;border-radius:10px;padding:11px;margin:9px 0;color:#b7d1d1;font-size:12px;line-height:1.45}.inventory-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.inv-row{display:flex;align-items:center;gap:10px;padding:9px;border:1px solid #506976;background:#253c48;border-radius:10px}.inv-row>span{font-size:23px}.inv-row>div{flex:1;min-width:0}.inv-row b{display:block;font-size:12px}.inv-row small{display:block;color:var(--muted);font-size:10px}.inv-row .btn{flex-shrink:0}.overlay{position:fixed;inset:0;background:#050c12c9;z-index:20;display:flex;align-items:center;justify-content:center;padding:12px;overflow:auto}.modal{width:min(980px,100%);background:linear-gradient(145deg,#2b3e4d,#192a35);border:1px solid #85919a;box-shadow:var(--shadow);border-radius:20px;padding:23px;color:var(--ink);max-height:calc(100dvh - 24px);overflow:auto}.intro-modal{width:min(900px,100%)}.intro-title{display:flex;gap:17px;align-items:center;margin-bottom:15px}.stamp{display:grid;place-items:center;border-radius:50%;background:#f2c374;color:#243540;border:7px solid #56635f;width:70px;height:70px;flex-shrink:0;font-size:35px}.intro-modal h1{margin:4px 0;font-size:clamp(25px,4vw,42px);line-height:1.05;letter-spacing:-.045em}.intro-modal em{font-style:normal;color:var(--gold)}.intro-title p{margin:6px 0 0;color:#bfccd2;font-size:13px}.deity-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.deity-card{background:#19303d;color:var(--ink);border:2px solid #56707a;border-radius:13px;padding:14px 10px;text-align:left;display:flex;flex-direction:column;gap:7px;min-height:165px}.deity-card.selected{background:#454237;border-color:var(--gold);box-shadow:0 0 0 2px #f7c87330}.deity-card .symbol{font-size:35px}.deity-card b{font-size:19px}.deity-card small{color:var(--muted);font-size:11px;line-height:1.4}.deity-card .base{color:#f1d69e;font-size:10px}.intro-bottom{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-top:16px}.chosen-detail{color:#bed2d4;font-size:13px;line-height:1.4;flex:1}.intro-bottom .btn{min-width:250px}.intro-note{color:#9baeb4;font-size:10px;margin-top:13px}.modal-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}.notebook-modal{max-width:750px}.modal-foot{display:flex;justify-content:space-between;gap:12px;padding-top:12px}.notebook-body{margin-top:10px;display:grid;gap:11px}.skill-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.skill-card{background:#1b313e;border:1px solid #526978;border-radius:10px;padding:10px}.skill-card .stat-title{display:flex;justify-content:space-between;font-size:12px;margin-bottom:6px}.skill-card p{margin:6px 0 0;font-size:10px;color:var(--muted)}.help-modal{max-width:680px}.help-copy{font-size:13px;line-height:1.5}.help-copy p{margin:13px 0}.event-modal{width:min(500px,100%)}.event-modal p{color:#c0cdd1;font-size:13px;line-height:1.5}.event-actions{display:flex;flex-direction:column;gap:7px}.toast{position:fixed;z-index:50;bottom:35px;left:50%;transform:translateX(-50%);background:#f5d59a;color:#1b2833;border-radius:10px;padding:12px 17px;font-weight:800;font-size:13px;box-shadow:var(--shadow);max-width:90vw;text-align:center}
 @media(max-width:900px){.topbar{gap:7px;padding:6px 10px;min-height:52px}.brand-mark{width:28px;height:28px;font-size:19px;border-width:2px}.brand b{font-size:11px}.brand small{font-size:7px}.hud-item{min-width:65px;padding:4px 6px}.hud-item b{font-size:14px}.hud-item small{font-size:8px}.nav-btn span{display:none}.play-view{grid-template-columns:minmax(0,1.65fr) minmax(260px,1fr);gap:7px}.action-side{padding:8px}.plan-field{grid-template-columns:70px 1fr;gap:4px}.plan-field select{padding:6px;font-size:11px}.plan-field label{font-size:10px}.scene-header{padding-bottom:5px}.bottom-scene{padding:6px 1px 0}.footer{font-size:8px}.town-shell{grid-template-columns:175px 1fr;gap:8px}.town-content,.town-nav{padding:9px}.stock-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.deity-card{padding:9px 7px;min-height:125px}.deity-card b{font-size:16px}.deity-card .symbol{font-size:26px}.modal{padding:14px}}
@@ -711,7 +711,7 @@ body{overflow:hidden;background:#172536}
 @media(max-width:430px){.v1-person-portrait{width:75px;height:85px}.v1-portrait-face{left:18px}.v1-portrait-hair{left:14px}.v1-story-person{gap:9px}}
 
 
-/* v1.2.22 — Compact, visual ability trees; usable in narrow landscape game panels. */
+/* v1.2.24 — Compact, visual ability trees; usable in narrow landscape game panels. */
 .skill-tree-shell{display:grid;gap:12px;max-width:900px;margin:auto}
 .skill-tree-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
 .skill-tree-points{font-weight:900;border:1px solid #c5ab71;border-radius:12px;padding:7px 11px;background:#453d37;color:#ffe1a3}
@@ -737,11 +737,30 @@ body{overflow:hidden;background:#172536}
 .skill-tree-topnote{font-size:11px;color:#d4dad5;margin:0}.skill-tree-foot{display:flex;justify-content:space-between;align-items:center;gap:9px;flex-wrap:wrap}
 .org-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.org-quick{display:flex;flex-direction:column;align-items:flex-start;gap:5px;border:1px solid #5b7b86;border-radius:11px;padding:12px;background:#263b48;color:#f7e6c7;text-align:left;min-height:94px;cursor:pointer}.org-quick strong{font-size:13px}.org-quick small{font-size:11px;color:#bbd2d2}
 @media(max-width:430px){.skill-tree-lanes{gap:5px}.skill-tree-lane{padding:8px 4px}.skill-tree-node{padding:7px 4px;min-height:58px}.skill-tree-node-icon{font-size:20px;flex-basis:22px}.skill-tree-node-text{font-size:10px}.org-grid{gap:6px}}
+
+/* v1.2.24 — one navigation surface, character-first personal hub */
+#worldSceneActions,#app #worldSceneActions,#gameWorld #worldSceneActions{display:none!important}
+#app #playView .bottom-scene{bottom:calc(79px + env(safe-area-inset-bottom,0px))}
+#townView.world-focused-view .town-content{padding:10px 12px 18px}
+.you-screen{width:min(760px,100%);margin:0 auto;display:grid;gap:15px}
+.you-submenu{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;position:sticky;top:-14px;z-index:8;padding:6px 0;background:#1d303cf2}
+.you-submenu-tab{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;min-height:62px;min-width:0;padding:6px 3px;background:#263c4b;color:#dce9e7;border:1px solid #506a78;border-radius:11px;font-size:clamp(10px,2.55vw,12px);font-weight:800;line-height:1.15;position:relative}
+.you-submenu-tab span:first-child{font-size:21px;line-height:1.2}.you-submenu-tab.active{background:#755b3c;border-color:#f1c67c;color:#fff1d9;box-shadow:inset 0 0 0 1px #ffdf9c55}
+.you-points-chip{position:absolute;top:2px;right:4px;border-radius:15px;background:#ecc47d;color:#26313e;font-size:10px;padding:1px 5px}
+.you-panel-body{min-width:0;display:grid;gap:10px;padding-bottom:20px}
+.you-portrait-panel{min-height:480px;display:flex;flex-direction:column;align-items:center;gap:12px;padding:10px 0}
+.you-portrait-header{display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center}.you-portrait-header strong{font-size:clamp(18px,3.5vw,25px);color:#ffe4af}.you-portrait-header span{font-size:12px;color:#b8cdd5}
+.you-portrait-art{width:min(390px,100%);max-width:100%;padding:14px;border:1px solid #6c8394;border-radius:20px;background:linear-gradient(180deg,#69828b,#c1b8a6 74%,#6a6e6c 74%);box-shadow:0 10px 30px #101b2b80}
+.you-portrait-art svg{width:100%;height:auto;display:block;max-height:min(62dvh,570px);margin:0 auto}
+.you-section-head h2{font-size:20px;margin:0 0 4px;color:#ffe4ae}.you-section-head p{font-size:12px;line-height:1.45;color:#b9cbd2;margin:0}
+.you-panel-body>.paper{padding:12px}.you-panel-body .wardrobe-slot-grid{margin-top:6px}.you-panel-body .skill-cards{margin-top:5px}
+@media(max-width:380px){.you-submenu-tab{font-size:9px;padding:5px 2px}.you-submenu{gap:4px}.you-portrait-panel{min-height:0}.you-portrait-art{width:min(340px,100%);padding:9px}}
+@media (orientation:landscape) and (max-height:580px){#app #playView .bottom-scene{bottom:10px}.you-portrait-panel{min-height:0}.you-portrait-art{width:min(250px,75%)}}
 </style>
 </head><body>
 <div id="app" class="hidden">
 <header class="topbar">
- <div class="brand"><button type="button" class="brand-mark brand-portrait" data-world="you" title="Open your character, skills and wardrobe" aria-label="Open character profile"><img src="data:image/webp;base64,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" alt=""/></button><div><b>STREET PASTOR</b><small>THE LIVING WORLD · v1.2.22</small></div></div>
+ <div class="brand"><button type="button" class="brand-mark brand-portrait" data-world="you" title="Open your character, skills and wardrobe" aria-label="Open character profile"><img src="data:image/webp;base64,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" alt=""/></button><div><b>STREET PASTOR</b><small>THE LIVING WORLD · v1.2.24</small></div></div>
  <div class="hud"><div class="hud-item"><small>DATE</small><b id="hudWeek">Mon · Apr 6</b></div><button type="button" class="hud-item hud-click" data-act="funds" title="Open finances and your savings goal"><small>FUNDS ↗</small><b id="hudCash">$12.00</b></button><button type="button" class="hud-item hud-click" data-act="followers" title="Open congregation demographics and donations"><small>FOLLOWERS ↗</small><b id="hudFollowers">0</b></button><button type="button" class="hud-item hud-click" data-act="organisation" title="Open your organisation and community outreach"><small>DEDICATION ↗</small><b id="hudDedication">27%</b></button></div>
  <div class="header-buttons"><select id="headerLanguage" class="language-picker compact" aria-label="Choose game language"><option value="en">🇬🇧 EN</option><option value="zh">🇨🇳 中文</option></select><button class="nav-btn" data-act="settings" title="Display size and layout" aria-label="Display settings">⚙</button><button class="nav-btn" data-act="stats" title="Notebook">▤ <span>Notebook</span></button><button class="nav-btn" data-act="saveTransfer" title="Save export/import" aria-label="Back up or import career">⇄</button><button class="nav-btn" data-act="fullscreen" title="Full screen" aria-label="Toggle full screen">⛶</button><button class="nav-btn" data-act="help" title="How to play">?</button></div>
 </header>
@@ -1173,7 +1192,7 @@ window.SPV1={PEOPLE,HOMES,PROGRAMS,INTRO_LINES,fresh,st,c,named,rel,fx,notice,bo
 
 </script>
 <script>
-/* Street Pastor v1.2.19 — integrated, responsive, isometric world. No dependencies. */
+/* Street Pastor v1.2.23 — extended venues and clean stage composition. No dependencies. */
 (function(){'use strict';
 const W={}; let activeActors=[]; const SCENES={
 venue:{name:'Your Ministry',subtitle:'Every empire begins somewhere',color:'#c89b57'},
@@ -1579,14 +1598,43 @@ function foregroundInterior(c,q,g,room,time){
  }
 }
 
+// Outdoors use a shared roadside datum. A facade's door always ends on the
+// rear sidewalk immediately before the road, regardless of its roof height.
+function roadsideFoot(q){return q.top+q.s*.075;}
+function roadsideFront(c,q){
+ const {w,s,top}=q,roadBack=top+s*.16,walkBack=roadsideFoot(q);
+ // A continuous pavement connects *every* building to the roadway. It is
+ // drawn before the road, and the road/curb finishes at precisely roadBack.
+ round(c,0,walkBack,w,roadBack-walkBack+2,0,'#c1b9ab');
+ c.strokeStyle='#e9dbcb99';c.lineWidth=1.2;
+ for(let x=s*.12;x<w;x+=s*.74){c.beginPath();c.moveTo(x,walkBack);c.lineTo(x,roadBack);c.stroke();}
+ c.strokeStyle='#eee1c5';c.lineWidth=Math.max(2,s*.025);c.beginPath();c.moveTo(0,roadBack);c.lineTo(w,roadBack);c.stroke();
+}
 function outdoorFacade(c,x,y,width,height,base,awning,label,s){
- round(c,x,y,width,height,5,base,'#f0d6a7',2);
- // roofline, shopfront, entrance and displays
- round(c,x-5,y-9,width+10,14,4,awning,'#f7dba3',2);
- round(c,x+width*.11,y+height*.28,width*.32,height*.5,3,'#3d5967','#e4c58e',2);
- round(c,x+width*.51,y+height*.28,width*.35,height*.5,3,'#355163','#e4c58e',2);
- round(c,x+width*.07,y+height*.08,width*.86,17,5,'#f0d3a2','#9a704f');
- text(c,label,x+width/2,y+height*.08+8,Math.min(11,s*.22),'#593f42',900,'center',width*.79);
+ // Three-dimensional-looking, non-overlapping street frontage with a door
+ // whose bottom aligns with the supplied ground line y+height.
+ round(c,x+3,y+3,width,height,3,'#292e3955');
+ round(c,x,y,width,height,3,base,'#efd6b0',1.8);
+ round(c,x-s*.025,y-s*.08,width+s*.05,s*.11,3,awning,'#f6dbaa',1.5);
+ const signH=Math.min(height*.17,s*.27),signY=y+height*.25;
+ round(c,x+width*.055,signY,width*.89,signH,3,'#f1d8ad','#8c6b55',1);
+ text(c,label,x+width*.5,signY+signH*.56,Math.min(s*.18,Math.max(9,width*.09)),'#553c43',900,'center',width*.83);
+ const foot=y+height,winTop=signY+signH+s*.09,winH=Math.max(s*.27,foot-winTop-s*.12);
+ round(c,x+width*.08,winTop,width*.30,winH,2,'#36586b','#e4c9a0',1.6);
+ round(c,x+width*.64,winTop,width*.28,winH,2,'#36586b','#e4c9a0',1.6);
+ c.strokeStyle='#afbec3';c.lineWidth=1.1;
+ for(const frac of [.23,.77]){const xx=x+width*frac;c.beginPath();c.moveTo(xx,winTop+s*.04);c.lineTo(xx,winTop+winH-s*.04);c.stroke();}
+ // Grounded central shop door: no blank wall underneath.
+ const doorW=width*.19,doorX=x+width*.415,doorY=winTop+s*.03;
+ round(c,doorX,doorY,doorW,Math.max(s*.18,foot-doorY),2,'#294556','#ebd49f',1.4);
+ c.fillStyle='#f4daa8';c.beginPath();c.arc(doorX+doorW*.75,foot-s*.17,Math.max(1.5,s*.021),0,Math.PI*2);c.fill();
+ // Entrance threshold physically joins the rear sidewalk.
+ round(c,doorX-s*.07,foot-s*.018,doorW+s*.14,s*.052,2,'#e1c7a0','#a98e79',1);
+ round(c,x-s*.015,y+height*.42,width+s*.03,s*.08,2,awning,'#f2d29d',1.1);
+}
+function curbsideFacade(c,q,x,width,height,base,awning,label){
+ const foot=roadsideFoot(q);
+ outdoorFacade(c,x,foot-height,width,height,base,awning,label,q.s);
 }
 // Manhattan backdrop. Buildings have individual footprints and visible facades; no
 // giant decorative panel is allowed to obscure the central sermon/pedestrian lane.
@@ -1708,21 +1756,22 @@ function street(c,q,g,time,live){
  if(!alt)drawWeatherSky(c,q,g,time);
  extendedPavement(c,q,'street',time);
  if(alt){nySkyline(c,q,time);drawWeatherSky(c,q,g,time);}
+ roadsideFront(c,q);
  // Buildings beyond the square give the scene a real horizon rather than room walls.
- const shopY=Math.max(66,q.top-s*2.45),facadeH=s*1.75;
+ const shopY=roadsideFoot(q)-s*2.0,facadeH=s*1.86;
  if(market){
-  // Ashbrook: old redbrick market town, not Cedar Flats under a new name.
-  outdoorFacade(c,q.cx-s*3.78,shopY-s*.16,s*2.3,facadeH+s*.32,'#a16a59','#7d4f47','ASHBROOK BAKERY',s);
-  outdoorFacade(c,q.cx+s*.90,shopY-s*.10,s*2.39,facadeH+s*.27,'#9a856e','#567e75','MARKET ARCADE',s);
+  // Ashbrook: different roofs, *shared curb elevation*.
+  curbsideFacade(c,q,q.cx-s*3.78,s*2.3,s*2.24,'#a16a59','#7d4f47','ASHBROOK BAKERY');
+  curbsideFacade(c,q,q.cx+s*.90,s*2.39,s*2.14,'#9a856e','#567e75','MARKET ARCADE');
   // Town-hall clocktower anchors the background skyline.
-  const tx=q.cx-s*.15,ty=shopY-s*1.30;
-  round(c,tx-s*.33,ty,s*.68,s*2.38,4,'#8c6558','#d7b594',2);
+  const tx=q.cx-s*.15,ty=roadsideFoot(q)-s*3.04;
+  round(c,tx-s*.33,ty,s*.68,s*3.04,4,'#8c6558','#d7b594',2);
   round(c,tx-s*.48,ty-s*.15,s*.96,s*.24,3,'#735653','#d6b59d',2);
   c.fillStyle='#e6d5b4';c.beginPath();c.arc(tx,ty+s*.45,s*.22,0,Math.PI*2);c.fill();
   c.strokeStyle='#685345';c.lineWidth=2;c.beginPath();c.moveTo(tx,ty+s*.45);c.lineTo(tx+s*.12,ty+s*.37);c.moveTo(tx,ty+s*.45);c.lineTo(tx-s*.04,ty+s*.31);c.stroke();
  }else if(alt){
   // Storefronts are set into the city blocks rather than floating rural kiosks.
-  const groundY=q.top+s*.16;
+  const groundY=roadsideFoot(q);
   const px=s*.11,dx=s*1.78,rx=w-s*2.64,rw=s*2.43;
   round(c,px,groundY-s*1.90,dx,s*1.90,2,'#516575','#bdc7c5',2);
   round(c,rx,groundY-s*2.23,rw,s*2.23,2,'#66667a','#c2b0ac',2);
@@ -1747,15 +1796,16 @@ function street(c,q,g,time,live){
   text(c,'POTENTIAL',billboardX+s*.77,billboardY+s*.47,s*.18,'#f2c784',900);
  }else{
   // Cedar Flats: faded shops, cheap diner, grimy electronics storefront.
-  outdoorFacade(c,q.cx-s*3.6,shopY,s*2.05,facadeH,'#987f71','#725e67','MARTHA’S DINER',s);
-  outdoorFacade(c,q.cx+s*.87,shopY+s*.17,s*2.25,facadeH,'#77888b','#5b6875','TV & ELECTRONICS',s);
-  const tvX=q.cx+s*1.55,tvY=shopY+s*.80;round(c,tvX,tvY,s*.47,s*.37,4,'#202b48','#e5dcb4',2);
-  text(c,'H',tvX+s*.24,tvY+s*.18,s*.22,'#efce92');
-  // Abandoned shop and crooked shuttered window.
-  round(c,s*.05,shopY+s*.58,s*.88,s*1.2,3,'#686e69','#988878',2);text(c,'TO LET',s*.47,shopY+s*.80,s*.14,'#eee0c6');
+  curbsideFacade(c,q,q.cx-s*3.6,s*2.05,s*1.96,'#987f71','#725e67','MARTHA’S DINER');
+  curbsideFacade(c,q,q.cx+s*.87,s*2.25,s*1.92,'#77888b','#5b6875','TV & ELECTRONICS');
+  const tvX=q.cx+s*1.55,tvY=roadsideFoot(q)-s*.82;
+  round(c,tvX,tvY,s*.47,s*.26,4,'#202b48','#e5dcb4',2);text(c,'TV',tvX+s*.24,tvY+s*.15,s*.18,'#efce92');
+  // Abandoned storefront is also planted on the pavement rather than floating.
+  curbsideFacade(c,q,s*.05,s*.84,s*1.46,'#686e69','#7e706a','TO LET');
  }
  // Road behind the public square, with road markings and an open street edge.
  poly(c,[[0,q.top+s*.16],[w,q.top+s*.16],[w,q.top+s*.52],[0,q.top+s*.52]],'#687878');
+ c.strokeStyle='#ecdfc6';c.lineWidth=2.2;c.beginPath();c.moveTo(0,q.top+s*.16);c.lineTo(w,q.top+s*.16);c.stroke();
  c.save();c.strokeStyle='#f7e4bc';c.lineWidth=3;c.setLineDash([14,20]);c.beginPath();c.moveTo(0,q.top+s*.31);c.lineTo(w,q.top+s*.31);c.stroke();c.restore();
  if(alt)nyStreetLife(c,q,time);
  // Outdoor plaza, not a boxed room. Open paving on all sides.
@@ -1834,9 +1884,11 @@ function openDistrict(c,q,g,time,kind){
  drawWeatherSky(c,q,g,time);
  extendedPavement(c,q,kind,time);
  if(hi)nySkyline(c,q,time);
+ roadsideFront(c,q);
 
  // Back street and curb behind the district square.
- poly(c,[[0,q.top+s*.12],[w,q.top+s*.12],[w,q.top+s*.49],[0,q.top+s*.49]],'#647b7e');
+ poly(c,[[0,q.top+s*.16],[w,q.top+s*.16],[w,q.top+s*.49],[0,q.top+s*.49]],'#647b7e');
+ c.strokeStyle='#f4e1c3';c.lineWidth=2;c.beginPath();c.moveTo(0,q.top+s*.16);c.lineTo(w,q.top+s*.16);c.stroke();
  c.save();c.strokeStyle='#f0deb6';c.lineWidth=Math.max(2,s*.05);c.setLineDash([14,16]);c.beginPath();c.moveTo(0,q.top+s*.31);c.lineTo(w,q.top+s*.31);c.stroke();c.restore();
 
  const a=proj(q,0,0),b=proj(q,4,0),d=proj(q,0,4),e=proj(q,4,4);
@@ -1856,21 +1908,21 @@ function openDistrict(c,q,g,time,kind){
  for(const dx of [-.41,.39]){c.fillStyle='#705147';c.fillRect(bench.x+s*dx,bench.y-s*.18,s*.08,s*.26);}
 
  if(shopping){
-  // Cleanly laid-out shopfronts: distinct buildings, no overlapping floating panels.
-  const y=Math.max(42,q.top-s*2.58);
+  // Shops are adjoining street-level buildings. All front doors end at the
+  // same pavement, with NO disjoint floating panels or gap beneath them.
+  const gap=s*.035,outer=s*.06,unit=(w-2*outer-2*gap)/3;
   if(hi){
-   outdoorFacade(c,s*.06,y-s*.14,s*1.92,s*1.58,'#6e8392','#b84d52','NYC BOUTIQUE',s);
-   outdoorFacade(c,q.cx-s*.58,y-s*.02,s*1.24,s*1.42,'#6d7388','#c69a67','BROADWAY BLVD',s);
-   outdoorFacade(c,w-s*2.02,y-s*.18,s*1.94,s*1.66,'#8d7194','#a95c86','BLESSBAY',s);
-   round(c,q.cx-s*.25,y+s*.70,s*.50,s*.44,4,'#35556b','#dec49c',2);text(c,'👜',q.cx,q.top-s*1.66,s*.30,'#fff6e2');
+   curbsideFacade(c,q,outer,unit,s*2.25,'#6e8392','#b84d52','NYC BOUTIQUE');
+   curbsideFacade(c,q,outer+unit+gap,unit,s*2.05,'#6d7388','#c69a67','BROADWAY BLVD');
+   curbsideFacade(c,q,outer+2*(unit+gap),unit,s*2.37,'#8d7194','#a95c86','BLESSBAY');
   }else if(market){
-   outdoorFacade(c,s*.08,y,s*1.98,s*1.42,'#a17b66','#b46d56','ASHBROOK MARKET',s);
-   outdoorFacade(c,w-s*2.02,y+s*.04,s*1.96,s*1.44,'#877c67','#5f8472','TAILOR & SONS',s);
-   outdoorFacade(c,q.cx-s*.55,y+s*.08,s*1.18,s*1.22,'#8e7d68','#d1a061','BOOKSTALL',s);
+   curbsideFacade(c,q,outer,unit,s*1.95,'#a17b66','#b46d56','ASHBROOK MARKET');
+   curbsideFacade(c,q,outer+unit+gap,unit,s*1.85,'#8e7d68','#d1a061','BOOKSTALL');
+   curbsideFacade(c,q,outer+2*(unit+gap),unit,s*1.97,'#877c67','#5f8472','TAILOR & SONS');
   }else{
-   outdoorFacade(c,s*.08,y,s*1.88,s*1.38,'#918377','#706d6a','SECOND HAND',s);
-   outdoorFacade(c,w-s*2.00,y+s*.06,s*1.92,s*1.40,'#9a8571','#68757a','GENERAL STORE',s);
-   outdoorFacade(c,q.cx-s*.52,y+s*.08,s*1.12,s*1.18,'#8c8f8f','#8f695e','PAWN',s);
+   curbsideFacade(c,q,outer,unit,s*1.78,'#918377','#706d6a','SECOND HAND');
+   curbsideFacade(c,q,outer+unit+gap,unit,s*1.69,'#8c8f8f','#8f695e','PAWN SHOP');
+   curbsideFacade(c,q,outer+2*(unit+gap),unit,s*1.82,'#9a8571','#68757a','GENERAL STORE');
   }
   const rack=proj(q,...PUBLIC_DISPLAY_ANCHORS.shop.rack);round(c,rack.x-s*.53,rack.y-s*.70,s*1.06,s*.15,5,'#ddc18e','#866551');
   for(let i=0;i<4;i++)text(c,['🧥','👕','👗','👟'][i],rack.x+s*(i-.5)*.21,rack.y-s*.46,s*.26,'#dce8e9');
@@ -1885,8 +1937,9 @@ function openDistrict(c,q,g,time,kind){
    person(c,pos.x,pos.y,.78,time+i,['#698e9b','#ad8378','#879e83','#9783a6'][i],['#ce997e','#aa7662','#dbb38f','#b68e78'][i],['#453746','#55433d'][i%2]);
   }
  }else{
-  outdoorFacade(c,q.cx-s*3.62,Math.max(49,q.top-s*2.65),s*2.20,s*1.98,'#bca88a','#728d74','FOOD BANK',s);
-  outdoorFacade(c,q.cx+s*.74,Math.max(49,q.top-s*2.65)+s*.07,s*2.3,s*1.98,'#94b2a8','#4b837a','COMMUNITY HUB',s);
+  const gap=s*.055,outer=s*.065,bw=(w-2*outer-gap)/2;
+  curbsideFacade(c,q,outer,bw,s*1.93,'#bca88a','#728d74','FOOD BANK');
+  curbsideFacade(c,q,outer+bw+gap,bw,s*2.05,'#94b2a8','#4b837a','COMMUNITY HUB');
   const active=g.v1?.programs||[],table=proj(q,...PUBLIC_DISPLAY_ANCHORS.outreach.table);
   round(c,table.x-s*.65,table.y-s*.40,s*1.34,s*.32,4,'#8d6b57','#e6c18d',2);
   text(c,active.length?'🥣 🥖 🍎':'🥣 🍞',table.x,table.y-s*.37,s*.25,'#f3e9cc');
@@ -2105,6 +2158,149 @@ function roomActorAnchors(q,room,count,reserved){
  }
  return available;
 }
+// v1.2.23: dedicated, deeper auditorium rendering. The front floor is an
+// extended rectangular seating section rather than a short square diamond.
+// Purchased objects occupy fixed wall/stage/side positions and never overlay
+// the preacher. These coordinates are independent of inventory order.
+function cleanVenue(c,q,g,time){
+ const s=q.s,w=q.w,h=q.h,t=style(g),v=g.venue||'hall';
+ const major=v==='mega',medium=v==='church',upgrade=Math.max(0,Math.min(3,Number(g.venueUpgrades?.[v])||0));
+ const isGold=gear(g,'dais')?.id?.includes('gold'),dais=gear(g,'dais');
+ const seating=gear(g,'seatingRig'),soft=gear(g,'seating');
+ const audienceTone=isGold?'#f5c681':major?'#c4879e':medium?'#a87758':'#a68f78';
+ // The cutaway walls and deity branding frame the room; do NOT draw a second
+ // free-standing throne, backdrop, upper balcony billboard or giant dais.
+ extendedInterior(c,q,g,'venue');
+ wall(c,q,g,'venue');
+ sanctuaryWindows(c,q,g);
+ anchoredColumns(c,q,g,'venue');
+ const back=proj(q,0,0),left=proj(q,0,4),right=proj(q,4,0);
+ const frontY=Math.min(h-s*.46,q.top+s*(major?5.60:medium?5.48:5.35));
+ const frontHalf=Math.min(w*.40,s*3.05);
+ const LF={x:q.cx-frontHalf,y:frontY},RF={x:q.cx+frontHalf,y:frontY};
+ const floorCol=major?'#8d919f':medium?'#aaa093':'#a7a7a3';
+ path(c,[back,right,RF,LF,left],floorCol,'#f4d5a4',3);
+ path(c,[LF,RF,{x:RF.x,y:RF.y+s*.14},{x:LF.x,y:LF.y+s*.14}],major?'#786379':'#6f6465','#e7c89c',2);
+ // Continuous floor tile lines recede toward the rear of the sanctuary.
+ c.save();c.strokeStyle='#fff3df42';c.lineWidth=1.0;
+ const sideY=right.y;
+ for(let yy=q.top+s*.66;yy<frontY;yy+=s*.44){
+  const rel=yy<=sideY?(yy-q.top)/Math.max(1,sideY-q.top):(frontY-yy)/Math.max(1,frontY-sideY);
+  const half=yy<=sideY?Math.max(s*.3,rel*4*s):frontHalf+(4*s-frontHalf)*Math.max(0,rel);
+  c.beginPath();c.moveTo(q.cx-half,yy);c.lineTo(q.cx+half,yy);c.stroke();
+ }
+ for(let k=-2;k<=2;k++){const xx=q.cx+k*frontHalf/3;
+  c.beginPath();c.moveTo(q.cx+(xx-q.cx)*.25,q.top+s*.83);c.lineTo(xx,frontY);c.stroke();}
+ c.restore();
+ // The central aisle occupies the new floor extension, and keeps a clear
+ // path between the two banks of benches.
+ const aisleStart=q.top+s*2.73;
+ poly(c,[[q.cx-s*.20,aisleStart],[q.cx+s*.20,aisleStart],[q.cx+s*.48,frontY-s*.06],[q.cx-s*.48,frontY-s*.06]],major?'#675a76':medium?'#967362':'#948271','#ead5ad');
+ for(let yy=aisleStart+s*.24;yy<frontY-s*.1;yy+=s*.60){c.strokeStyle='#e9cd9988';c.lineWidth=1.8;c.beginPath();c.moveTo(q.cx-s*.25,yy);c.lineTo(q.cx+s*.25,yy);c.stroke();}
+ // One low altar/stage. Purchased dais changes its finish, not the number of
+ // objects occupying the same position.
+ const stageBack=proj(q,.28,.28),stageR=proj(q,2.0,.28),stageF=proj(q,2.0,2.0),stageL=proj(q,.28,2.0);
+ const stageCol=isGold?'#c69854':major?t[2]:medium?'#a4755f':'#a18875';
+ path(c,[stageBack,stageR,stageF,stageL],isGold?'#eed19a':major?'#cba7b4':'#c9ae94',isGold?'#ffe7ae':'#f4d5ad',2.3);
+ path(c,[stageL,stageF,{x:stageF.x,y:stageF.y+s*.15},{x:stageL.x,y:stageL.y+s*.15}],stageCol,'#f5d49c',1.5);
+ path(c,[stageR,stageF,{x:stageF.x,y:stageF.y+s*.15},{x:stageR.x,y:stageR.y+s*.15}],stageCol,'#f5d49c',1.5);
+ if(dais){c.strokeStyle=isGold?'#ffe2a2':t[0];c.lineWidth=Math.max(2,s*.045);c.beginPath();c.moveTo(stageL.x,stageL.y);c.lineTo(stageF.x,stageF.y);c.lineTo(stageR.x,stageR.y);c.stroke();}
+ // Upgrade architecture is part of the outer room, not a stray floor block.
+ if(upgrade>=2){const by=Math.min(frontY-s*.35,sideY+s*.52);
+  round(c,q.cx-s*2.7,by,s*.73,s*.13,4,stageCol,'#f2d29e',1.5);
+  round(c,q.cx+s*1.97,by,s*.73,s*.13,4,stageCol,'#f2d29e',1.5);}
+ if(upgrade>=3||major){
+  const wallY=Math.max(s*.17,q.top-q.wall*.12);
+  for(const side of [-1,1]){const x=q.cx+side*s*3.08;
+   round(c,x-s*.38,wallY,s*.76,s*.11,4,isGold?'#e6c47f':t[2],'#e4c99d',1.6);
+   for(let k=-1;k<=1;k++){round(c,x+k*s*.19-s*.028,wallY-s*.29,s*.056,s*.31,2,'#dfcdad','#f9e6bc',.6);}
+  }
+ }
+ // Compact wall-mounted kit sits *outside* the stage and centre aisle.
+ const voice=gear(g,'voice'),audio=gear(g,'audio'),broadcast=gear(g,'broadcast');
+ if(voice||audio||major){
+  for(const side of [-1,1]){const x=q.cx+side*s*3.34,y=q.top+s*.74;
+   round(c,x-s*.20,y-s*.64,s*.40,s*.66,4,major?'#303e51':'#354959','#c7c9bf',1.6);
+   for(const dy of [-.40,-.17]){c.fillStyle='#9cb7bd';c.beginPath();c.arc(x,y+s*dy,s*.11,0,Math.PI*2);c.fill();}
+  }
+ }
+ if(broadcast){for(const side of (broadcast.id==='hall_cam'?[-1]:[-1,1])){
+  const x=q.cx+side*s*3.32,y=q.top+s*2.60;
+  round(c,x-s*.19,y-s*.49,s*.41,s*.29,4,'#304758',broadcast.id==='mega_gold_camera'?'#f4d49c':'#a8c4c7',1.7);
+  round(c,x-s*.08,y-s*.41,s*.22,s*.13,4,'#a4d5d8','#dfecdc',1.3);
+  c.fillStyle='#dc696b';c.beginPath();c.arc(x+s*.16,y-s*.47,s*.04,0,7);c.fill();
+  c.strokeStyle='#647783';c.lineWidth=2;c.beginPath();c.moveTo(x,y-s*.18);c.lineTo(x,y+s*.07);c.stroke();
+ }}
+ if(gear(g,'decor')){
+  for(const side of [-1,1]){const x=q.cx+side*s*2.22,y=Math.max(s*.56,q.top-q.wall*.23);
+   round(c,x-s*.16,y-s*.22,s*.32,s*.44,3,t[2],'#e7d29e',1.8);
+   text(c,t[3],x,y,s*.25,t[1],900);
+  }
+ }
+ if(gear(g,'sign')){
+  // Installed signage is a small wall plaque. The central venue title remains
+  // the only full-width title and nothing hangs in front of the preacher.
+  const x=q.cx,y=Math.max(s*.75,q.top-q.wall*.18);
+  round(c,x-s*.45,y+s*.06,s*.90,s*.19,4,major?'#2d4b5c':'#6a5b58','#dec58d',1.5);
+  text(c,`✦ ${(g.chosen||'FAITH').toUpperCase()} ✦`,x,y+s*.16,s*.12,'#ffedc2',850,'center',s*.83);
+ }
+ // Front-left hospitality and front-right collections are installed on their
+ // own small tables near the wall, never in the middle of the altar.
+ if(gear(g,'welcome')){
+  const x=q.cx-s*2.70,y=q.top+s*3.22;
+  round(c,x-s*.37,y-s*.10,s*.75,s*.17,4,'#cbaa7e','#f4deb0',1.6);
+  for(const dx of [-.25,.25]){c.fillStyle='#795e53';c.fillRect(x+s*dx,y+s*.08,s*.055,s*.26);}
+  text(c,gear(g,'welcome').id==='donuts'?'☕ 🍩':'☕',x,y-s*.20,s*.25);
+ }
+ if(gear(g,'collection')||!gear(g,'collection')){
+  const x=q.cx+s*2.70,y=q.top+s*3.22;
+  round(c,x-s*.35,y-s*.12,s*.70,s*.20,4,'#d5b88d','#f1dfb4',1.4);
+  for(const dx of [-.23,.23]){c.fillStyle='#796558';c.fillRect(x+s*dx,y+s*.07,s*.05,s*.26);}
+  const collector=gear(g,'collection');
+  round(c,x-s*.12,y-s*.43,s*.24,s*.27,3,collector?.id==='card_machine'?'#668f92':'#bc936b','#f8e4b7',1.4);
+  text(c,collector?.id==='card_machine'?'▣':'$',x,y-s*.31,s*.17,'#fff4cf',800);
+ }
+ // Seated audience: actual rows on the enlarged indoor floor, not beyond the
+ // stage or attached to a hovering platform below it.
+ const maxRows=major?4:medium?3:2;
+ const rows=Math.min(4,maxRows+(upgrade>=2?1:0));
+ const frontSpace=frontY-(q.top+s*2.88);
+ const first=q.top+s*3.05,step=Math.min(s*.63,frontSpace/Math.max(1,rows+.35));
+ const gold=seating?.id==='mega_gold_seats';
+ for(let i=0;i<rows;i++){
+  const y=first+i*step;
+  if(y>frontY-s*.28)break;
+  const fade=Math.max(.65,1-i*.08),width=s*(major?1.34:1.18)*fade,offset=s*.95;
+  for(const side of [-1,1]){
+   const x=q.cx+side*offset;
+   round(c,x-width*.5,y-s*.16,width,s*.18,4,gold?'#d1ad75':soft?.id==='velvet'?'#bc8a9b':audienceTone,gold?'#ffe2a5':'#efd8ad',1.5);
+   round(c,x-width*.47,y+s*.02,width*.94,s*.10,3,gold?'#f1d29b':major?'#d4a3b8':'#bda184','#e5c89c',1.0);
+   for(const dx of [-.4,.39]){c.fillStyle='#6a5651';c.fillRect(x+dx*width,y+s*.11,s*.035,s*.16);}
+  }
+ }
+ // Staff occupy the left/right aisles rather than standing between the
+ // preacher and the camera. Keep actors clickable in the foreground.
+ const cast=window.SPV1?.PEOPLE||{};
+ const members=Object.keys(g.v1?.characters||{}).filter(id=>g.v1.characters[id]?.met&&['jimmy','tammy','tony','bernie','gideon','babs','hubris'].includes(id)).slice(0,3);
+ const memberCoords=[[-2.50,3.90],[2.45,4.22],[-2.45,4.80]];
+ members.forEach((id,i)=>{const x=q.cx+memberCoords[i][0]*s*.60,y=q.top+memberCoords[i][1]*s;
+  const info=cast[id]||{};person(c,x,y,.89,time+i,info.coat||'#73879f',info.skin||'#cba081',info.hair||'#453c46');activeActors.push({id,x,y:y-s*.67});
+ });
+ // Live visitors use the audience space rather than materialising on the dais.
+ const live=window.SPWORLD?._live;
+ if(g.phase==='live'&&live?.people?.length){for(const [i,p] of live.people.slice(0,13).entries()){
+  const point=proj(q,1,1),walking=p.status!=='listen';
+  const x=q.cx+s*((i%5)-2)*.62,y=Math.min(frontY-s*.34,q.top+s*(3.24+Math.floor(i/5)*.46));
+  p.worldAnchor={x,y:y-s*.85};person(c,x,y,walking?.68:.75,time+p.stagger,p.coat||'#7895a0',p.skin,p.hair);
+ }}
+ // At last draw the preacher front and centre, with the lectern clearly to
+ // their LEFT, never laid over the character's body or face.
+ const preach=proj(q,1.22,1.13),lectern=proj(q,.60,1.67);
+ furnishing(c,q,g,'pulpit',.60,1.67,major?1.02:medium?.93:.86);
+ preacher(c,preach.x,preach.y-s*.07,major?1.50:1.39,time,g);
+ if(live)live.preacherAnchor={x:preach.x,y:preach.y-s*1.25};
+}
+
 function indoor(c,q,g,time,room){extendedInterior(c,q,g,room);ground(c,q,g,room);wall(c,q,g,room);sanctuaryWindows(c,q,g);anchoredColumns(c,q,g,room);const s=q.s,v=g.venue||'street',t=style(g),home=window.SPV1?.HOMES?.find(x=>x.id===g.v1?.home),homeTier=Math.max(0,(window.SPV1?.HOMES||[]).findIndex(x=>x.id===g.v1?.home)),fancy=v==='mega';
 if(room==='venue'){
  venueArchitecture(c,q,g);
@@ -2150,7 +2346,7 @@ if(room==='venue'){
 function paint(c,g,time,w,h,live){activeActors=[];W._assetRects=[];const q=geometry(w,h),s=scene(g),isStreet=s==='street'||(s==='venue'&&g.venue==='street');if(s==='venue'&&['church','mega'].includes(g.venue))q.wall=q.s*(g.venue==='mega'?3.65:3.28);const theme=style(g);const grad=c.createLinearGradient(0,0,0,h);grad.addColorStop(0,s==='government'?'#354059':s==='home'?'#293b52':'#263b51');grad.addColorStop(.68,'#3d4c54');grad.addColorStop(1,'#182a3a');c.fillStyle=grad;c.fillRect(0,0,w,h);
 // light in the distance, animated particles
 for(let i=0;i<24;i++){const x=((i*163)%Math.max(w,1)),y=(((i*83+time*2)%Math.max(h,1))),r=i%4?1.4:2.1;c.fillStyle=i%3?'#ffefbc1f':theme[0]+'44';c.beginPath();c.arc(x,y,r,0,7);c.fill();}
-if(isStreet){street(c,q,g,time,live);}else if(s==='shop'||s==='outreach'){openDistrict(c,q,g,time,s);}else if(s==='home'&&(!g.v1?.home||g.v1.home==='none')){alley(c,q,g,time);drawWeatherSky(c,q,g,time);}else indoor(c,q,g,time,s==='venue'?'venue':s);
+if(isStreet){street(c,q,g,time,live);}else if(s==='venue'){cleanVenue(c,q,g,time);}else if(s==='shop'||s==='outreach'){openDistrict(c,q,g,time,s);}else if(s==='home'&&(!g.v1?.home||g.v1.home==='none')){alley(c,q,g,time);drawWeatherSky(c,q,g,time);}else indoor(c,q,g,time,s);
  if(isStreet||s==='shop'||s==='outreach'||(s==='home'&&(!g.v1?.home||g.v1.home==='none')))drawWeatherFront(c,q,g,time);
 if(live?.running){
  const speaker=live.sermonBubble, listener=live.listenerBubble;
@@ -2763,13 +2959,13 @@ let worldLastHotspots='',worldLastSync=0;
 function worldScene(){return SPWORLD.scene(g);}
 function closeWorldAction(){$('actionPanel').classList.remove('sheet-open');$('worldCloseAction').classList.remove('sheet-open');}
 function openWorldAction(){if(running&&g.phase!=='live')return;g.worldPlace='venue';worldLastHotspots='';if(g.phase==='town'||g.phase==='results')startNewDay();else if(g.phase!=='live'&&g.phase!=='plan')phase('plan');renderPlay();$('actionPanel').classList.add('sheet-open');$('worldCloseAction').classList.add('sheet-open');$('worldMap').classList.add('hidden');}
-function worldPage(page){$('worldCharacter').classList.add('hidden');if(running||studySession){screenToast('Finish this activity before visiting the management desk.');return;}closeWorldAction();$('worldMap').classList.add('hidden');g.townPage=page;phase('town');renderTown();worldSyncUI(true);}
+function worldPage(page){if(page==='survival'){youTab='survival';page='you';}else if(page==='inventory'){youTab='wardrobe';page='you';}else if(page==='you'){youTab='portrait';}$('worldCharacter').classList.add('hidden');if(running||studySession){screenToast('Finish this activity before visiting the management desk.');return;}closeWorldAction();$('worldMap').classList.add('hidden');g.townPage=page;phase('town');renderTown();worldSyncUI(true);}
 function setWorldPlace(place){$('worldCharacter').classList.add('hidden');if(running||studySession){screenToast('Finish the current activity before travelling between rooms.');return;}if(!SPWORLD.scenes[place])return;closeWorldAction();$('worldMap').classList.add('hidden');if(g.phase==='results')startNewDay();else if(g.phase==='town'){phase('plan');renderPlay();}g.worldPlace=place;save();worldSyncUI(true);requestAnimationFrame(()=>worldSyncUI(true));}
 function worldMap(){$('worldCharacter').classList.add('hidden');if(running||studySession){screenToast('Finish the current activity first.');return;}closeWorldAction();if(g.phase==='town'){phase('plan');renderPlay();}const places=[['organisation','🏛️','Organisation','Staff, dedication, outreach and accounts'],['venue','⛪','Your Ministry','Services, furniture and visitors'],['street','🏘️','Town Square','Street life, food and passers-by'],['home','🏠','My Home','Upgrade home, rest and wardrobe'],['office','🗂️','Office','Tax, staff and finances'],['shop','🛍️','Shops','Clothing, equipment and supplies'],['library','📚','Library','Books, learning and skills'],['media','📺','Media Studio','Phone, broadcasts and press'],['outreach','❤️','Outreach','Community programmes'],['government','🏛️','Government','Political campaign and hearings']];$('worldMapPlaces').innerHTML=places.map(([id,icon,label,description])=>`<button class="world-map-place ${worldScene()===id?'current':''}" ${id==='organisation'?'data-world="page" data-world-page="organisation"':`data-world-place="${id}"`}><span class="world-place-emoji">${icon}</span><strong>${label}</strong><small>${description}</small></button>`).join('');$('worldMap').classList.remove('hidden');}
 function worldCharacter(id){const character=SPV1.PEOPLE[id],profile=g.v1?.characters?.[id];if(!character||!profile?.met)return;const score=Math.round(profile.relation||0),label=score>=55?'Trusted ally':score>=15?'Friendly':score<=-45?'Hostile':score<=-10?'Wary':'Acquaintance';const html=`<div class="world-person-head"><span class="world-person-emoji" style="background:${character.coat||'#52677a'}">${character.emoji||'💬'}</span><div style="flex:1"><h3>${esc(character.name)}</h3><small>${esc(character.role)} · ${label} (${score>0?'+':''}${score})</small></div><button class="world-close" data-world="closeCharacter" aria-label="Close character conversation">✕</button></div><p class="world-person-quote">“${esc(character.quote||'Good to see you.')}”</p><div class="world-person-actions"><button class="btn gold tiny" data-world="page" data-world-page="stories">💬 Their stories</button><button class="btn tiny" data-world="page" data-world-page="followers">🤝 Followers</button></div>`;$('worldCharacter').innerHTML=html;$('worldCharacter').classList.remove('hidden');closeWorldAction();$('worldMap').classList.add('hidden');}
 $('scene').addEventListener('click',e=>{if(running)return;const r=$('scene').getBoundingClientRect(),id=SPWORLD.hitActor(e.clientX-r.left,e.clientY-r.top);if(id)worldCharacter(id);});
 function worldInteract(action,page){switch(action){case 'service':openWorldAction();break;case 'map':worldMap();break;case 'closeMap':$('worldMap').classList.add('hidden');break;case 'character':worldCharacter(page);break;case 'closeCharacter':$('worldCharacter').classList.add('hidden');break;case 'close':if(g.phase==='town'){phase('plan');renderPlay();}else if(g.phase==='results')startNewDay();closeWorldAction();break;case 'next':startNewDay();closeWorldAction();break;case 'goto':setWorldPlace(page);break;case 'page':worldPage(page);break;case 'phone':worldPage('social');break;case 'stories':worldPage('stories');break;case 'people':case 'followers':worldPage('followers');break;case 'you':worldPage('you');break;case 'funds':notebook('funds');break;case 'journal':notebook('journal');break;case 'skills':notebook('tree');break;default:break;}}
-function worldSyncUI(force=false){if(!$('app')||$('app').classList.contains('hidden'))return;const key=[worldScene(),g.venue,g.location,g.v1?.home,g.phase,g.day,window.innerWidth,window.innerHeight].join('|');if(!force&&key===worldLastHotspots)return;const layout=SPWORLD._layout;if(!layout||layout.scene!==worldScene())return;worldLastHotspots=key;$('worldHere').textContent=SPWORLD.sceneName(g);$('worldMiniMenu').classList.toggle('hidden',false);$('worldMiniMenu').querySelector('[data-world="service"]').classList.toggle('hidden',g.phase==='live');const actions=SPWORLD.hotspots(g);const bar=$('worldSceneActions');const selected=bar.querySelector(':focus')?.getAttribute('data-world-page')||'';const previousScroll=bar.scrollLeft;bar.innerHTML=`<button class="world-action-chip world-location-chip" data-world="map" title="Change location"><span>📍</span><span>Locations</span></button>`+actions.map(h=>`<button class="world-action-chip" title="${esc(h.label)}" data-world="${esc(h.action)}" ${h.page?`data-world-page="${esc(h.page)}"`:''}><span class="world-action-emoji">${h.icon}</span><span>${esc(h.label)}</span></button>`).join('');bar.scrollLeft=previousScroll;$('worldHotspots').innerHTML='';$('worldNpcHotspots').innerHTML='';if(g.phase==='town'){$('worldDrawerTitle').textContent='🗂 '+(g.townPage||'MANAGE').replace(/^./,m=>m.toUpperCase());}const buttons=document.querySelectorAll('.game-dock [data-world]');buttons.forEach(b=>b.classList.toggle('dock-active',b.dataset.world==='service'?(g.phase==='plan'||g.phase==='live')&&worldScene()==='venue':b.dataset.world==='map'&&!$('worldMap').classList.contains('hidden')));}
+function worldSyncUI(force=false){if(!$('app')||$('app').classList.contains('hidden'))return;const key=[worldScene(),g.venue,g.location,g.v1?.home,g.phase,g.day,window.innerWidth,window.innerHeight].join('|');if(!force&&key===worldLastHotspots)return;const layout=SPWORLD._layout;if(!layout||layout.scene!==worldScene())return;worldLastHotspots=key;$('worldHere').textContent=SPWORLD.sceneName(g);$('worldMiniMenu').classList.toggle('hidden',false);$('worldMiniMenu').querySelector('[data-world="service"]').classList.toggle('hidden',g.phase==='live');$('worldSceneActions').replaceChildren();$('worldHotspots').innerHTML='';$('worldNpcHotspots').innerHTML='';if(g.phase==='town'){$('worldDrawerTitle').textContent='🗂 '+(g.townPage||'MANAGE').replace(/^./,m=>m.toUpperCase());}const buttons=document.querySelectorAll('.game-dock [data-world]');buttons.forEach(b=>b.classList.toggle('dock-active',b.dataset.world==='service'?(g.phase==='plan'||g.phase==='live')&&worldScene()==='venue':b.dataset.world==='map'&&!$('worldMap').classList.contains('hidden')));}
 function syncWorldSpeech(){
  const wrap=$('worldCanvasWrap'),main=$('spSpeaker'),audience=$('spListener');if(!wrap||!main||!audience)return;
  const on=running&&g.phase==='live'&&g.worldPlace==='venue'&&!pausedForChoice;
@@ -3576,11 +3772,11 @@ function resolveVenueBroadcast(){if(!session||!g.social.autoLive||!venueStreamRe
 const TOWN_TABS=[['organisation','🏛️','Organisation','Your ministry operations and community'],['survival','🧼','Survival','Food, washing and a shave'],['learning','📚','Study & Media','Books, phone study and charging'],['social','📱','Social Media','Posts, livestreams and analytics'],['trash','🗑️','Rummage bins','One free search per day'],['charity','🧥','Thrift Store','Bargain books rotate daily'],['highstreet','🏬','Main Street Shop','A step up in quality'],['online','📦','BlessBay Online','Premises only'],['properties','🏛️','Property Office','Only once you reach New York'],['schedule','🗓️','Main Service','Choose your weekly day and time'],['staff','🤝','Team roster','Milestone staff'],['inventory','🎒','Equipment','Five clothing slots'],['you','🧍','You','Your stats, skills and wardrobe'],['followers','👥','Followers','Congregation and recruited team'],['legacy','✈️','Golden Jet','Buy an extravagant private aircraft'],['lifestyle','🏠','My Homes','Private houses and living expenses'],['outreach','❤️','Outreach','Community work and programmes'],['empire','🏦','Empire Accounts','Taxes, rivals and press'],['stories','📖','Living Stories','Characters and relationships'],['government','🏛️','Government','The Divine Exemption Act']];
 // Five broad categories replace the old 12-item scrolling sidebar.
 const TOWN_GROUPS=[
- ['street','🏘️','Street Life',['survival','trash']],
+ ['street','🏘️','Street Life',['trash']],
  ['shopping','🛍️','Shopping',['charity','highstreet','online']],
  ['study','📚','Study',['learning']],['media','📱','Social Media',['social']],
  ['business','🏛️','Organisation',['organisation','outreach','staff','properties','schedule','empire','government','lifestyle','legacy']],['people','👥','Followers & Stories',['followers','stories']],
- ['profile','🧍','You',['you']]
+ ['profile','🧍','You',['you','survival','inventory']]
 ];
 function binRisk(){if(g.followers<5)return 0;return clamp(.002+(g.followers-4)*.00145,0,.22);}
 function binsAvailable(){return g.venue==='street' && g.location<2 && g.followers<65}
@@ -3628,6 +3824,8 @@ function shopCard(it){
 }
 
 let shopFilter='all',shopFilterStore='';
+let youTab='portrait'; // UI-only state, no save migration required
+
 function shopCategory(it){
  if(it.book)return 'books';
  if(['shirt','jacket','trousers','shoes','gloves','outfit'].includes(it.slot))return 'clothing';
@@ -3671,7 +3869,9 @@ function busCheck(){const next=g.location+1;const eligible=next<=2&&g.hygiene>=6
  return {eligible,needed:next===1?5:9,next};}
 function renderTown(){
  renderHUD();
- if(g.townPage==='trash'&&!binsAvailable())g.townPage='survival';
+ if(g.townPage==='trash'&&!binsAvailable()){g.townPage='you';youTab='survival';}
+ if(g.townPage==='survival'){g.townPage='you';youTab='survival';}
+ if(g.townPage==='inventory'){g.townPage='you';youTab='wardrobe';}
  if(!visibleTownTabs().some(t=>t[0]===g.townPage))g.townPage='organisation';
  const cur=g.townPage,group=groupForPage(cur),loc=TOWN_TABS.find(t=>t[0]===cur)||TOWN_TABS[0];
  $('townView').classList.toggle('world-focused-view',cur==='you'||cur==='followers');
@@ -3680,17 +3880,39 @@ function renderTown(){
  const subtabs=groupTabs(group).map(([id,icon,title])=>`<button class="town-subtab ${cur===id?'active':''}" data-town="${id}" aria-pressed="${cur===id}">${icon} ${esc(title)}</button>`).join('');
  $('townNav').innerHTML=`<span class="eyebrow">${esc(area().name.toUpperCase())}</span><h2>${esc(TOWN_GROUPS.find(x=>x[0]===group)?.[2]||'My world')}</h2><p>${group==='shopping'?'Clothing, books, gear and supplies only.':group==='business'?'Manage your ministry away from the shops.':'Your chosen section.'}</p><button class="btn subtle full" data-world="map">🗺 Change section</button><button class="btn gold full" data-act="nextDay">PLAN ${dateLabel(g.day,true).toUpperCase()} →</button>`;
  let content='';
+ const survivalPageContent=()=>`<div class="town-top"><div><span class="eyebrow">KEEP YOURSELF GOING</span><h2>🧼 Survival & grooming</h2><p>Food is paid automatically each day. Meals and grooming cost more in larger cities, but there are also more people to attract. The soup kitchen remains an affordable option. ${isHoused()?'Your home now includes daily washing and laundry upkeep: cleanliness automatically improves after each day.':'Without a home, body and clothing cleanliness gradually fall each day.'}</p></div></div><div class="status-grid"><div><small>BODY CLEANLINESS</small><strong>${Math.round(g.hygiene)}%</strong></div><div><small>CLOTHING CONDITION</small><strong>${Math.round(g.clothesClean)}%</strong></div><div><small>HAIR & SHAVE</small><strong>${Math.round(g.grooming)}%</strong></div></div><div class="stock-grid survival-grid"><div class="stock-card"><span class="icon">🥣</span><h3>Soup Kitchen</h3><p>Queue for a free meal; food for today costs only ${cash(pennies(.12*locationLivingMultiplier()))}.</p><div class="tag">Free · once a day</div><button class="btn" data-survive="food" ${g.foodPreparedDay===g.day?'disabled':''}>${g.foodPreparedDay===g.day?'Meal arranged':'Get a meal'}</button></div><div class="stock-card"><span class="icon">🚿</span><h3>${isHoused()?'Shower at home':'Public Washroom'}</h3><p>${isHoused()?'Included with your home. Take a shower whenever you need a quick reset, once per day.':'Soap, a sink and a fresh start. Come back as often as you need.'}</p><div class="tag"> ${isHoused()?'Included with home':cash(washCost)} · +50 hygiene, +10 clothes</div><button class="btn" data-survive="wash" ${(isHoused()&&g.washedDay===g.day)||g.money<washCost?'disabled':''}>${isHoused()&&g.washedDay===g.day?'Already showered today':`Wash up · ${isHoused()?'Free':cash(washCost)}`}</button></div><div class="stock-card"><span class="icon">🪒</span><h3>Basic Shave</h3><p>Remove the week's stubble. Beard appearance changes on your character.</p><div class="tag"> ${cash(shaveCost)} · +52 grooming</div><button class="btn" data-survive="shave" ${g.money<shaveCost?'disabled':''}>Shave · ${cash(shaveCost)}</button></div><div class="stock-card"><span class="icon">💈</span><h3>Barber</h3><p>A proper haircut and shave gives you a fresher appearance.</p><div class="tag"> ${cash(barberCost)} · +85 grooming</div><button class="btn" data-survive="barber" ${g.money<barberCost?'disabled':''}>Visit barber · ${cash(barberCost)}</button></div><div class="stock-card"><span class="icon">🧺</span><h3>Launder Clothing</h3><p>${isHoused()?'Clothing stays fresher when you have somewhere to wash and store it. Home upkeep now covers everyday laundering.':'Your clothes get grubby every week, even after you\'ve upgraded them.'}</p><div class="tag"> ${cash(laundryCost)} · +55 clothes condition</div><button class="btn" data-survive="laundry" ${g.money<laundryCost?'disabled':''}>Do laundry · ${cash(laundryCost)}</button></div></div><div class="note">Hunger streak: ${g.hunger} · You can always preach or scavenge, even when money runs out. Basic grooming costs a little; the soup kitchen can help with meals.</div>`;
  if(cur==='organisation'){
- const links=[['❤️','Community Outreach','Programmes, dedication and community impact','outreach'],['🤝','Staff & Wages','Contracts, loyalty and recruited helpers','staff'],['🏛️','Buildings & Expansion','Hall, church and venue upgrades','properties'],['🏠','Your Home','Property, upkeep and privacy','lifestyle'],['🗓️','Service Schedule','Plan the main gathering','schedule'],['📊','Ministry Accounts','Taxes, funding and public image','empire'],['📜','Government','Legislation and long-term campaign','government'],['✈️','Empire & Legacy','Television, milestones and the jet','legacy']];
+ const links=[['❤️','Community Outreach','Programmes, dedication and community impact','outreach'],['🤝','Staff & Wages','Contracts, loyalty and recruited helpers','staff'],['🏛️','Buildings & Expansion','Hall, church and venue upgrades','properties'],['🏠','Your Home','Property, upkeep and privacy','lifestyle'],['🗓️','Service Schedule','Plan the main gathering','schedule'],['📊','Ministry Accounts','Taxes, funding and public image','empire'],['📜','Government','Legislation and long-term campaign','government'],['✈️','Golden Jet & Legacy','Private aircraft, milestones and rebirth','legacy']];
  const allowed=id=>!['properties','schedule'].includes(id)||g.location===2;
  content=`<div class="town-top"><div><span class="eyebrow">YOUR MOVEMENT · NOT A SHOP</span><h2>🏛️ Organisation</h2><p>This is the headquarters of your ministry: outreach, staff, property, finances and long-term ambitions. Shops are for purchases only.</p></div></div>
  <div class="paper"><h3>Ministry at a glance</h3><div class="profile-numbers"><div><small>DEDICATION</small><b>${Math.round(g.dedication)}%</b></div><div><small>CONGREGATION</small><b>${num(g.followers)}</b></div><div><small>STAFF</small><b>${g.staff.length}/5</b></div></div><p>Venue: <b>${esc(venue().name)}</b> · Weekly staff payroll: <b>${cash(staffPayroll())}</b> · Online audience: <b>${num(g.social.followers||0)}</b>.</p></div>
  <div class="org-grid">${links.filter(([i,l,d,id])=>id!=='legacy'||g.venue==='mega').map(([icon,label,desc,id])=>`<button class="org-quick" data-town="${id}" ${!allowed(id)?'disabled':''}><strong>${icon} ${esc(label)}</strong><small>${allowed(id)?esc(desc):'Available once you reach New York City'}</small></button>`).join('')}</div>`;
  }
- else if(['lifestyle','outreach','empire','stories','government'].includes(cur))content=SPV1.renderPage(g,cur);
- else if(cur==='you')content=`<div class="town-top"><div><span class="eyebrow">YOUR PERSONAL JOURNEY</span><h2>🧍 You</h2><p>Your stats, clothing and equipment. Recruited helpers belong under Followers.</p></div></div>${characterHTML()}`;
+ else if(['lifestyle','outreach','empire','stories','government'].includes(cur)){
+  content=SPV1.renderPage(g,cur);
+  if(cur==='outreach'){
+   if(g.venue!=='mega')content+=`<div class="paper" id="tv-outreach"><h3>📺 Television Outreach</h3><p>Reach more people through televised ministry campaigns. Airtime unlocks when you establish your megachurch.</p><div class="note">🔒 Build a megachurch to book television advertising.</div></div>`;
+   else {
+    const campaign=g.tvCampaign&&g.tvCampaign.expiresDay>=g.day?g.tvCampaign:null;
+    const tv=TV_PACKAGES.map(p=>`<div class="stock-card"><span class="icon">📺</span><h3>${esc(p.name)}</h3><p>${esc(p.description)}</p><div class="tag">Next week's main service · potential reach +${Math.round(p.boost*100)}% · ${cash(p.price)}</div><button class="btn" data-tv="${p.id}" ${g.money<p.price||campaign?'disabled':''}>${campaign?'Campaign already booked':g.money<p.price?'Not enough cash':'Book airtime · '+cash(p.price)}</button></div>`).join('');
+    content+=`<div class="paper" id="tv-outreach"><h3>📺 Television Outreach</h3><p>Buy airtime to advertise your <b>next week's main service</b>. A bigger television audience brings visitors, but your sermon determines how many join.</p>${campaign?`<div class="note">📡 ${esc(campaign.name)} booked. Runs on the next eligible main service after day ${campaign.readyDay-1}.</div>`:''}<div class="stock-grid">${tv}</div></div>`;
+   }
+  }
+ }
+
+ else if(cur==='you'){
+ const tabs=[['portrait','🧍','Portrait'],['wardrobe','🎒','Wardrobe & items'],['skills','🌳','Skills'],['survival','🧼','Survival']];
+ const tabNav=`<nav class="you-submenu" aria-label="Character sections">${tabs.map(([id,icon,title])=>`<button data-you-tab="${id}" class="you-submenu-tab ${youTab===id?'active':''}" aria-pressed="${youTab===id}"><span>${icon}</span><span>${title}</span>${id==='skills'&&unspentPoints()>0?`<b class="you-points-chip">${unspentPoints()}</b>`:''}</button>`).join('')}</nav>`;
+ let body='';
+ if(youTab==='portrait')body=`<div class="you-portrait-panel"><div class="you-portrait-header"><strong>${esc(g.leader)}</strong><span>${deity().symbol} ${esc(deity().name)}${hasFullDivineSet()?` · ${esc(divineAscensionTitle())}`:''}</span></div><div class="you-portrait-art">${wardrobePreviewSVG()}</div></div>`;
+ else if(youTab==='wardrobe')body=`<div class="you-section-head"><h2>🎒 Wardrobe & items</h2><p>Dress your preacher and equip the gear you've bought. Tap a slot to choose an item.</p></div><div class="note divine-set-note">✦ Divine Regalia: ${divinePartsEquipped()}/5 equipped${hasFullDivineSet()?' · Ascension form active':''}</div><div class="paper"><h3>Clothing</h3>${slotGrid(WEAR_SLOTS)}</div><div class="paper"><h3>Equipment</h3>${slotGrid(STREET_SLOTS)}</div>${selectedWardrobe()}`;
+ else if(youTab==='skills')body=`<div class="you-section-head"><h2>🌳 Skills & talents</h2><p>Train your four abilities and unlock permanent specialisations.</p></div><div class="profile-numbers"><div><small>TOTAL LEVEL</small><b>${totalSkillLevels()}</b></div><div><small>UNSPENT POINTS</small><b>${unspentPoints()}</b></div></div><button class="btn gold full" data-notebook-page="tree">🌳 OPEN SKILL TREE · ${unspentPoints()} POINTS</button><div class="skill-cards">${SKILLS.map(k=>{const x=xpProgress(g.xp[k]);return `<button class="skill-card" data-skill="${k}"><div class="stat-title"><b>${SKILL_INFO[k].icon} ${esc(SKILL_INFO[k].label)} ⓘ</b><b>Level ${skill(k)}${gearSkillBoost(k)>0?' +'+gearSkillBoost(k):''}</b></div><div class="bar"><i style="width:${x.pct}%"></i></div><p>${Math.max(0,x.max-g.xp[k])} XP to next level</p></button>`}).join('')}</div>`;
+ else if(youTab==='survival')body=survivalPageContent();
+ content=`<div class="you-screen">${tabNav}<div class="you-panel-body">${body}</div></div>`;
+ }
+
  else if(cur==='followers')content=followersOverviewHTML();
-  else if(cur==='survival')content=`<div class="town-top"><div><span class="eyebrow">KEEP YOURSELF GOING</span><h2>🧼 Survival & grooming</h2><p>Food is paid automatically each day. Meals and grooming cost more in larger cities, but there are also more people to attract. The soup kitchen remains an affordable option. ${isHoused()?'Your home now includes daily washing and laundry upkeep: cleanliness automatically improves after each day.':'Without a home, body and clothing cleanliness gradually fall each day.'}</p></div></div><div class="status-grid"><div><small>BODY CLEANLINESS</small><strong>${Math.round(g.hygiene)}%</strong></div><div><small>CLOTHING CONDITION</small><strong>${Math.round(g.clothesClean)}%</strong></div><div><small>HAIR & SHAVE</small><strong>${Math.round(g.grooming)}%</strong></div></div><div class="stock-grid survival-grid"><div class="stock-card"><span class="icon">🥣</span><h3>Soup Kitchen</h3><p>Queue for a free meal; food for today costs only ${cash(pennies(.12*locationLivingMultiplier()))}.</p><div class="tag">Free · once a day</div><button class="btn" data-survive="food" ${g.foodPreparedDay===g.day?'disabled':''}>${g.foodPreparedDay===g.day?'Meal arranged':'Get a meal'}</button></div><div class="stock-card"><span class="icon">🚿</span><h3>${isHoused()?'Shower at home':'Public Washroom'}</h3><p>${isHoused()?'Included with your home. Take a shower whenever you need a quick reset, once per day.':'Soap, a sink and a fresh start. Come back as often as you need.'}</p><div class="tag"> ${isHoused()?'Included with home':cash(washCost)} · +50 hygiene, +10 clothes</div><button class="btn" data-survive="wash" ${(isHoused()&&g.washedDay===g.day)||g.money<washCost?'disabled':''}>${isHoused()&&g.washedDay===g.day?'Already showered today':`Wash up · ${isHoused()?'Free':cash(washCost)}`}</button></div><div class="stock-card"><span class="icon">🪒</span><h3>Basic Shave</h3><p>Remove the week's stubble. Beard appearance changes on your character.</p><div class="tag"> ${cash(shaveCost)} · +52 grooming</div><button class="btn" data-survive="shave" ${g.money<shaveCost?'disabled':''}>Shave · ${cash(shaveCost)}</button></div><div class="stock-card"><span class="icon">💈</span><h3>Barber</h3><p>A proper haircut and shave gives you a fresher appearance.</p><div class="tag"> ${cash(barberCost)} · +85 grooming</div><button class="btn" data-survive="barber" ${g.money<barberCost?'disabled':''}>Visit barber · ${cash(barberCost)}</button></div><div class="stock-card"><span class="icon">🧺</span><h3>Launder Clothing</h3><p>${isHoused()?'Clothing stays fresher when you have somewhere to wash and store it. Home upkeep now covers everyday laundering.':'Your clothes get grubby every week, even after you\'ve upgraded them.'}</p><div class="tag"> ${cash(laundryCost)} · +55 clothes condition</div><button class="btn" data-survive="laundry" ${g.money<laundryCost?'disabled':''}>Do laundry · ${cash(laundryCost)}</button></div></div><div class="note">Hunger streak: ${g.hunger} · You can always preach or scavenge, even when money runs out. Basic grooming costs a little; the soup kitchen can help with meals.</div>`;
+  else if(cur==='survival')content=survivalPageContent();
  else if(cur==='learning'){
  const phone=item(g.equipped.phone),plan=DATA_PLANS[g.dataPlan]||DATA_PLANS.none,phoneTier=phone?.phone||0;
  const bookButtons=g.books.length?g.books.map(id=>{const it=item(id),reads=g.readCounts[id]||0;return it?`<button class="btn" data-study-book="${id}">📖 ${esc(it.name)} <small>· read ${reads}× · ${esc(SKILLS.filter(k=>it.xp?.[k]).map(k=>SKILL_INFO[k].label).join(' + '))}</small></button>`:'';}).join(''):'<div class="note">No books yet. The thrift store has a rotating shelf of cheap parody books each day.</div>';
@@ -3730,14 +3952,11 @@ function renderTown(){
   }
 else if(cur==='legacy'){
   let late='';
-  if(g.venue!=='mega')late='<div class="note">🔒 The future is not for sale yet. Build a megachurch before you can dream of television campaigns and a private jet.</div>';
+  if(g.venue!=='mega')late='<div class="note">🔒 The future is not for sale yet. Build a megachurch before you can acquire your private jet.</div>';
   else{
-   const campaign=g.tvCampaign&&g.tvCampaign.expiresDay>=g.day?g.tvCampaign:null;
-   const tv=TV_PACKAGES.map(p=>`<div class="stock-card"><span class="icon">📺</span><h3>${esc(p.name)}</h3><p>${esc(p.description)}</p><div class="tag">Next week’s main service · potential reach +${Math.round(p.boost*100)}% · ${cash(p.price)}</div><button class="btn" data-tv="${p.id}" ${g.money<p.price||campaign?'disabled':''}>${campaign?'Campaign already booked':g.money<p.price?'Not enough cash':'Book airtime · '+cash(p.price)}</button></div>`).join('');
-   late=`<div class="paper"><h3>📺 Television & publicity</h3><p>A megachurch perk. Buy expensive television adverts to boost the audience at your <b>next week’s scheduled main service</b>. Coverage does not guarantee conversions; your sermon still matters.</p>${campaign?`<div class="note">📡 ${esc(campaign.name)} booked. Runs on the next eligible main service after day ${campaign.readyDay-1}.</div>`:''}<div class="stock-grid">${tv}</div></div>
-   <div class="paper"><h3>✈️ Your Gold-Plated Private Jet</h3><p>A high-prestige luxury purchase—NOT the ending. Tax exemption and the final showdown with L. Ron Hubris remain ahead. A custom golden aircraft for your personal empire. You need a megachurch, ${cash(JET_PRICE)}, at least ${num(JET_FOLLOWERS)} followers, 57% dedication and your complete five-piece divine regalia equipped. Your congregation and online ministry can keep growing while you save.</p>${g.jetPurchased?`<div class="note">✦ Your private jet is waiting. It creates enormous media interest, but your real finale is the Divine Exemption Act.</div>${SPV1.endingUnlocked(g)?'<button class="btn gold" data-act="boardJet">BEGIN BORN AGAIN →</button>':'<div class="note">🏛️ Pursue government tax exemption in Organisation → Government to unlock Born Again.</div>'}`:`<button class="btn gold" data-act="buyJet" ${g.money<JET_PRICE||g.followers<JET_FOLLOWERS||g.dedication<57||!hasFullDivineSet()?'disabled':''}>BUY THE GOLDEN JET · ${cash(JET_PRICE)}</button>`}<p>Progress: ${num(g.followers)}/${num(JET_FOLLOWERS)} followers · dedication ${Math.round(g.dedication)}%/57% · divine outfit ${divinePartsEquipped()}/5.</p></div>`;
+   late=`<div class="paper"><h3>✈️ Your Gold-Plated Private Jet</h3><p>A high-prestige luxury purchase—NOT the ending. Tax exemption and the final showdown with L. Ron Hubris remain ahead. A custom golden aircraft for your personal empire. You need a megachurch, ${cash(JET_PRICE)}, at least ${num(JET_FOLLOWERS)} followers, 57% dedication and your complete five-piece divine regalia equipped. Your congregation and online ministry can keep growing while you save.</p>${g.jetPurchased?`<div class="note">✦ Your private jet is waiting. It creates enormous media interest, but your real finale is the Divine Exemption Act.</div>${SPV1.endingUnlocked(g)?'<button class="btn gold" data-act="boardJet">BEGIN BORN AGAIN →</button>':'<div class="note">🏛️ Pursue government tax exemption in Organisation → Government to unlock Born Again.</div>'}`:`<button class="btn gold" data-act="buyJet" ${g.money<JET_PRICE||g.followers<JET_FOLLOWERS||g.dedication<57||!hasFullDivineSet()?'disabled':''}>BUY THE GOLDEN JET · ${cash(JET_PRICE)}</button>`}<p>Progress: ${num(g.followers)}/${num(JET_FOLLOWERS)} followers · dedication ${Math.round(g.dedication)}%/57% · divine outfit ${divinePartsEquipped()}/5.</p></div>`;
   }
-  content=`<div class="town-top"><div><span class="eyebrow">THE BIGGEST POSSIBLE BRAND</span><h2>✦ Empire & legacy</h2><p>The absurd rewards are hidden until you become a megachurch magnate. Only the private jet unlocks rebirth.</p></div></div>${late}<div class="note">Past lives: ${g.rebirths} · Permanent skill boosts: ${SKILLS.map(k=>`${esc(SKILL_INFO[k].label)} +${g.legacy[k]||0}`).join(' · ')}. Skill XP multiplier ×${legacyXP().toFixed(2)} · Bonus talent points ${Math.min(4,g.rebirths)} · Next-life starting funds ${cash(g.rebirths?Math.min(180,40+(g.rebirths+1)*20):60)}. <br>Divine blessings: ${esc(legacyDescription())}. A new life requires a different deity.</div>`;
+  content=`<div class="town-top"><div><span class="eyebrow">THE BIGGEST POSSIBLE BRAND</span><h2>✈️ Golden Jet & Legacy</h2><p>Your final luxury purchase and rebirth milestones. Television campaigns now live in Organisation → Community Outreach.</p></div></div>${late}<div class="note">Past lives: ${g.rebirths} · Permanent skill boosts: ${SKILLS.map(k=>`${esc(SKILL_INFO[k].label)} +${g.legacy[k]||0}`).join(' · ')}. Skill XP multiplier ×${legacyXP().toFixed(2)} · Bonus talent points ${Math.min(4,g.rebirths)} · Next-life starting funds ${cash(g.rebirths?Math.min(180,40+(g.rebirths+1)*20):60)}. <br>Divine blessings: ${esc(legacyDescription())}. A new life requires a different deity.</div>`;
  }
  $('townContent').innerHTML=`<nav class="town-subtabs" aria-label="Town section">${subtabs}</nav><div class="town-inner-content">${content}</div>`;
 }
@@ -3779,7 +3998,7 @@ function scavenge(mode='quick'){
  }
  screenToast(note);renderTown();renderHUD();save();
 }
-function survive(id){if(g.phase!=='town'||g.townPage!=='survival')return;
+function survive(id){if(g.phase!=='town'||!(g.townPage==='survival'||g.townPage==='you'&&youTab==='survival'))return;
  if(id==='food'){if(g.foodPreparedDay===g.day)return;g.foodPreparedDay=g.day;screenToast('Food arranged. Today costs '+cash(mealCost())+'.');}
  else if(id==='wash'){const cost=isHoused()?0:groomingCost(.95);if((isHoused()&&g.washedDay===g.day)||g.money<cost)return;g.money=pennies(g.money-cost);g.washedDay=g.day;g.hygiene=clamp(g.hygiene+50,0,100);g.clothesClean=clamp(g.clothesClean+10,0,100);screenToast('Washed up for '+cash(cost)+'. You look a lot better.');}
  else {const base={shave:1.5,barber:4,laundry:2}[id];const cost=base?groomingCost(base):0;if(!cost||g.money<cost)return;g.money=pennies(g.money-cost);
@@ -3861,7 +4080,7 @@ function drawBusMovie(dt){if($('busMovie').classList.contains('hidden'))return;b
  c.fillStyle='#f8e9cc';c.font='bold 22px system-ui';c.textAlign='center';c.fillText(zh?'前往更大舞台':'THE ROAD TO SOMETHING BIGGER',450,415);if(p>=1){c.font='15px system-ui';c.fillText(zh?'抵达——点击继续':'ARRIVED — TAP CONTINUE',450,444);}
 }
 function purchaseTV(id){
- if(g.phase!=='town'||g.venue!=='mega'||g.townPage!=='legacy')return;
+ if(g.phase!=='town'||g.venue!=='mega'||g.townPage!=='outreach')return;
  const p=TV_PACKAGES.find(o=>o.id===id);if(!p||g.money<p.price||(g.tvCampaign&&g.tvCampaign.expiresDay>=g.day))return;
  g.money=pennies(g.money-p.price);
  g.tvCampaign={name:p.name,boost:p.boost,readyDay:g.day+7,expiresDay:g.day+21,served:false};
@@ -4828,8 +5047,9 @@ document.addEventListener('click',e=>{
  if(target.dataset.treeSkill){skillTreeFocus=target.dataset.treeSkill;skillTreeSelected=Object.keys(PERKS).find(id=>PERKS[id].skill===skillTreeFocus)||'charm_open';notebook('tree');return;}
  if(target.dataset.treeDetail){skillTreeSelected=target.dataset.treeDetail;notebook('tree');return;}
  if(target.dataset.shopFilter){if(g.phase==='town'&&['charity','highstreet','online'].includes(g.townPage)){shopFilter=target.dataset.shopFilter;renderTown();}return;}
+ if(target.dataset.youTab){if(g.phase==='town'&&g.townPage==='you'){youTab=target.dataset.youTab;renderTown();}return;}
  if(target.dataset.townGroup){if(g.phase!=='town')return;const t=groupTabs(target.dataset.townGroup);if(t.length){g.townPage=t[0][0];renderTown();save();}return;}
- if(target.dataset.town){if(g.phase!=='town')return;g.townPage=target.dataset.town;renderTown();save();return;}
+ if(target.dataset.town){if(g.phase!=='town')return;g.townPage=target.dataset.town;if(g.townPage==='you')youTab='portrait';renderTown();save();return;}
  if(target.dataset.shopCancel!==undefined){closeShopConfirmation();return;}
  if(target.dataset.shopConfirm!==undefined){const chosen=pendingShopItem;closeShopConfirmation();if(chosen)buy(chosen);return;}
  if(target.dataset.shopChoice){previewShopPurchase(target.dataset.shopChoice);return;}
@@ -4933,7 +5153,7 @@ Object.assign(ZH,{"🚌 A BIG DECISION":"🚌 重大抉择","Your next chapter i
 Object.assign(ZH,{"ACCESSIBILITY · PER DEVICE":"无障碍 · 按设备设置","Display & readability":"显示与阅读体验","Display settings":"显示设置","Display size and layout":"显示大小与布局","Close display settings":"关闭显示设置","Change the size of menus, buttons and descriptions. Your Pixel can use a larger setting without changing your iPhone. You can also rotate the phone — both layouts are supported.":"调整菜单、按钮和说明文字的大小。Pixel 手机可以设置更大的文字，不影响 iPhone。横屏和竖屏都支持。","Interface text size":"界面文字大小","Compact":"紧凑","More fits on screen":"在屏幕上显示更多内容","Standard":"标准","Original size":"原始大小","Comfortable":"舒适","Clearer on phones":"手机上更清楚","Extra large":"超大","Easy-to-read text":"更容易阅读","Tip: Landscape gives more room for the street scene. In portrait, Town uses horizontal category tabs so you don't have to scroll past every shop.":"提示：横屏可显示更宽的街景；竖屏时城镇页面会采用横向分类标签，不必滚动经过每家店铺。","DONE":"完成","Explore Town":"探索城镇","Choose a section, then a place.":"先选择分类，再选择地点。","Street Life":"街头生活","Shopping":"购物","Study":"学习","Organisation":"组织经营","My Gear":"我的装备","EARLY GAME · ONE SEARCH EACH DAY":"游戏前期 · 每天可搜一次","🗑️ Rummage Bins":"🗑️ 翻找垃圾箱","Rummage Bins":"翻找垃圾箱","When you're just starting out, you can hunt for a cardboard box, a sign, a coat, unopened food or some loose change. Each day gives one free search, but you might find nothing.":"刚起步时，可以在垃圾箱里寻找纸箱、标牌、外套、未开封的食物或一些零钱。每天可免费搜索一次，但也可能一无所获。","Already searched today":"今天已经搜过了","Try your luck":"试试运气","Nobody knows your face yet — it is safe to rummage.":"现在还没人认识你，翻找垃圾箱暂时不会被认出来。","Once you reach 65 followers, leave the street, or move to New York, scavenging is removed from the menu. Your public image matters more than scraps.":"当你达到 65 位追随者、有自己的场地或来到纽约时，翻找垃圾箱会从菜单中消失。你的公众形象比垃圾中的战利品更重要。","🔎 ALREADY SEARCHED":"🔎 今日已搜索","🔎 SEARCH THE BINS":"🔎 搜索垃圾箱","Someone recognised you rummaging:":"有人认出你正在翻找垃圾箱："," and lower dedication.":"，忠诚度也下降了。","At the beginning, open Town → Street Life → Rummage Bins for one free chance to find a box, sign, clothing, food or coins each day. Once you have followers, getting spotted can cost you supporters. Bin searching disappears as you build a reputation or reach the city. Save for clean clothes, washing and the bus to New York.":"在游戏初期，打开“城镇 → 街头生活 → 翻找垃圾箱”，每天免费寻找一次纸箱、标牌、衣物、食物或零钱。有追随者之后，被人发现可能导致掉粉。随着名气增加或进入大城市，这项活动会消失。记得存钱买干净衣服、洗澡并坐车前往纽约。","Budget for meals and grooming. Early on, Town → Street Life → Rummage Bins offers free finds once a day. You can search quickly for less risk or thoroughly for better finds. Food is a common reward. Being spotted becomes more likely as your followers grow; it disappears when you are established. Make two $75 fictional bus trips from Cedar Flats to Ashbrook to New York City. Equipment does not stack in the same slot. Early equipment is deliberately affordable; keep an eye on your next bus fare savings goal.":"记得支付餐食与个人清洁费用。游戏初期，可在“城镇 → 街头生活 → 翻找垃圾箱”每天免费搜寻一次。有追随者之后，被发现会损失粉丝和忠诚度；成名后此选项会消失。乘坐两次虚构的 2.50 美元公交车，从松谷镇经过东布赖尔到达纽约。相同装备槽位的加成不会叠加。"});
 
 Object.assign(ZH,{"CEDAR FLATS TO NEW YORK · v0.7":"从松谷镇到纽约 · v0.7","BEFORE YOUR FIRST SERMON · QUICK GUIDE":"第一次布道前 · 简短指南","How your little empire grows":"你的小小事业如何起步","Three things to know. No tutorial missions, just the rules you'll be using.":"只需了解三件事。不用完成教学任务，看看游戏规则就好。","Preach to earn":"布道赚取收入","Plan your topic, delivery, movement and request for donations. As people pass, you'll see money and followers change. Make two decisions during the sermon. Afterward, discover which choices worked.":"提前决定主题、说话方式、走动方式和募捐策略。路人经过时，金钱和信徒数会实时变化。布道途中要做两次决定；结束后才知道哪些做法有效。","Study instead of preaching":"放弃布道，选择学习","Reading books or watching parody video lessons takes the whole day. You gain experience in a skill, but earn no sermon money. Food and other daily costs are still deducted.":"读书或观看讽刺短视频会花掉整整一天。你会获得技能经验，但没有布道收入，餐食和其他日常开销仍会扣除。","Survive, then move up":"先求生存，再向上发展","Search bins, buy clothes and save for a wash or shave. Travel twice, from a small town towards New York. Your skills stay with you when you move, but many followers do not.":"翻垃圾桶、买衣服，为洗漱和理发存钱。你需要搬迁两次，从小镇前往纽约。技能会随身保留，但很多当地信徒不会跟来。","Remember:":"记住：","Equipment replaces other items in its slot. Patience and better choices matter more than skipping days.":"同一装备栏中的新物品会替换旧物品。耐心和明智的选择比不断跳过日期更重要。","GOT IT — CHOOSE MY THEME →":"明白了——选择我的形象 →","QUICK START OVERVIEW":"新手玩法概览","WHAT DO YOUR STARTING SKILLS DO?":"初始技能分别有什么用？","Tap each skill to see its effect":"点击技能查看作用","Your myth is the theme. The audience is here for YOU.":"神话只是包装。观众真正关注的是你！","Use a familiar myth as your marketing hook; your face becomes the brand. Choose a patron, then tap each skill below to understand what it changes.":"选择熟悉的神话作为吸引眼球的包装，你自己才是品牌。选好守护神，再点击下方技能了解效果。","Anubis":"阿努比斯","Zeus":"宙斯","Venus":"维纳斯","Odin":"奥丁","Guardian of the dead and sacred rites":"亡灵与神圣仪式的守护神","King of the gods, thunder and sky":"众神之王，掌管雷霆和天空","Love, charm and beauty":"爱情、魅力与美丽","Wisdom, poetry and mysterious visions":"智慧、诗歌与神秘预言","A warm, welcoming persona helps followers feel they belong.":"亲切的个人形象能增强信徒的归属感。","A loud, dramatic persona earns larger collections but starts with lower trust.":"高调戏剧化的形象有利于募款，但初始可信度偏低。","Your mysterious, solemn persona keeps dedicated followers loyal.":"神秘庄重的形象能让忠实信徒更加坚定。","An enigmatic persona draws curious passers-by.":"充满谜团的形象更容易吸引好奇的路人。","Washed up for $0.95. You look a lot better.":"花 $0.95 洗漱完毕，看起来精神多了。","Soap, a sink and a fresh start. Available once every three days.":"香皂、洗手池和一个清爽的开始。每三天可进行一次。"," $0.95 · +50 hygiene, +10 clothes":"$0.95 · 清洁度+50、衣物+10","Wash up · $0.95":"洗漱 · $0.95","Come back later":"过几天再来","You can always preach or scavenge, even when money runs out. Basic grooming costs a little; the soup kitchen can help with meals.":"即使没钱，也能继续布道或翻找垃圾。整理仪容需要花少许钱，施粥处则可以解决吃饭问题。","Your myth is the theme. The audience is here for YOU. Pick a patron for your image and starting abilities.":"神话只是包装，观众真正关注的是你。选择守护神作为形象主题与初始能力。","Norse mythology":"北欧神话"});
-Object.assign(ZH,{"YOUR MOVEMENT": "你的追随者群体", "CEDAR FLATS TO NEW YORK · v0.9": "从松谷镇到纽约 · v0.9", "Curious": "好奇的新成员", "Regular": "常来的信徒", "Devoted": "虔诚的信徒", "Patrons": "富裕支持者", "Strangers": "路人", "Regular supporters": "老信徒捐款", "hecklers": "嘲讽者", "Followers & funds:": "信徒与资金：", "Endgame:": "终局：", "🔒 The future is not for sale yet. Build a megachurch before you can dream of television campaigns and a private jet.": "🔒 现在还谈不上这些。先建成超级教堂，才能解锁电视广告和私人飞机。", "THE BIGGEST POSSIBLE BRAND": "打造最夸张的个人品牌", "✦ Empire & legacy": "✦ 帝国与传承", "The absurd rewards are hidden until you become a megachurch magnate. Only the private jet unlocks rebirth.": "在成为超级教堂大亨之前，奢侈功能不会出现。只有买下私人飞机才能开启转世。", "📺 Television & publicity": "📺 电视与宣传", "A megachurch perk. Buy expensive television adverts to boost the audience at your next week’s scheduled main service. Coverage does not guarantee conversions; your sermon still matters.": "超级教堂解锁：花钱购买电视广告，提高下周主要聚会的到场人数。但广告不能保证他们信你，你的演讲仍然重要。", "Local Cable Spot": "本地有线电视广告", "Three-State TV Blitz": "三州广告攻势", "Prime-Time Revelation": "黄金时段启示", "A brief ad between late-night commercials. Small reach, manageable risk.": "深夜广告间隙的一小段宣传，观众较少，风险可控。", "An expensive regional push for next week’s main service.": "为下周主要聚会开展昂贵的地区宣传。", "An extravagant national campaign. You had better be ready for the crowd.": "极其昂贵的全国宣传。你最好准备好接待人潮。", "Campaign already booked": "已有广告计划", "Not enough cash": "资金不足", "✈️ The final acquisition": "✈️ 最后的收购", "The gold-plated jet is your final ambition. You must own the megachurch,": "私人飞机是你狂妄的终局目标。你需要超级教堂、", "Your private jet is waiting. Boarding it begins the ending — and reveals whether your chosen deity appreciated your business model.": "私人飞机正等着你。登机将开启结局，看看你选择的神是否欣赏你的生财之道。", "BUY PRIVATE JET": "购买私人飞机", "BOARD YOUR PRIVATE JET · BORN AGAIN →": "登上私人飞机 · 开启转世 →", "THE GODS HAVE NOTICED": "众神已经注意到你", "✈️ ENDGAME · THE BILL COMES DUE": "✈️ 终局 · 该还债了", "THE SCALES OF ANUBIS": "阿努比斯的天平", "THE WRATH OF ZEUS": "宙斯的愤怒", "VENUS IS NOT AMUSED": "维纳斯很不高兴", "ODIN DEMANDS HIS DUE": "奥丁前来讨债", "CHOOSE YOUR NEW LIFE ↓": "选择下一世 ↓", "Your god smites you. Begin again with a permanent +1 to one starting skill (maximum +3 each). You must pick a different god next time.": "你的神降下惩罚。重生时一项初始技能永久 +1（每项最高 +3）。下一次必须选择不同的神。", "OFFENDED": "已被激怒", "The doors close. Your private jet taxis under a sky the colour of tarnished gold.": "舱门关上。私人飞机在黯金色的天空下滑行。", "Anubis emerges from the shadows. A set of scales hangs in the clouds.": "阿努比斯走出阴影，云中浮现出一架天平。", "“You weighed every donation, little mortal. Did you think I would not weigh your heart?”": "“凡人，你把每一笔捐款都称得清清楚楚，难道以为我不会称量你的心吗？”", "A flash of emerald fire. Your empire disappears. A second life begins.": "翠绿色的火焰闪过，你的帝国灰飞烟灭，新的一生开始了。", "You pose beside your private jet as the cameras cheer. Clouds gather without warning.": "你在私人飞机旁摆姿势接受拍摄，乌云却突然聚集。", "Zeus steps through the thunder, looking deeply unimpressed.": "宙斯踏着雷声出现，表情非常不满。", "“You sold MY thunder as a subscription? Your refund arrives immediately.”": "“你把我的雷霆做成了订阅服务？那就立刻给你退款！”", "One tremendous lightning bolt. Silence. Then the sound of rain on a shop window.": "一道巨大的闪电，一切归于寂静。接着，又听到了雨点敲打商店橱窗的声音。", "Rose petals scatter across the private jet’s red carpet. You assume it is your welcome party.": "玫瑰花瓣飘满私人飞机前的红毯。你以为这是欢迎仪式。", "Venus appears in a swirl of violet light. The petals turn into thorns.": "维纳斯在紫色光芒中现身，花瓣化作尖刺。", "“I offered love. You sold admiration in monthly instalments.”": "“我给予世人爱，你却把崇拜变成按月分期付款。”", "The thorns glow. Everything fades to pink, and a new life begins.": "尖刺发出光芒，一切渐渐变成粉红色，新生开始了。", "A pair of ravens land on the wings of your brand-new private jet.": "两只乌鸦落在你崭新私人飞机的机翼上。", "Odin appears between the clouds, one eye fixed on your golden logo.": "奥丁出现在云间，独眼紧盯着你的金色标志。", "“I gave an eye for wisdom. You gave nothing, yet charged admission.”": "“我用一只眼睛换来了智慧。你什么也没付出，却还向别人收门票。”", "The sky splits with runes. You wake up once more with empty pockets.": "天空被符文撕裂。你再次醒来，口袋空空。", "Not all donations were support: hecklers paid": "不是每一笔捐款都代表支持：嘲讽者付了", "Neglected clothes and grooming made wavering followers leave.": "忽视衣着和仪容，让一些犹豫的信徒离开了。", "Your movement:": "你的信徒群体：", "FOLLOWER GIFTS": "信徒捐款", "You learned from parody clips instead of preaching. Your established supporters may still contribute.": "今天看讽刺视频学习，没有布道，但老信徒可能照常捐款。", "Reading broadened your skills. No passer-by income or recruits today, but your supporters still help.": "阅读增加了你的技能。今天没有路人收入或新信徒，但老信徒仍会帮忙。", "The battery is full again. Existing supporters may still give while you charge.": "电充满了。充电期间老信徒仍可能捐款。", "You skipped a sermon today: no passer-by income and no new followers. Established supporters can still make contributions.": "今天没有布道，因此没有路人捐款和新信徒，但老信徒仍可能捐款。"} );
+Object.assign(ZH,{"YOUR MOVEMENT": "你的追随者群体", "CEDAR FLATS TO NEW YORK · v0.9": "从松谷镇到纽约 · v0.9", "Curious": "好奇的新成员", "Regular": "常来的信徒", "Devoted": "虔诚的信徒", "Patrons": "富裕支持者", "Strangers": "路人", "Regular supporters": "老信徒捐款", "hecklers": "嘲讽者", "Followers & funds:": "信徒与资金：", "Endgame:": "终局：", "🔒 The future is not for sale yet. Build a megachurch before you can acquire your private jet.": "🔒 现在还谈不上这些。先建成超级教堂，才能解锁电视广告和私人飞机。", "THE BIGGEST POSSIBLE BRAND": "打造最夸张的个人品牌", "✦ Empire & legacy": "✦ 帝国与传承", "The absurd rewards are hidden until you become a megachurch magnate. Only the private jet unlocks rebirth.": "在成为超级教堂大亨之前，奢侈功能不会出现。只有买下私人飞机才能开启转世。", "📺 Television & publicity": "📺 电视与宣传", "A megachurch perk. Buy expensive television adverts to boost the audience at your next week’s scheduled main service. Coverage does not guarantee conversions; your sermon still matters.": "超级教堂解锁：花钱购买电视广告，提高下周主要聚会的到场人数。但广告不能保证他们信你，你的演讲仍然重要。", "Local Cable Spot": "本地有线电视广告", "Three-State TV Blitz": "三州广告攻势", "Prime-Time Revelation": "黄金时段启示", "A brief ad between late-night commercials. Small reach, manageable risk.": "深夜广告间隙的一小段宣传，观众较少，风险可控。", "An expensive regional push for next week’s main service.": "为下周主要聚会开展昂贵的地区宣传。", "An extravagant national campaign. You had better be ready for the crowd.": "极其昂贵的全国宣传。你最好准备好接待人潮。", "Campaign already booked": "已有广告计划", "Not enough cash": "资金不足", "✈️ The final acquisition": "✈️ 最后的收购", "The gold-plated jet is your final ambition. You must own the megachurch,": "私人飞机是你狂妄的终局目标。你需要超级教堂、", "Your private jet is waiting. Boarding it begins the ending — and reveals whether your chosen deity appreciated your business model.": "私人飞机正等着你。登机将开启结局，看看你选择的神是否欣赏你的生财之道。", "BUY PRIVATE JET": "购买私人飞机", "BOARD YOUR PRIVATE JET · BORN AGAIN →": "登上私人飞机 · 开启转世 →", "THE GODS HAVE NOTICED": "众神已经注意到你", "✈️ ENDGAME · THE BILL COMES DUE": "✈️ 终局 · 该还债了", "THE SCALES OF ANUBIS": "阿努比斯的天平", "THE WRATH OF ZEUS": "宙斯的愤怒", "VENUS IS NOT AMUSED": "维纳斯很不高兴", "ODIN DEMANDS HIS DUE": "奥丁前来讨债", "CHOOSE YOUR NEW LIFE ↓": "选择下一世 ↓", "Your god smites you. Begin again with a permanent +1 to one starting skill (maximum +3 each). You must pick a different god next time.": "你的神降下惩罚。重生时一项初始技能永久 +1（每项最高 +3）。下一次必须选择不同的神。", "OFFENDED": "已被激怒", "The doors close. Your private jet taxis under a sky the colour of tarnished gold.": "舱门关上。私人飞机在黯金色的天空下滑行。", "Anubis emerges from the shadows. A set of scales hangs in the clouds.": "阿努比斯走出阴影，云中浮现出一架天平。", "“You weighed every donation, little mortal. Did you think I would not weigh your heart?”": "“凡人，你把每一笔捐款都称得清清楚楚，难道以为我不会称量你的心吗？”", "A flash of emerald fire. Your empire disappears. A second life begins.": "翠绿色的火焰闪过，你的帝国灰飞烟灭，新的一生开始了。", "You pose beside your private jet as the cameras cheer. Clouds gather without warning.": "你在私人飞机旁摆姿势接受拍摄，乌云却突然聚集。", "Zeus steps through the thunder, looking deeply unimpressed.": "宙斯踏着雷声出现，表情非常不满。", "“You sold MY thunder as a subscription? Your refund arrives immediately.”": "“你把我的雷霆做成了订阅服务？那就立刻给你退款！”", "One tremendous lightning bolt. Silence. Then the sound of rain on a shop window.": "一道巨大的闪电，一切归于寂静。接着，又听到了雨点敲打商店橱窗的声音。", "Rose petals scatter across the private jet’s red carpet. You assume it is your welcome party.": "玫瑰花瓣飘满私人飞机前的红毯。你以为这是欢迎仪式。", "Venus appears in a swirl of violet light. The petals turn into thorns.": "维纳斯在紫色光芒中现身，花瓣化作尖刺。", "“I offered love. You sold admiration in monthly instalments.”": "“我给予世人爱，你却把崇拜变成按月分期付款。”", "The thorns glow. Everything fades to pink, and a new life begins.": "尖刺发出光芒，一切渐渐变成粉红色，新生开始了。", "A pair of ravens land on the wings of your brand-new private jet.": "两只乌鸦落在你崭新私人飞机的机翼上。", "Odin appears between the clouds, one eye fixed on your golden logo.": "奥丁出现在云间，独眼紧盯着你的金色标志。", "“I gave an eye for wisdom. You gave nothing, yet charged admission.”": "“我用一只眼睛换来了智慧。你什么也没付出，却还向别人收门票。”", "The sky splits with runes. You wake up once more with empty pockets.": "天空被符文撕裂。你再次醒来，口袋空空。", "Not all donations were support: hecklers paid": "不是每一笔捐款都代表支持：嘲讽者付了", "Neglected clothes and grooming made wavering followers leave.": "忽视衣着和仪容，让一些犹豫的信徒离开了。", "Your movement:": "你的信徒群体：", "FOLLOWER GIFTS": "信徒捐款", "You learned from parody clips instead of preaching. Your established supporters may still contribute.": "今天看讽刺视频学习，没有布道，但老信徒可能照常捐款。", "Reading broadened your skills. No passer-by income or recruits today, but your supporters still help.": "阅读增加了你的技能。今天没有路人收入或新信徒，但老信徒仍会帮忙。", "The battery is full again. Existing supporters may still give while you charge.": "电充满了。充电期间老信徒仍可能捐款。", "You skipped a sermon today: no passer-by income and no new followers. Established supporters can still make contributions.": "今天没有布道，因此没有路人捐款和新信徒，但老信徒仍可能捐款。"} );
 Object.assign(ZH,{
  "CEDAR FLATS TO NEW YORK · v0.9.5":"从雪松平原到纽约 · v0.9.5",
  "HOW TO PLAY · v0.9.5":"玩法说明 · v0.9.5",
