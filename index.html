@@ -670,11 +670,34 @@ body{overflow:hidden;background:#172536}
 #townView .v1-pay-choices button small{display:block;font-size:10px;opacity:.85}
 #townView .v1-pay-warning{color:#ffca86;font-size:12px;line-height:1.35;margin:7px 0}
 @media(max-width:650px){#townView .v1-follower-team{grid-template-columns:1fr}#townView .v1-follower-member{padding:9px;align-items:flex-start}}
+
+/* v1.2.12 — A clean, scene-wide navigation rail rather than floating menu tiles. */
+#app #worldHotspots,#app #worldNpcHotspots,#app #worldMiniMenu{display:none!important}
+#worldSceneActions{position:absolute;z-index:12;left:7px;right:7px;bottom:calc(127px + env(safe-area-inset-bottom, 0px));height:56px;display:flex;align-items:stretch;gap:7px;padding:5px 7px;overflow-x:auto;overflow-y:hidden;scrollbar-width:thin;scrollbar-color:#c0a36c #233b4c;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;touch-action:pan-x;background:linear-gradient(180deg,#223b4fdc,#122b3ce8);border:1px solid #a98b5d88;box-shadow:0 3px 14px #0d1c3180;border-radius:13px}
+.world-action-chip{flex:0 0 auto;min-width:92px;max-width:170px;display:flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap;border:1px solid #536d7f;color:#ffefcf;background:#30475b;border-radius:9px;padding:5px 10px;font-size:11px;font-weight:850;min-height:43px;touch-action:manipulation}
+.world-action-chip:hover,.world-action-chip:focus-visible{border-color:#f3d196;background:#56607a;outline-offset:2px}
+.world-action-chip:active{transform:scale(.98)}
+.world-action-emoji{font-size:20px;line-height:1}
+.world-location-chip{background:#786141;border-color:#eac27e;position:sticky;left:0;z-index:2;box-shadow:3px 0 7px #142e3d9c}
+#app #playView .bottom-scene{bottom:calc(82px + env(safe-area-inset-bottom, 0px))}
+#app.world-deep-open #worldSceneActions,#gameWorld.world-playing #worldSceneActions{display:none!important}
+#gameWorld.world-playing #playView .bottom-scene{bottom:12px}
+@media (max-width:600px){
+ #worldSceneActions{bottom:calc(120px + env(safe-area-inset-bottom, 0px));left:4px;right:4px;height:53px;gap:6px;padding:4px 6px}
+ .world-action-chip{min-width:83px;padding:4px 8px;font-size:10px;min-height:43px}
+ #app #playView .bottom-scene{bottom:calc(79px + env(safe-area-inset-bottom, 0px))}
+}
+@media (orientation:landscape) and (max-height:580px){
+ #worldSceneActions{right:9px;left:auto;bottom:8px;max-width:min(75vw,650px);height:43px;padding:3px}
+ .world-action-chip{min-height:35px;padding:2px 5px;font-size:10px}
+ #app #playView .bottom-scene{bottom:53px}
+}
+
 </style>
 </head><body>
 <div id="app" class="hidden">
 <header class="topbar">
- <div class="brand"><button type="button" class="brand-mark brand-portrait" data-world="you" title="Open your character, skills and wardrobe" aria-label="Open character profile"><img src="data:image/webp;base64,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" alt=""/></button><div><b>STREET PASTOR</b><small>THE LIVING WORLD · v1.2.10</small></div></div>
+ <div class="brand"><button type="button" class="brand-mark brand-portrait" data-world="you" title="Open your character, skills and wardrobe" aria-label="Open character profile"><img src="data:image/webp;base64,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" alt=""/></button><div><b>STREET PASTOR</b><small>THE LIVING WORLD · v1.2.12</small></div></div>
  <div class="hud"><div class="hud-item"><small>DATE</small><b id="hudWeek">Mon · Apr 6</b></div><button type="button" class="hud-item hud-click" data-act="funds" title="Open finances and your savings goal"><small>FUNDS ↗</small><b id="hudCash">$12.00</b></button><button type="button" class="hud-item hud-click" data-act="followers" title="Open congregation demographics and donations"><small>FOLLOWERS ↗</small><b id="hudFollowers">0</b></button><button type="button" class="hud-item hud-click" data-act="followers" title="See follower dedication"><small>DEDICATION ↗</small><b id="hudDedication">27%</b></button></div>
  <div class="header-buttons"><select id="headerLanguage" class="language-picker compact" aria-label="Choose game language"><option value="en">🇬🇧 EN</option><option value="zh">🇨🇳 中文</option></select><button class="nav-btn" data-act="settings" title="Display size and layout" aria-label="Display settings">⚙</button><button class="nav-btn" data-act="stats" title="Notebook">▤ <span>Notebook</span></button><button class="nav-btn" data-act="saveTransfer" title="Save export/import" aria-label="Back up or import career">⇄</button><button class="nav-btn" data-act="fullscreen" title="Full screen" aria-label="Toggle full screen">⛶</button><button class="nav-btn" data-act="help" title="How to play">?</button></div>
 </header>
@@ -688,6 +711,7 @@ body{overflow:hidden;background:#172536}
   <aside class="action-side" id="actionPanel" aria-label="Sermon preparation panel"></aside>
   <button id="worldCloseAction" class="world-close" data-world="close" aria-label="Close sermon controls">✕</button>
  </section>
+ <div id="worldSceneActions" role="toolbar" aria-label="Actions in this location"></div>
  <div id="worldMiniMenu"><button class="world-mini-btn" data-world="map" title="Go to a different room">⌂ <strong id="worldHere">My Ministry</strong> ▾</button><button class="world-mini-btn" data-world="service" title="Open sermon controls">📣 Service</button></div>
  <section id="resultsView" class="view hidden"><div class="world-sheet-head"><span>📊 SERVICE RESULTS</span><button class="world-close" data-world="next" aria-label="Close results and plan next day">Plan next day ✕</button></div><div class="page-inner" id="resultsContent"></div></section>
  <section id="townView" class="view hidden"><div class="world-sheet-head"><span id="worldDrawerTitle">🗂 MINISTRY MANAGEMENT</span><button class="world-close" data-world="close" aria-label="Return to the scene">Back to room ✕</button></div><div class="town-shell"><div class="town-nav" id="townNav"></div><div class="town-content" id="townContent"></div></div></section>
@@ -778,7 +802,8 @@ body{overflow:hidden;background:#172536}
  <div class="modal weekly-finance-modal" id="weeklyFinanceContent"></div>
 </div>
 <div id="toast" class="toast hidden" role="status"></div>
-<script>/* STREET PASTOR v1.0 — LIVING EMPIRE
+<script>
+/* STREET PASTOR v1.0 — LIVING EMPIRE
    Pure vanilla JS. All progress is stored in the main game's versioned local save.
    Every public figure is represented by an invented, exaggerated parody character. */
 (()=>{'use strict';
@@ -1101,8 +1126,10 @@ function showEnding(g){const s=st(g),el=document.getElementById('v1EndingOverlay
  return true;}
 window.SPV1={PEOPLE,HOMES,PROGRAMS,INTRO_LINES,fresh,st,c,named,rel,fx,notice,bonus,fixedCosts,settle,afterDay,followerFactor,storyModal,choose,renderPage,action,drawCharacters,drawOpening,showEnding,endingUnlocked,hearingStatus};
 })();
+
 </script>
-<script>/* Street Pastor v1.1 — integrated, responsive, isometric world. No dependencies. */
+<script>
+/* Street Pastor v1.2.12 — integrated, responsive, isometric world. No dependencies. */
 (function(){'use strict';
 const W={}; let activeActors=[]; const SCENES={
 venue:{name:'Your Ministry',subtitle:'Every empire begins somewhere',color:'#c89b57'},
@@ -1244,7 +1271,16 @@ function venueGearArt(c,q,g,time){
  if(welcome){const p=proj(q,.58,3.21);furnishing(c,q,g,'food',.45,3.14,.70);if(welcome.id==='donuts')text(c,'🍩 🍩',p.x,p.y-s*.65,s*.24,'#f8e3b3');else text(c,'☕',p.x,p.y-s*.66,s*.26,'#f8e3b3');}
 }
 function venueExpansionArt(c,q,g){
- const s=q.s,v=g.venue,level=Math.max(0,Math.min(3,Number(g.venueUpgrades?.[v])||0)),T=style(g);if(v==='street'||level<=0)return;
+ const s=q.s,v=g.venue,level=Math.max(0,Math.min(3,Number(g.venueUpgrades?.[v])||0)),T=style(g);
+ // Keep a visual memento of the original church at the megachurch. It is
+ // connected as an overflow branch and retains its permanent growth effects.
+ if(v==='mega'&&g.unlocked?.includes('church')){
+  const n=Math.max(0,Math.min(3,Number(g.venueUpgrades?.church)||0));
+  if(n){const p=proj(q,.47,.57);round(c,p.x-s*.30,p.y-s*(1.10+n*.08),s*.68,s*(.50+n*.08),5,'#b79787','#f4d2a4',2);
+   text(c,'✦',p.x+s*.03,p.y-s*(1.00+n*.08),s*.19,T[1],900);
+   galleryLabel(c,n===3?'CHURCH LEGACY':'CHURCH BRANCH',p,s);}
+ }
+ if(v==='street'||level<=0)return;
  // Three actual architectural changes, not three invisible capacity modifiers.
  if(level>=1){const p=proj(q,3.55,3.45);for(let i=0;i<3;i++){
    round(c,p.x-s*.74+i*s*.35,p.y-s*.66+i*s*.09,s*.36,s*.36,5,v==='hall'?'#b2a08e':v==='church'?'#bc9477':'#ba7295','#e4c18d',2);}
@@ -1279,6 +1315,104 @@ case 'flags':{text(c,style(g)[3],p.x,p.y-s*.8,s*.8,style(g)[1]);break;}
 case 'gavel':box(c,q,u,v,1.15,.6,s*.73,'#725943','#b5976b','#614c43');text(c,'⚖',p.x+s*.35,p.y-s*.65,s*.5,'#ffefd2');break;
 }}
 // Open, public-space rendering. Unlike an interior this never draws enclosing room walls.
+
+// Surrounding scenery is painted at world scale around the existing 4x4 isometric core.
+// The central platform, equipment, and actor positions are unchanged, so old saves and dialogue anchors work.
+function extendedPavement(c,q,kind,time){
+ const {w,h,s,top}=q;const y=top+s*.51;
+ const g=c.createLinearGradient(0,y,0,h);g.addColorStop(0,kind==='outreach'?'#b0c1a8':kind==='shop'?'#b9b09d':'#b5a995');g.addColorStop(1,kind==='outreach'?'#8a9e83':'#97978b');
+ c.fillStyle=g;c.fillRect(0,y,w,h-y);
+ c.save();c.lineWidth=1;c.strokeStyle='#ffefd04a';
+ for(let yy=y;yy<h;yy+=s*.39){c.beginPath();c.moveTo(0,yy);c.lineTo(w,yy);c.stroke();}
+ for(let xx=-s;xx<w+s;xx+=s*.63){c.beginPath();c.moveTo(xx,y);c.lineTo(xx+s*.43,h);c.stroke();}c.restore();
+ // A surrounding block of pavement, a working road, shop-adjacent street furniture.
+ for(let side of [-1,1]){
+  const x=side<0?s*.40:w-s*.40,backY=Math.min(h-45,y+s*1.7);
+  c.strokeStyle='#596d6d';c.lineWidth=Math.max(2.5,s*.055);c.beginPath();c.moveTo(x,backY);c.lineTo(x,backY-s*1.38);c.stroke();
+  round(c,x-s*.24,backY-s*1.43,s*.48,s*.21,5,'#e6c785','#45616c',2);
+  if(h-y>s*3){const yy=h-s*.87,xx=x-side*s*.36;
+   round(c,xx-s*.36,yy-s*.26,s*.74,s*.14,3,'#8a654f','#eed4a8',1.5);
+   c.fillStyle='#644f46';c.fillRect(xx-s*.29,yy-s*.12,s*.06,s*.29);c.fillRect(xx+s*.26,yy-s*.12,s*.06,s*.29);
+  }
+ }
+}
+function publicForeground(c,q,time,kind){
+ const {w,h,s}=q,front=proj(q,4,4).y;
+ if(h-front<s*.55)return;
+ const yy=Math.min(h-s*1.9,front+s*.56);
+ // Bench, rubbish bin and planter continue the scene beyond the central preaching pitch.
+ const bx=s*.66,by=yy+s*.18;
+ round(c,bx-s*.49,by-s*.19,s*.98,s*.17,4,'#926d52','#f0d5a4',1.5);
+ for(let side of [-1,1]){const leg=bx+side*s*.38;c.fillStyle='#695247';c.fillRect(leg,by-s*.02,s*.06,s*.22);}
+ const planterX=w-s*.66;round(c,planterX-s*.31,yy-s*.41,s*.6,s*.42,5,'#b39b78','#f0d5ad',2);
+ for(const dx of [-.23,0,.21]){c.fillStyle=kind==='outreach'?'#6da28d':'#58896e';c.beginPath();c.arc(planterX+dx*s,yy-s*(.53+Math.abs(dx)*.37),s*.24,0,7);c.fill();}
+ // Pedestrians traverse a clear route without obstructing the preacher or the action bar.
+ for(let i=0;i<3;i++){const phase=(time*(i===1?.048:.063)+i*.39)%1;const x=i===1?w-s*.65-phase*(w-s*1.3):s*.65+phase*(w-s*1.3);
+  const y=yy+s*(i-1)*.30;person(c,x,y,.68,time+i,['#648a96','#a58c75','#8b7299'][i],null,null);}
+}
+
+function extendedInterior(c,q,g,room){
+ const {w,h,s,top}=q;const theme=style(g),v=g.venue;
+ const base=room==='venue'?(v==='mega'?'#a17b82':v==='church'?'#a28c7b':'#9b9287'):room==='home'?'#9b8d87':room==='government'?'#b1a186':room==='office'?'#8199a0':room==='library'?'#aaa18d':room==='media'?'#7f7792':'#988e85';
+ const y=top+s*.47;const grad=c.createLinearGradient(0,y,0,h);grad.addColorStop(0,base);grad.addColorStop(1,room==='venue'&&v==='mega'?'#67506a':'#655e60');c.fillStyle=grad;c.fillRect(0,y,w,h-y);
+ // The floor beyond the cutaway room shares the same tiles, so the edge is no longer empty void.
+ c.strokeStyle='#eadab036';c.lineWidth=1.2;
+ for(let k=0;k<18;k++){let yy=y+k*s*.39;if(yy>h)break;c.beginPath();c.moveTo(0,yy);c.lineTo(w,yy);c.stroke();}
+ for(let xx=-s;xx<w+s;xx+=s*.72){c.beginPath();c.moveTo(xx,y);c.lineTo(xx+s*.23,h);c.stroke();}
+ if(room==='venue'){
+  const px=[s*.13,w-s*.13];
+  for(const x of px){round(c,x-s*.08,top-s*.22,s*.16,s*2.65,4,v==='mega'?'#d7bb8c':'#beaa95','#f0d6a1',2);round(c,x-s*.18,top-s*.32,s*.36,s*.23,4,'#e3c281','#ffe8ae',2);}
+  if(v==='mega'){
+   for(let k=0;k<3;k++){const xx=w*(.10+.4*k);round(c,xx,h-s*1.32,s*.60,s*.10,4,theme[2],'#f6daa5');}
+  }
+ }
+ if(room==='home'){
+  // Windows and rugs frame the home in the foreground without blocking the owned furniture.
+  for(const x of [s*.3,w-s*.70]){round(c,x,top-s*.50,s*.48,s*.70,5,'#355362','#ddc29b',3);round(c,x+s*.22,top-s*.49,s*.025,s*.68,2,'#dbc39c');}
+ }
+ if(room==='library'||room==='office'||room==='government'){
+  for(const x of [s*.18,w-s*.8])round(c,x,top+s*.25,s*.61,s*.97,5,room==='government'?'#8e7857':'#6d7477','#d8c397',2);
+ }
+}
+function foregroundInterior(c,q,g,room,time){
+ const {w,h,s}=q;const front=proj(q,4,4).y;
+ const available=h-front;if(available<s*.42)return;
+ const theme=style(g),v=g.venue||'street';
+ const rows=Math.max(0,Math.min(v==='mega'?6:v==='church'?4:room==='venue'?2:3,Math.floor((available-s*.25)/(s*.55))));
+ if(room==='venue'){
+  // Furnished audience zone beyond the altar, with centre aisle deliberately kept clear.
+  for(let i=0;i<rows;i++){
+   const y=front+s*(.39+i*.55),sw=s*(v==='mega'?2.0:1.75),decal=v==='mega'?'#bc7896':v==='church'?'#9a6c54':'#987a65';
+   for(let side of [-1,1]){
+    const x=w/2+side*s*1.18;
+    round(c,x-sw/2,y-s*.27,sw,s*.24,6,decal,v==='mega'?'#f9dd9c':'#d9b783',2);
+    round(c,x-sw*.45,y-s*.12,sw*.9,s*.23,5,v==='mega'?'#c18da5':'#b09275','#e5ca9f',1.5);
+    for(const dx of [-.40,.38]){const xx=x+dx*sw;c.strokeStyle='#765c56';c.lineWidth=2;c.beginPath();c.moveTo(xx,y+s*.08);c.lineTo(xx,y+s*.24);c.stroke();}
+   }
+   if(i%2===0){const xx=w*.5+(i%3-1)*s*.13;person(c,xx,y-s*.25,.66,time+i,'#87969b','#cb9d7b','#473e41');}
+  }
+  if(v==='mega'){
+   for(const side of [-1,1]){const x=w/2+side*s*3.13,y=front+s*.70;
+    round(c,x-s*.33,y-s*.69,s*.66,s*.47,7,theme[2],'#ffe5a1',3);text(c,'VIP',x,y-s*.45,s*.20,'#fff1c8',900);
+   }
+  }
+ }else if(room==='home'){
+  if(h-front>s*.55){const y=front+s*.83;round(c,w*.50-s*.78,y-s*.25,s*1.56,s*.38,12,'#b59386','#d6c2a4');
+   text(c,'HOME',w*.5,y-s*.04,s*.23,'#e7d4aa',800);}
+ }else if(room==='office'||room==='library'){
+  for(let i=0;i<Math.min(rows,2);i++){const y=front+s*(.58+i*.76);for(const side of [-1,1]){
+    const x=w/2+side*s*1.4;round(c,x-s*.68,y-s*.34,s*1.36,s*.26,5,'#9d7c62','#e8cb98',2);
+    round(c,x-s*.25,y-s*.64,s*.51,s*.28,5,'#364b57','#9bbcc1',2);
+   }}
+ }else if(room==='government'){
+  for(let i=0;i<Math.min(rows,3);i++){const y=front+s*(.5+i*.55);for(const side of [-1,1]){
+    const x=w/2+side*s*1.15;round(c,x-s*.80,y-s*.24,s*1.65,s*.23,4,'#8d6c50','#d7b57e',2);
+   }}
+ }else if(room==='media'){
+  for(let i=0;i<Math.min(rows,3);i++){const y=front+s*(.50+i*.52),x=w/2+(i%2?1:-1)*s*1.28;round(c,x-s*.6,y-s*.18,s*1.2,s*.27,4,'#5c5f78','#ccb9d3');}
+ }
+}
+
 function outdoorFacade(c,x,y,width,height,base,awning,label,s){
  round(c,x,y,width,height,5,base,'#f0d6a7',2);
  // roofline, shopfront, entrance and displays
@@ -1291,6 +1425,7 @@ function outdoorFacade(c,x,y,width,height,base,awning,label,s){
 function street(c,q,g,time,live){
  const s=q.s,t=style(g),w=q.w,h=q.h,alt=(g.location===2),sky=c.createLinearGradient(0,0,0,h);
  sky.addColorStop(0,alt?'#8eaabd':'#95b5c0');sky.addColorStop(.56,alt?'#d6c4b2':'#d3c7ab');sky.addColorStop(1,'#536e69');c.fillStyle=sky;c.fillRect(0,0,w,h);
+ extendedPavement(c,q,'street',time);
  // Buildings beyond the square give the scene a real horizon rather than room walls.
  const shopY=Math.max(66,q.top-s*2.45),facadeH=s*1.75;
  outdoorFacade(c,q.cx-s*3.6,shopY,s*2.05,facadeH,'#bd8e75','#84566a',alt?'CITY DINER':'MARTHA’S DINER',s);
@@ -1303,9 +1438,7 @@ function street(c,q,g,time,live){
  c.save();c.strokeStyle='#f7e4bc';c.lineWidth=3;c.setLineDash([14,20]);c.beginPath();c.moveTo(0,q.top+s*.31);c.lineTo(w,q.top+s*.31);c.stroke();c.restore();
  // Outdoor plaza, not a boxed room. Open paving on all sides.
  const origin=proj(q,0,0),left=proj(q,0,4),right=proj(q,4,0),front=proj(q,4,4);
- path(c,[origin,right,front,left],alt?'#bea995':'#b7aa96','#eedcba',3);
- path(c,[left,front,{x:front.x,y:front.y+s*.12},{x:left.x,y:left.y+s*.12}],'#80786c');
- path(c,[right,front,{x:front.x,y:front.y+s*.12},{x:right.x,y:right.y+s*.12}],'#8b7766');
+ path(c,[origin,right,front,left],alt?'#bea995':'#b7aa96','#ddcbb2',1.1);
  for(let j=1;j<4;j++){const a=proj(q,j,0),b=proj(q,j,4),d=proj(q,0,j),e=proj(q,4,j);c.strokeStyle='#f3e2c94c';c.lineWidth=1.4;c.beginPath();c.moveTo(a.x,a.y);c.lineTo(b.x,b.y);c.moveTo(d.x,d.y);c.lineTo(e.x,e.y);c.stroke();}
  // Street fixtures, positioned so they don't obscure the sermon pitch.
  const bench=proj(q,3.12,3.15);round(c,bench.x-s*.65,bench.y-s*.40,s*1.24,s*.21,4,'#99644d','#e5bd7d',2);c.fillStyle='#704f48';c.fillRect(bench.x-s*.49,bench.y-s*.20,s*.10,s*.32);c.fillRect(bench.x+s*.35,bench.y-s*.20,s*.10,s*.32);
@@ -1342,6 +1475,7 @@ function street(c,q,g,time,live){
   person(c,position.x+Math.sin(time*.5+i)*s*.055,position.y,1.03,time+i,info.coat||'#9a768b',info.skin||'#cda082',info.hair||'#463e42');
   if(i<2)pill(c,(info.name||id).slice(0,19),position.x,position.y-s*1.40,'#203a4adf');activeActors.push({id,x:position.x,y:position.y-s*.7});
  });
+ publicForeground(c,q,time,'street');
  preacher(c,pitch.x,pitch.y-s*.17,1.22,time,g);
  if(live){live.preacherAnchor={x:pitch.x,y:pitch.y-s*1.35};}
 }
@@ -1350,6 +1484,7 @@ function street(c,q,g,time,live){
 function openDistrict(c,q,g,time,kind){
  const s=q.s,w=q.w,h=q.h,shopping=kind==='shop',hi=g.location===2;
  const sky=c.createLinearGradient(0,0,0,h);sky.addColorStop(0,shopping?'#96b8c7':'#a9c9bf');sky.addColorStop(.65,shopping?'#e4d4b8':'#d2d7b7');sky.addColorStop(1,'#8e9c84');c.fillStyle=sky;c.fillRect(0,0,w,h);
+ extendedPavement(c,q,kind,time);
  const by=Math.max(49,q.top-s*2.65),building=s*1.98;
  if(shopping){
   outdoorFacade(c,q.cx-s*3.62,by,s*2.3,building,'#bd8e73','#875a65',hi?'CITY OUTFITTERS':'NEARLY NEW',s);
@@ -1383,6 +1518,7 @@ function openDistrict(c,q,g,time,kind){
   if(active.length>=2){const tent=proj(q,2.83,2.54);poly(c,[[tent.x-s*.69,tent.y-s*.65],[tent.x,tent.y-s*1.35],[tent.x+s*.69,tent.y-s*.65]],'#d4e7d5','#6a9d83');round(c,tent.x-s*.57,tent.y-s*.65,s*1.15,s*.56,4,'#87ac94','#d6ead2');text(c,'HELP DESK',tent.x,tent.y-s*.41,s*.18,'#f8f7d7',900);}
   const clip=proj(q,.75,.8);round(c,clip.x-s*.33,clip.y-s*.70,s*.66,s*.62,4,'#d8c9a6','#698577');text(c,'♥',clip.x,clip.y-s*.42,s*.33,'#a75563');
  }
+ publicForeground(c,q,time,kind);
  // Ambient pedestrians cross the public paving, while named supporters can be tapped.
  for(let i=0;i<4;i++){const t0=(time*.095+i*.29)%1,pos=proj(q,3.65-t0*3.15,.48+t0*3.08);person(c,pos.x,pos.y,.78,time+i,['#698e9b','#ad8378','#879e83','#9783a6'][i],['#ce997e','#aa7662','#dbb38f','#b68e78'][i],['#453746','#55433d'][i%2]);}
  const cast=window.SPV1?.PEOPLE||{};const interested=shopping?['gwynnie','elwood','tammy']:['jimmy','tammy','tony','babs'];
@@ -1470,7 +1606,7 @@ function alley(c,q,g,time){
  person(c,farX,farY,.76,time,'#72858e','#c5a084','#4d4040');
  const night=.76+.09*Math.sin(time*.7);c.fillStyle=`rgba(255,208,144,${Math.max(0,night-.6)})`;c.beginPath();c.arc(w*.77,top+s*.34,s*.17,0,7);c.fill();
 }
-function indoor(c,q,g,time,room){ground(c,q,g,room);wall(c,q,g,room);const s=q.s,v=g.venue||'street',t=style(g),home=window.SPV1?.HOMES?.find(x=>x.id===g.v1?.home),homeTier=Math.max(0,(window.SPV1?.HOMES||[]).findIndex(x=>x.id===g.v1?.home)),fancy=v==='mega';
+function indoor(c,q,g,time,room){extendedInterior(c,q,g,room);ground(c,q,g,room);wall(c,q,g,room);const s=q.s,v=g.venue||'street',t=style(g),home=window.SPV1?.HOMES?.find(x=>x.id===g.v1?.home),homeTier=Math.max(0,(window.SPV1?.HOMES||[]).findIndex(x=>x.id===g.v1?.home)),fancy=v==='mega';
 if(room==='venue'){
  venueArchitecture(c,q,g);
  venueExpansionArt(c,q,g);
@@ -1501,6 +1637,7 @@ if(room==='venue'){
  } else if(room==='government'){
  furnishing(c,q,g,'gavel',.8,.7,1.12);furnishing(c,q,g,'desk',3.0,.8,.96);furnishing(c,q,g,'podium',1.4,3.0,.85);furnishing(c,q,g,'chair',3.1,3.0,.78);
  }
+ foregroundInterior(c,q,g,room,time);
  // The characters continue living in every location.
  const cast=window.SPV1?.PEOPLE||{};const ids=Object.keys(g.v1?.characters||{}).filter(x=>g.v1.characters[x]?.met);const members=ids.filter(id=>room==='venue'?(['jimmy','tammy','tony','bernie','gideon','babs','hubris'].includes(id)):room==='office'?(['jimmy','bernie','tony','gideon','babs'].includes(id)):room==='government'?['hubris','bernie','gideon','babs'].includes(id):room==='media'?['hubris','gideon','babs','gwynnie','elwood'].includes(id):room==='outreach'?['jimmy','tammy','tony'].includes(id):room==='home'?false:ids.length>0).slice(0,3);
  if(room==='venue'&&g.phase==='live'){
@@ -1539,9 +1676,10 @@ return q;
 }
 W.draw=function(c,g,time=0,live=null){W._live=live;const {w,h,dpr}=fit(c.canvas);c.setTransform(dpr,0,0,dpr,0,0);const q=paint(c,g,time,w,h,live);W._layout={...q,g,scene:scene(g)};};
 W.hotspots=function(g){const q=W._layout;if(!q||q.scene!==scene(g))return [];return hotspots(g).map(h=>{const p=proj(q,h.u,h.v);return {...h,x:p.x,y:p.y-q.s*.57};});};
-W.hitActor=function(x,y){const a=activeActors.findLast(a=>Math.hypot(a.x-x,a.y-y)<28);return a?.id||null;};W.actors=function(){return activeActors.slice();};W.sceneName=sceneName;W.scenes=SCENES;W.style=style;W.scene=scene;
+W.hitActor=function(x,y){const a=activeActors.findLast(a=>Math.hypot(a.x-x,a.y-y)<43);return a?.id||null;};W.actors=function(){return activeActors.slice();};W.sceneName=sceneName;W.scenes=SCENES;W.style=style;W.scene=scene;
 window.SPWORLD=W;
 })();
+
 </script>
 <script>
 
@@ -1877,18 +2015,23 @@ const VENUE_EXPANSIONS={
   {cost:3200,add:500,label:'Community hall extension',reach:.05,income:.05,stop:.005,conv:.003}
  ],
  church:[
-  {cost:9500,add:700,label:'Extra seating',reach:.065,income:.21,stop:.008,conv:.006},
-  {cost:24000,add:1600,label:'Extended sanctuary',reach:.095,income:.28,stop:.011,conv:.008},
-  {cost:90000,add:3500,label:'New auditorium wing',reach:.125,income:.34,stop:.014,conv:.011}
+  {cost:9500,add:700,label:'Extra seating',reach:.065,income:.45,stop:.008,conv:.006},
+  {cost:24000,add:1600,label:'Extended sanctuary',reach:.095,income:.75,stop:.011,conv:.008},
+  {cost:90000,add:3500,label:'New auditorium wing',reach:.125,income:1.05,stop:.014,conv:.011}
  ],
  mega:[
-  {cost:450000,add:5500,label:'Additional sections',reach:.055,income:.055,stop:.005,conv:.004},
-  {cost:1200000,add:14000,label:'Second tier seating',reach:.075,income:.075,stop:.006,conv:.005},
-  {cost:3700000,add:31000,label:'Grand arena expansion',reach:.095,income:.095,stop:.007,conv:.006}
+  {cost:450000,add:5500,label:'Additional sections',reach:.055,income:.13,stop:.005,conv:.004},
+  {cost:1200000,add:14000,label:'Second tier seating',reach:.075,income:.20,stop:.006,conv:.005},
+  {cost:3700000,add:31000,label:'Grand arena expansion',reach:.095,income:.28,stop:.007,conv:.006}
  ]
 };
 function venueUpgradeLevel(id=g.venue){return Math.max(0,Math.min((VENUE_EXPANSIONS[id]||[]).length,Math.floor(Number(g.venueUpgrades?.[id])||0)));}
-function venueCapacity(id=g.venue){const v=VENUES.find(x=>x.id===id);if(!v||id==='street')return Infinity;return v.capacity+(VENUE_EXPANSIONS[id]||[]).slice(0,venueUpgradeLevel(id)).reduce((total,x)=>total+x.add,0);}
+function inheritedChurchCapacity(id=g.venue){
+ if(id!=='mega'||!g.unlocked?.includes('church'))return 0;
+ return (VENUE_EXPANSIONS.church||[]).slice(0,venueUpgradeLevel('church')).reduce((total,x)=>total+(x.add||0),0);
+}
+function venueCapacity(id=g.venue){const v=VENUES.find(x=>x.id===id);if(!v||id==='street')return Infinity;return v.capacity+(VENUE_EXPANSIONS[id]||[]).slice(0,venueUpgradeLevel(id)).reduce((total,x)=>total+x.add,0)+inheritedChurchCapacity(id);} // inherited linked-branch overflow seats
+
 function venueInvestmentBenefits(id=g.venue){
  const b={reach:0,income:0,stop:0,conv:0,inherited:0,projects:0};
  const rank={street:0,hall:1,church:2,mega:3}[id]||0;
@@ -2093,7 +2236,7 @@ function worldMap(){$('worldCharacter').classList.add('hidden');if(running||stud
 function worldCharacter(id){const character=SPV1.PEOPLE[id],profile=g.v1?.characters?.[id];if(!character||!profile?.met)return;const score=Math.round(profile.relation||0),label=score>=55?'Trusted ally':score>=15?'Friendly':score<=-45?'Hostile':score<=-10?'Wary':'Acquaintance';const html=`<div class="world-person-head"><span class="world-person-emoji" style="background:${character.coat||'#52677a'}">${character.emoji||'💬'}</span><div style="flex:1"><h3>${esc(character.name)}</h3><small>${esc(character.role)} · ${label} (${score>0?'+':''}${score})</small></div><button class="world-close" data-world="closeCharacter" aria-label="Close character conversation">✕</button></div><p class="world-person-quote">“${esc(character.quote||'Good to see you.')}”</p><div class="world-person-actions"><button class="btn gold tiny" data-world="page" data-world-page="stories">💬 Their stories</button><button class="btn tiny" data-world="page" data-world-page="followers">🤝 Followers</button></div>`;$('worldCharacter').innerHTML=html;$('worldCharacter').classList.remove('hidden');closeWorldAction();$('worldMap').classList.add('hidden');}
 $('scene').addEventListener('click',e=>{if(running)return;const r=$('scene').getBoundingClientRect(),id=SPWORLD.hitActor(e.clientX-r.left,e.clientY-r.top);if(id)worldCharacter(id);});
 function worldInteract(action,page){switch(action){case 'service':openWorldAction();break;case 'map':worldMap();break;case 'closeMap':$('worldMap').classList.add('hidden');break;case 'character':worldCharacter(page);break;case 'closeCharacter':$('worldCharacter').classList.add('hidden');break;case 'close':if(g.phase==='town'){phase('plan');renderPlay();}else if(g.phase==='results')startNewDay();closeWorldAction();break;case 'next':startNewDay();closeWorldAction();break;case 'goto':setWorldPlace(page);break;case 'page':worldPage(page);break;case 'phone':worldPage('social');break;case 'stories':worldPage('stories');break;case 'people':case 'followers':worldPage('followers');break;case 'you':worldPage('you');break;case 'funds':notebook('funds');break;case 'journal':notebook('journal');break;case 'skills':notebook('tree');break;default:break;}}
-function worldSyncUI(force=false){if(!$('app')||$('app').classList.contains('hidden'))return;const key=[worldScene(),g.venue,g.location,g.v1?.home,g.phase,g.day,window.innerWidth,window.innerHeight].join('|');if(!force&&key===worldLastHotspots)return;const layout=SPWORLD._layout;if(!layout||layout.scene!==worldScene())return;worldLastHotspots=key;$('worldHere').textContent=SPWORLD.sceneName(g);$('worldMiniMenu').classList.toggle('hidden',false);$('worldMiniMenu').querySelector('[data-world="service"]').classList.toggle('hidden',g.phase==='live');$('worldHotspots').innerHTML=SPWORLD.hotspots(g).map(h=>`<button class="world-marker" title="${esc(h.label)}" aria-label="${esc(h.label)}" style="left:${h.x.toFixed(1)}px;top:${h.y.toFixed(1)}px" data-world="${esc(h.action)}" ${h.page?`data-world-page="${esc(h.page)}"`:''}><span class="world-marker-icon">${h.icon}</span><span class="world-marker-label">${esc(h.label)}</span></button>`).join('');$('worldNpcHotspots').innerHTML=SPWORLD.actors().slice(0,3).map(a=>`<button class="world-npc-hit" style="left:${a.x.toFixed(1)}px;top:${a.y.toFixed(1)}px" data-world="character" data-world-page="${esc(a.id)}" aria-label="Talk to ${esc(SPV1.PEOPLE[a.id]?.name||a.id)}" title="Talk to ${esc(SPV1.PEOPLE[a.id]?.name||a.id)}"><span>💬</span></button>`).join('');if(g.phase==='town'){$('worldDrawerTitle').textContent='🗂 '+(g.townPage||'MANAGE').replace(/^./,m=>m.toUpperCase());}const buttons=document.querySelectorAll('.game-dock [data-world]');buttons.forEach(b=>b.classList.toggle('dock-active',b.dataset.world==='service'?(g.phase==='plan'||g.phase==='live')&&worldScene()==='venue':b.dataset.world==='map'&&!$('worldMap').classList.contains('hidden')));}
+function worldSyncUI(force=false){if(!$('app')||$('app').classList.contains('hidden'))return;const key=[worldScene(),g.venue,g.location,g.v1?.home,g.phase,g.day,window.innerWidth,window.innerHeight].join('|');if(!force&&key===worldLastHotspots)return;const layout=SPWORLD._layout;if(!layout||layout.scene!==worldScene())return;worldLastHotspots=key;$('worldHere').textContent=SPWORLD.sceneName(g);$('worldMiniMenu').classList.toggle('hidden',false);$('worldMiniMenu').querySelector('[data-world="service"]').classList.toggle('hidden',g.phase==='live');const actions=SPWORLD.hotspots(g);const bar=$('worldSceneActions');const selected=bar.querySelector(':focus')?.getAttribute('data-world-page')||'';const previousScroll=bar.scrollLeft;bar.innerHTML=`<button class="world-action-chip world-location-chip" data-world="map" title="Change location"><span>📍</span><span>Locations</span></button>`+actions.map(h=>`<button class="world-action-chip" title="${esc(h.label)}" data-world="${esc(h.action)}" ${h.page?`data-world-page="${esc(h.page)}"`:''}><span class="world-action-emoji">${h.icon}</span><span>${esc(h.label)}</span></button>`).join('');bar.scrollLeft=previousScroll;$('worldHotspots').innerHTML='';$('worldNpcHotspots').innerHTML='';if(g.phase==='town'){$('worldDrawerTitle').textContent='🗂 '+(g.townPage||'MANAGE').replace(/^./,m=>m.toUpperCase());}const buttons=document.querySelectorAll('.game-dock [data-world]');buttons.forEach(b=>b.classList.toggle('dock-active',b.dataset.world==='service'?(g.phase==='plan'||g.phase==='live')&&worldScene()==='venue':b.dataset.world==='map'&&!$('worldMap').classList.contains('hidden')));}
 function worldSyncTick(ms){if(ms-worldLastSync<340)return;worldLastSync=ms;worldSyncUI();}
 document.addEventListener('click',e=>{const button=e.target.closest('button[data-world],button[data-world-place]');if(!button||button.disabled)return;e.preventDefault();e.stopImmediatePropagation();if(button.dataset.worldPlace)setWorldPlace(button.dataset.worldPlace);else worldInteract(button.dataset.world,button.dataset.worldPage);worldSyncUI(true);},true);
 document.addEventListener('keydown',e=>{if(e.key!=='Escape')return;if(!$('worldMap').classList.contains('hidden'))$('worldMap').classList.add('hidden');else if(!$('worldCharacter').classList.contains('hidden'))$('worldCharacter').classList.add('hidden');else if(g.phase==='town'){phase('plan');renderPlay();}else if(g.phase==='results')startNewDay();else closeWorldAction();},true);
@@ -3004,7 +3147,7 @@ function renderTown(){
  }
  else if(cur==='properties'){
   const gated=g.location!==2;
-  content=`<div class="town-top"><div><span class="eyebrow">YOU MUST REACH NEW YORK CITY FIRST</span><h2>🏛️ The Property Office</h2><p>Rent a community hall or buy a permanent church. Venue size limits people attending a service, never your total followers or online viewers. Each larger building unlocks better decor and streaming equipment.</p></div></div>${gated?'<div class="note">🔒 Travel first to Ashbrook and then New York City. Your small town and market-town pitches cannot own premises.</div>':`<div class="stock-grid">${VENUES.map((v,i)=>{const unlocked=g.unlocked.includes(v.id),current=g.venue===v.id,prev=VENUES[i-1],nextLegal=i===0||g.unlocked.includes(prev.id),needs=[g.money>=v.price,nextLegal],can=needs.every(Boolean);return `<div class="stock-card ${!can&&!unlocked?'locked':''}"><span class="icon">${v.icon}</span><h3>${esc(v.name)}</h3><p>${esc(v.detail)}</p><div class="tag">${v.id==='street'?'Open street · No venue cap':'Audience capacity '+num(venueCapacity(v.id))} · Overhead ${cash(v.upkeep)}/week<br>${v.rental?'Rental contract':'Purchase outright'} · ${cash(v.price)}</div><button class="btn" data-property="${v.id}" ${current||(!unlocked&&!can)?'disabled':''}>${current?'✓ Current venue':unlocked?'Return here':can?(v.rental?'Rent ':'Buy ')+cash(v.price):'Requirements not met'}</button></div>`;}).join('')}</div>${g.venue==='mega'?`<div class="paper" style="border-color:#c99b4d;background:linear-gradient(135deg,#3a3229,#243442)"><h3>✈️ The $200 Million Golden Jet</h3><p>The final outrageous purchase is available in your media empire. Save up, prepare your followers, and board the golden jet to complete the story.</p><button class="btn gold full" data-town="legacy">VIEW GOLDEN JET & ENDGAME →</button></div>`:''}${g.venue==='street'?'':(()=>{const id=g.venue,level=venueUpgradeLevel(id),next=VENUE_EXPANSIONS[id]?.[level],capacity=venueCapacity(id),invest=venueInvestmentBenefits(id);return `<div class="paper venue-extension"><h3>🪑 Expand: ${esc(venue().name)}</h3><p>Expansion improves attendance and creates permanent ministry experience, not just more seats. Previous venue bonuses carry into larger buildings. Physical seating remains venue-specific.</p><div class="profile-numbers"><div><small>CURRENT AUDIENCE CAPACITY</small><b>${num(capacity)}</b></div><div><small>EXPANSION STAGE</small><b>${level} / ${(VENUE_EXPANSIONS[id]||[]).length}</b></div></div><p class="note">Established ministry bonuses: <b>+${Math.round(invest.income*100)}% membership income</b> · +${Math.round(invest.reach*100)}% potential visitors · +${Math.round(invest.stop*1000)/10}% attention · +${Math.round(invest.conv*1000)/10}% conversion. ${invest.inherited?`${invest.inherited} upgrades carried over from earlier venues.`:'These benefits stay with your organisation when you move.'}</p>${next?`<p>Next project: <b>${esc(next.label)}</b> · +${num(next.add)} seats · +${Math.round(next.income*100)}% membership income · +${Math.round(next.reach*100)}% reach · ${cash(next.cost)}.</p><button class="btn gold" data-expand-venue="${id}" ${g.money<next.cost?'disabled':''}>Expand premises · ${cash(next.cost)}</button>`:'<div class="note">Maximum expansion reached here. Your organisational bonuses will still apply at larger premises.</div>'}</div>`;})()}`}`;
+  content=`<div class="town-top"><div><span class="eyebrow">YOU MUST REACH NEW YORK CITY FIRST</span><h2>🏛️ The Property Office</h2><p>Rent a community hall or buy a permanent church. Venue size limits people attending a service, never your total followers or online viewers. Each larger building unlocks better decor and streaming equipment.</p></div></div>${gated?'<div class="note">🔒 Travel first to Ashbrook and then New York City. Your small town and market-town pitches cannot own premises.</div>':`<div class="stock-grid">${VENUES.map((v,i)=>{const unlocked=g.unlocked.includes(v.id),current=g.venue===v.id,prev=VENUES[i-1],nextLegal=i===0||g.unlocked.includes(prev.id),needs=[g.money>=v.price,nextLegal],can=needs.every(Boolean);return `<div class="stock-card ${!can&&!unlocked?'locked':''}"><span class="icon">${v.icon}</span><h3>${esc(v.name)}</h3><p>${esc(v.detail)}</p><div class="tag">${v.id==='street'?'Open street · No venue cap':'Audience capacity '+num(venueCapacity(v.id))} · Overhead ${cash(v.upkeep)}/week<br>${v.rental?'Rental contract':'Purchase outright'} · ${cash(v.price)}</div><button class="btn" data-property="${v.id}" ${current||(!unlocked&&!can)?'disabled':''}>${current?'✓ Current venue':unlocked?'Return here':can?(v.rental?'Rent ':'Buy ')+cash(v.price):'Requirements not met'}</button></div>`;}).join('')}</div>${g.venue==='mega'?`<div class="paper" style="border-color:#c99b4d;background:linear-gradient(135deg,#3a3229,#243442)"><h3>✈️ The $200 Million Golden Jet</h3><p>The final outrageous purchase is available in your media empire. Save up, prepare your followers, and board the golden jet to complete the story.</p><button class="btn gold full" data-town="legacy">VIEW GOLDEN JET & ENDGAME →</button></div>`:''}${g.venue==='street'?'':(()=>{const id=g.venue,level=venueUpgradeLevel(id),next=VENUE_EXPANSIONS[id]?.[level],capacity=venueCapacity(id),invest=venueInvestmentBenefits(id);return `<div class="paper venue-extension"><h3>🪑 Expand: ${esc(venue().name)}</h3><p>Expansion improves attendance and creates permanent ministry experience, not just more seats. Previous venue bonuses carry into larger buildings, and your retained first church provides overflow seating linked to megachurch broadcasts.</p><div class="profile-numbers"><div><small>CURRENT AUDIENCE CAPACITY</small><b>${num(capacity)}</b></div><div><small>EXPANSION STAGE</small><b>${level} / ${(VENUE_EXPANSIONS[id]||[]).length}</b></div></div><p class="note">Established ministry bonuses: <b>+${Math.round(invest.income*100)}% membership income</b> · +${Math.round(invest.reach*100)}% potential visitors · +${Math.round(invest.stop*1000)/10}% attention · +${Math.round(invest.conv*1000)/10}% conversion. ${invest.inherited?`${invest.inherited} upgrades carried over from earlier venues.`:'These benefits stay with your organisation when you move.'}${id==='mega'&&inheritedChurchCapacity('mega')?` +${num(inheritedChurchCapacity('mega'))} linked first-church overflow seats.`:''}</p>${next?`<p>Next project: <b>${esc(next.label)}</b> · +${num(next.add)} seats · +${Math.round(next.income*100)}% membership income · +${Math.round(next.reach*100)}% reach · ${cash(next.cost)}.</p><button class="btn gold" data-expand-venue="${id}" ${g.money<next.cost?'disabled':''}>Expand premises · ${cash(next.cost)}</button>`:'<div class="note">Maximum expansion reached here. Your organisational bonuses will still apply at larger premises.</div>'}</div>`;})()}`}`;
  }
  else if(cur==='staff'){content=followersTeamHTML();}
    else if(cur==='inventory'){
@@ -4381,7 +4524,7 @@ Object.assign(ZH,{
  'Audience capacity':'观众容量',
  'Expand your':'扩建你的',
  'Expand:':'扩建：',
- 'Premises upgrades increase the maximum number of potential visitors at a single service. They never limit your total followers or recurring donations.':'场地扩建只提高每场活动的潜在观众人数上限，绝不会限制信徒总数或信徒的定期捐款。',
+ 'Premises upgrades improve both audience capacity and long-term ministry income. First-church upgrades remain active after moving to a megachurch.':'场地扩建只提高每场活动的潜在观众人数上限，绝不会限制信徒总数或信徒的定期捐款。',
  'Premises upgrades increase the maximum number of potential visitors at a single service. They do not limit how many followers you can have or how many support you between sermons.':'场地扩建只会提高每场活动的潜在观众人数上限，不会限制信徒总数，也不会影响场外信徒的定期捐款。',
  'Premises upgrades increase the maximum number of potential visitors at a single service. They do':'场地扩建只会提高每场活动的潜在观众人数上限，但',
  'limit how many followers you can have or how many support you between sermons.':'不会限制信徒总数，也不会影响场外信徒的定期捐款。',
