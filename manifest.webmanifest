@@ -1,7 +1,7 @@
 {
-  "name": "Street Pastor",
+  "name": "Street Pastor: Living World",
   "short_name": "Street Pastor",
-  "description": "A satirical 2D preaching and management game",
+  "description": "Satirical 2D tycoon game with living stories, rival ministries, housing, taxes and political endgame.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
