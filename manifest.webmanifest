@@ -1,7 +1,7 @@
 {
   "name": "Street Pastor: Living World",
   "short_name": "Street Pastor",
-  "description": "Street Pastor v1.3.3: responsive bilingual sermons, new NPC reactions, modest community hall, and New York scenery fixes.",
+  "description": "Street Pastor v1.4.0: realistic online growth, media advertising, church office and furnished homes; expanded Chinese localization.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
@@ -26,5 +26,5 @@
       "purpose": "any maskable"
     }
   ],
-  "version": "1.3.3"
+  "version": "1.4.0"
 }
