@@ -3,7 +3,7 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#172833">
 <meta name="description" content="Street Pastor — a satirical, offline-friendly management game.">
 <meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Street Pastor"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#151c2e"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon-192.png">
-<title>Street Pastor — Living World v1.2.10</title><style>
+<title>Street Pastor — Living World v1.2.16</title><style>
 :root{color-scheme:dark;--bg:#101a23;--panel:#1a2a36;--panel2:#223745;--border:#3a5361;--ink:#f5eedc;--muted:#a9bbc0;--gold:#f7c873;--teal:#83d1b8;--rose:#f29a87;--shadow:0 16px 55px #08101799;--r:15px;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 30% 8%,#253745 0,#121e29 60%,#101720 100%);color:var(--ink)}button,input{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.46}button:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:2px}.hidden{display:none!important}#app{height:100dvh;display:flex;flex-direction:column;overflow:hidden}main{flex:1;min-height:0;display:flex;padding:10px 13px 6px}.view{width:100%;min-height:0}.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:65px;padding:8px 18px;border-bottom:1px solid #385061;background:#121e29e8}.brand{display:flex;gap:10px;align-items:center;flex-shrink:0}.brand-mark{color:#1c2a35;background:var(--gold);height:39px;width:39px;border-radius:50%;display:grid;place-items:center;font-size:25px;border:4px solid #655944}.brand b{letter-spacing:.16em;font-size:16px;white-space:nowrap}.brand small{display:block;font-size:9px;color:var(--muted);letter-spacing:.2em;margin-top:2px}.hud{display:flex;gap:5px;align-items:center;justify-content:center}.hud-item{min-width:100px;padding:5px 12px;border:1px solid #3a5160;border-radius:10px;background:#22344180}.hud-item small{display:block;font-size:9px;letter-spacing:.14em;color:var(--muted);font-weight:750}.hud-item b{font-size:18px;font-variant-numeric:tabular-nums}.header-buttons{display:flex;gap:6px}.nav-btn,.circle-btn{background:#263a48;color:var(--ink);border:1px solid #526b75;border-radius:10px;min-height:35px;padding:6px 12px;font-weight:800}.nav-btn:hover,.circle-btn:hover{background:#345361}.footer{min-height:20px;padding:1px 17px 5px;color:#8ea6ad;display:flex;justify-content:space-between;gap:8px;font-size:9px;letter-spacing:.09em}.play-view{display:grid;grid-template-columns:minmax(0,1.75fr) minmax(300px,.90fr);gap:12px}.scene-side{border:1px solid #54626a;background:#1c2e37;border-radius:var(--r);padding:9px;display:flex;flex-direction:column;min-width:0;min-height:0}.scene-header{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:11px;letter-spacing:.09em;font-weight:800;color:#f9d99a;padding:2px 6px 9px}.faith-name{color:var(--muted);text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:50%}.canvas-wrap{flex:1;min-height:0;border-radius:10px;overflow:hidden;position:relative;background:#d9c4a1}.canvas-wrap canvas{width:100%;height:100%;display:block;object-fit:fill}.scene-overlay{position:absolute;inset:0;pointer-events:none;display:flex;justify-content:center;align-items:flex-start;padding:10px;color:white}.scene-overlay:empty{display:none}.bottom-scene{display:flex;align-items:center;gap:10px;padding:10px 4px 2px;font-size:10px;letter-spacing:.09em;font-weight:800;color:var(--muted)}.bottom-scene span:first-child{color:var(--gold);flex-shrink:0}.bottom-scene span:last-child{white-space:nowrap}.timeline{height:7px;border-radius:20px;background:#0c1821;flex:1;overflow:hidden}.timeline>div{height:100%;width:0;background:linear-gradient(90deg,#ad8c55,var(--gold));transition:width .12s linear}.action-side{border:1px solid #536878;background:linear-gradient(157deg,#293b48,#1b2a35);border-radius:var(--r);display:flex;flex-direction:column;min-height:0;overflow-y:auto;padding:12px;gap:9px;scrollbar-width:thin}.eyebrow{font-size:10px;color:var(--gold);letter-spacing:.2em;font-weight:900}.action-side h2,.page-inner h2,.town-content h2,.modal h2{font-size:clamp(20px,2vw,28px);line-height:1.1;margin:6px 0}.action-side p,.muted,.minor{color:var(--muted)}.action-side p{margin:0;font-size:12px;line-height:1.35}.plan-controls{display:grid;gap:7px}.plan-field{display:grid;grid-template-columns:97px 1fr;gap:8px;align-items:center}.plan-field label{font-size:11px;letter-spacing:.06em;color:#d5d9d5;font-weight:800}.plan-field select{min-width:0;width:100%;background:#10222d;border:1px solid #4a6570;color:var(--ink);padding:9px 10px;border-radius:9px;font-size:13px;font-weight:700}.mood-pill{background:#3b403b;color:#f8ddaa;padding:8px;border:1px solid #655a3e;border-radius:9px;font-size:11px;line-height:1.3}.predict{display:grid;grid-template-columns:1fr 1fr;gap:6px}.predict>div{border:1px solid #455b66;border-radius:10px;padding:8px;background:#132530}.predict small{font-size:9px;letter-spacing:.08em;color:var(--muted);display:block}.predict b{font-size:19px}.btn{border:1px solid #536d7b;border-radius:10px;background:#2f4959;color:var(--ink);padding:10px 14px;font-weight:850;line-height:1.15;transition:background .15s}.btn:hover{background:#405e6c}.btn.gold{background:var(--gold);color:#2c302e;border-color:#f4dfac;box-shadow:inset 0 -3px #bd8950}.btn.gold:hover{background:#ffdb94}.btn.subtle{background:#152937;color:var(--muted)}.btn.tiny{padding:7px 10px;font-size:11px}.btn.full{width:100%;display:block}.btn-row{display:flex;gap:7px}.btn-row>.btn{flex:1}.aside-tip{padding:8px;border-left:3px solid var(--teal);background:#17343a;border-radius:5px;color:#b9dfd4;font-size:11px;line-height:1.35}.feed{display:flex;flex-direction:column;gap:7px;min-height:0;overflow-y:auto;flex:1}.feed-entry{border-bottom:1px solid #3d5260;padding:6px 0;font-size:12px;line-height:1.35;color:#e7dcca}.feed-entry b{color:var(--gold)}.feed-entry.positive b{color:var(--teal)}.feed-entry.negative b{color:var(--rose)}.live-box{border:1px solid #4a6570;border-radius:10px;padding:9px;display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.live-box div{text-align:center}.live-box b{display:block;font-size:19px}.live-box small{font-size:9px;letter-spacing:.1em;color:var(--muted)}.page-inner{max-width:980px;margin:0 auto;height:100%;overflow-y:auto;padding:6px 5px 16px;scrollbar-width:thin}.page-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:10px}.page-head p{color:var(--muted);font-size:13px;margin:0}.report-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.report-tile{background:#1d303d;border:1px solid #4a6470;padding:14px 10px;border-radius:12px}.report-tile small{display:block;color:var(--muted);font-size:10px;letter-spacing:.1em}.report-tile strong{font-size:26px}.report-tile .plus{color:var(--teal)}.report-tile .minus{color:var(--rose)}.report-columns{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin:11px 0}.paper{background:#213745;border:1px solid #4c6570;border-radius:12px;padding:14px}.paper h3{margin:0 0 7px;font-size:16px}.paper p{font-size:12px;color:#bdcdd0;line-height:1.5}.paper ul{margin:7px 0;padding-left:18px;font-size:12px;color:#deded3}.paper li{margin-bottom:7px}.xp-list{display:grid;gap:8px}.xp-line{display:grid;grid-template-columns:110px 1fr 70px;align-items:center;gap:9px;font-size:12px}.xp-line b{color:var(--gold)}.bar{height:7px;border-radius:15px;background:#111f2a;overflow:hidden}.bar i{display:block;background:#e6b75c;height:100%;border-radius:15px}.town-shell{height:100%;min-height:0;display:grid;grid-template-columns:235px 1fr;gap:12px}.town-nav{background:#1e303e;border:1px solid #526974;border-radius:var(--r);padding:12px;display:flex;flex-direction:column;gap:8px;overflow-y:auto}.town-nav>h2{font-size:20px;margin:0 0 2px}.town-nav>p{font-size:11px;color:var(--muted);margin:0 0 7px}.town-tab{border:1px solid #526775;background:#1a2935;color:#d9e4e1;border-radius:10px;text-align:left;padding:12px;font-size:12px;font-weight:750}.town-tab small{display:block;color:#97abb2;font-weight:500;margin-top:4px}.town-tab.active{border-color:var(--gold);background:#4a4437;color:#fff1cd}.town-content{background:#1d303c;border:1px solid #526875;border-radius:var(--r);overflow-y:auto;padding:15px;scrollbar-width:thin}.town-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}.town-top p{margin:3px 0 13px;color:var(--muted);font-size:12px;max-width:630px}.stock-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.stock-card{background:#263d4b;border:1px solid #506977;border-radius:11px;padding:12px;display:flex;flex-direction:column;gap:7px;min-height:185px}.stock-card .icon{font-size:29px;line-height:1}.stock-card h3{font-size:14px;margin:0}.stock-card p{font-size:11px;color:#c0cdd0;line-height:1.4;flex:1;margin:0}.stock-card .tag{font-size:10px;color:var(--gold);line-height:1.3}.stock-card .btn{font-size:11px;padding:8px}.locked{opacity:.65}.note{background:#172c36;border:1px solid #476474;border-radius:10px;padding:11px;margin:9px 0;color:#b7d1d1;font-size:12px;line-height:1.45}.inventory-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.inv-row{display:flex;align-items:center;gap:10px;padding:9px;border:1px solid #506976;background:#253c48;border-radius:10px}.inv-row>span{font-size:23px}.inv-row>div{flex:1;min-width:0}.inv-row b{display:block;font-size:12px}.inv-row small{display:block;color:var(--muted);font-size:10px}.inv-row .btn{flex-shrink:0}.overlay{position:fixed;inset:0;background:#050c12c9;z-index:20;display:flex;align-items:center;justify-content:center;padding:12px;overflow:auto}.modal{width:min(980px,100%);background:linear-gradient(145deg,#2b3e4d,#192a35);border:1px solid #85919a;box-shadow:var(--shadow);border-radius:20px;padding:23px;color:var(--ink);max-height:calc(100dvh - 24px);overflow:auto}.intro-modal{width:min(900px,100%)}.intro-title{display:flex;gap:17px;align-items:center;margin-bottom:15px}.stamp{display:grid;place-items:center;border-radius:50%;background:#f2c374;color:#243540;border:7px solid #56635f;width:70px;height:70px;flex-shrink:0;font-size:35px}.intro-modal h1{margin:4px 0;font-size:clamp(25px,4vw,42px);line-height:1.05;letter-spacing:-.045em}.intro-modal em{font-style:normal;color:var(--gold)}.intro-title p{margin:6px 0 0;color:#bfccd2;font-size:13px}.deity-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.deity-card{background:#19303d;color:var(--ink);border:2px solid #56707a;border-radius:13px;padding:14px 10px;text-align:left;display:flex;flex-direction:column;gap:7px;min-height:165px}.deity-card.selected{background:#454237;border-color:var(--gold);box-shadow:0 0 0 2px #f7c87330}.deity-card .symbol{font-size:35px}.deity-card b{font-size:19px}.deity-card small{color:var(--muted);font-size:11px;line-height:1.4}.deity-card .base{color:#f1d69e;font-size:10px}.intro-bottom{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-top:16px}.chosen-detail{color:#bed2d4;font-size:13px;line-height:1.4;flex:1}.intro-bottom .btn{min-width:250px}.intro-note{color:#9baeb4;font-size:10px;margin-top:13px}.modal-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}.notebook-modal{max-width:750px}.modal-foot{display:flex;justify-content:space-between;gap:12px;padding-top:12px}.notebook-body{margin-top:10px;display:grid;gap:11px}.skill-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.skill-card{background:#1b313e;border:1px solid #526978;border-radius:10px;padding:10px}.skill-card .stat-title{display:flex;justify-content:space-between;font-size:12px;margin-bottom:6px}.skill-card p{margin:6px 0 0;font-size:10px;color:var(--muted)}.help-modal{max-width:680px}.help-copy{font-size:13px;line-height:1.5}.help-copy p{margin:13px 0}.event-modal{width:min(500px,100%)}.event-modal p{color:#c0cdd1;font-size:13px;line-height:1.5}.event-actions{display:flex;flex-direction:column;gap:7px}.toast{position:fixed;z-index:50;bottom:35px;left:50%;transform:translateX(-50%);background:#f5d59a;color:#1b2833;border-radius:10px;padding:12px 17px;font-weight:800;font-size:13px;box-shadow:var(--shadow);max-width:90vw;text-align:center}
 @media(max-width:900px){.topbar{gap:7px;padding:6px 10px;min-height:52px}.brand-mark{width:28px;height:28px;font-size:19px;border-width:2px}.brand b{font-size:11px}.brand small{font-size:7px}.hud-item{min-width:65px;padding:4px 6px}.hud-item b{font-size:14px}.hud-item small{font-size:8px}.nav-btn span{display:none}.play-view{grid-template-columns:minmax(0,1.65fr) minmax(260px,1fr);gap:7px}.action-side{padding:8px}.plan-field{grid-template-columns:70px 1fr;gap:4px}.plan-field select{padding:6px;font-size:11px}.plan-field label{font-size:10px}.scene-header{padding-bottom:5px}.bottom-scene{padding:6px 1px 0}.footer{font-size:8px}.town-shell{grid-template-columns:175px 1fr;gap:8px}.town-content,.town-nav{padding:9px}.stock-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.deity-card{padding:9px 7px;min-height:125px}.deity-card b{font-size:16px}.deity-card .symbol{font-size:26px}.modal{padding:14px}}
@@ -714,7 +714,7 @@ body{overflow:hidden;background:#172536}
 </head><body>
 <div id="app" class="hidden">
 <header class="topbar">
- <div class="brand"><button type="button" class="brand-mark brand-portrait" data-world="you" title="Open your character, skills and wardrobe" aria-label="Open character profile"><img src="data:image/webp;base64,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" alt=""/></button><div><b>STREET PASTOR</b><small>THE LIVING WORLD · v1.2.15</small></div></div>
+ <div class="brand"><button type="button" class="brand-mark brand-portrait" data-world="you" title="Open your character, skills and wardrobe" aria-label="Open character profile"><img src="data:image/webp;base64,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" alt=""/></button><div><b>STREET PASTOR</b><small>THE LIVING WORLD · v1.2.16</small></div></div>
  <div class="hud"><div class="hud-item"><small>DATE</small><b id="hudWeek">Mon · Apr 6</b></div><button type="button" class="hud-item hud-click" data-act="funds" title="Open finances and your savings goal"><small>FUNDS ↗</small><b id="hudCash">$12.00</b></button><button type="button" class="hud-item hud-click" data-act="followers" title="Open congregation demographics and donations"><small>FOLLOWERS ↗</small><b id="hudFollowers">0</b></button><button type="button" class="hud-item hud-click" data-act="followers" title="See follower dedication"><small>DEDICATION ↗</small><b id="hudDedication">27%</b></button></div>
  <div class="header-buttons"><select id="headerLanguage" class="language-picker compact" aria-label="Choose game language"><option value="en">🇬🇧 EN</option><option value="zh">🇨🇳 中文</option></select><button class="nav-btn" data-act="settings" title="Display size and layout" aria-label="Display settings">⚙</button><button class="nav-btn" data-act="stats" title="Notebook">▤ <span>Notebook</span></button><button class="nav-btn" data-act="saveTransfer" title="Save export/import" aria-label="Back up or import career">⇄</button><button class="nav-btn" data-act="fullscreen" title="Full screen" aria-label="Toggle full screen">⛶</button><button class="nav-btn" data-act="help" title="How to play">?</button></div>
 </header>
@@ -1163,6 +1163,42 @@ const THEME={venus:['#e89cb2','#fff0db','#ad557f','♀','♥'],zeus:['#86afdf','
 function style(g){return THEME[g.chosen]||THEME.default;}
 function name(g){let v=g.venue||'street';if(v==='mega')return 'IMPERIAL TEMPLE OF '+(g.chosen||'FAITH').toUpperCase();if(v==='church')return 'CHURCH OF '+(g.chosen||'FAITH').toUpperCase();if(v==='hall')return (g.chosen||'FAITH').toUpperCase()+' COMMUNITY HALL';return (['CEDAR FLATS','ASHBROOK','NEW YORK'][g.location]||'CEDAR FLATS')+' · FIRST SERMON';}
 function scene(g){return g.worldPlace||'venue';}
+function weatherForDay(g){
+ const seed=((Number(g.day||1)*17+Number(g.location||0)*13+Number(g.rebirths||0)*29)%23+23)%23;
+ return seed<4?'🌧️ Rainy':seed<7?'🌧️ Heavy Rain':seed<11?'☁️ Overcast':seed<13?'💨 Windy':seed<16?'☀️ Very Sunny':'☀️ Clear';
+}
+function drawWeatherSky(c,q,g,time){
+ const wt=weatherForDay(g),s=q.s,w=q.w,y=Math.max(76,Math.min(q.top*.27,107)),x=w*.81;
+ if(wt.includes('Sunny')){
+  c.save();const halo=c.createRadialGradient(x,y,4,x,y,s*2.5);
+  halo.addColorStop(0,'#fff3b8a5');halo.addColorStop(.38,'#ffe99e66');halo.addColorStop(1,'#ffdc7000');
+  c.fillStyle=halo;c.fillRect(x-s*2.5,y-s*2.5,s*5,s*5);
+  c.translate(x,y);c.rotate(time*.045);c.strokeStyle='#ffe69ccc';c.lineWidth=Math.max(2,s*.07);
+  for(let i=0;i<12;i++){const a=i*Math.PI/6;c.beginPath();c.moveTo(Math.cos(a)*s*.47,Math.sin(a)*s*.47);c.lineTo(Math.cos(a)*s*.72,Math.sin(a)*s*.72);c.stroke();}
+  c.fillStyle='#ffed92';c.strokeStyle='#fff7c9';c.lineWidth=2;c.beginPath();c.arc(0,0,s*.35,0,7);c.fill();c.stroke();c.restore();
+ }else if(wt.includes('Rain')||wt.includes('Overcast')){
+  c.save();for(let i=0;i<3;i++){const xx=w*(.53+i*.18),yy=y-s*(.25+i%2*.1);
+   c.fillStyle=wt.includes('Heavy')?'#697d8e':'#c7d2d4';
+   for(const dx of [-.28,0,.25]){c.beginPath();c.arc(xx+dx*s,yy,s*(.19+(dx===0?.1:0)),0,7);c.fill();}
+  }c.restore();
+ }
+}
+function drawWeatherFront(c,q,g,time){
+ const wt=weatherForDay(g),w=q.w,h=q.h,s=q.s;
+ if(!wt.includes('Rain')){
+  if(wt.includes('Sunny')){const haze=c.createLinearGradient(0,0,w,h);haze.addColorStop(0,'#ffe29a14');haze.addColorStop(1,'#ffe29a00');c.fillStyle=haze;c.fillRect(0,0,w,h);}
+  return;
+ }
+ const heavy=wt.includes('Heavy');c.save();c.strokeStyle=heavy?'#d9edffb1':'#c5e1f299';c.lineWidth=heavy?1.5:1.0;
+ const n=heavy?95:56;
+ for(let i=0;i<n;i++){const x=((i*97.21-time*(heavy?135:90))%(w+70)+(w+70))%(w+70)-30;
+  const y=((i*127.7+time*(heavy?190:135))%(h+50)+(h+50))%(h+50)-30;
+  c.beginPath();c.moveTo(x,y);c.lineTo(x-3.0,y+(heavy?19:12));c.stroke();}
+ c.strokeStyle='#b6dce16e';for(let i=0;i<(heavy?10:5);i++){
+  const x=(i*137.37+time*19)%Math.max(1,w),y=h-s*(.55+(i%3)*.35);
+  c.beginPath();c.ellipse(x,y,s*(.12+.04*Math.sin(time*2+i)),s*.035,0,0,Math.PI*2);c.stroke();}
+ c.restore();
+}
 function sceneName(g){const s=scene(g);if(s==='venue')return g.venue==='street'?(['Cedar Flats · Street Pitch','Ashbrook · Market Pitch','New York · Street Pitch'][g.location]||'Street Preaching'):g.venue==='hall'?'Community Hall':g.venue==='church'?'Your First Church':'The Megachurch';if(s==='street')return ['Cedar Flats Square','Ashbrook Square','New York Plaza'][g.location]||'Town Square';if(s==='home'){const h=window.SPV1?.HOMES?.find(v=>v.id===g.v1?.home);return h?.name||'Temporary Shelter';}return SCENES[s]?.name||'Your World';}
 function spot(id,label,icon,u,v,action,page,desc){return {id,label,icon,u,v,action:action||id,page:page||'',desc:desc||''};}
 function hotspots(g){const s=scene(g),v=g.venue||'street';if((s==='venue'&&v==='street')||s==='street')return [spot('preach','Preach','📣',.9,.6,'service'),spot('people','Followers','👥',2.7,1.6,'page','followers'),spot('shop','Shops','🛍',.6,3.5,'goto','shop'),spot('help','Survival','🥣',3.6,1.2,'page','survival'),spot('stories','Stories','💬',2.5,3.6,'page','stories')];
@@ -1256,9 +1292,25 @@ function preacher(c,x,y,z,time,g){
  if(gear(g,'shirt')?.divineSet||gear(g,'trousers')?.divineSet){c.strokeStyle=accent;c.lineWidth=1.7;c.beginPath();c.moveTo(-7,-19);c.lineTo(7,-19);c.stroke();}
  // Hands and fingerless / royal gloves.
  for(const dx of [-13,13]){c.fillStyle=gloves?(gloves.wardrobeColor||'#604b41'):'#d2a080';c.beginPath();c.arc(dx,-20,3.9,0,7);c.fill();if(gloves?.divineSet){c.strokeStyle=accent;c.lineWidth=1.5;c.stroke();}}
- // Face and hair. Grooming changes the beard shape without overriding bought clothing.
- c.fillStyle='#d6a37f';c.beginPath();c.arc(0,-44,9,0,7);c.fill();c.fillStyle='#4a383a';c.beginPath();c.arc(0,-47,9.2,Math.PI,Math.PI*2);c.fill();
- if((g.grooming??100)<70){c.fillStyle='#573a33';c.beginPath();c.ellipse(0,-39.3,7.4,4.0,0,0,7);c.fill();}
+ // Hair and beard progress independently; shave only affects the beard,
+ // whereas the barber resets both. Legacy saves derive their starting length
+ // from the old grooming value until the next day's growth.
+ const hairGrowth=Math.max(0,Math.min(1,g.hairLength??(100-(g.grooming??100))/100));
+ const beardGrowth=Math.max(0,Math.min(1,g.beardLength??(100-(g.grooming??100))/90));
+ c.fillStyle='#d6a37f';c.beginPath();c.arc(0,-44,9,0,7);c.fill();
+ c.fillStyle='#4a383a';c.beginPath();c.arc(0,-47-hairGrowth*1.9,9.2+hairGrowth*2.1,Math.PI,Math.PI*2);c.fill();
+ if(hairGrowth>.28){c.fillRect(-8.7,-47,2.1,2+hairGrowth*6);c.fillRect(7.1,-47,2.1,2+hairGrowth*6);}
+ if(hairGrowth>.62){c.fillStyle='#59433d';c.beginPath();c.ellipse(1.5,-53,5,3+hairGrowth*2,-.2,Math.PI,Math.PI*2);c.fill();}
+ if(beardGrowth>.08){c.fillStyle='#573a33';c.beginPath();c.ellipse(0,-39.0+beardGrowth*2.3,6.1+beardGrowth*1.6,1.5+beardGrowth*5.4,0,0,Math.PI*2);c.fill();}
+ if((g.hygiene??100)<42){
+  // Subtle cartoon stink trails; no effect on stats (those are calculated elsewhere).
+  const intensity=Math.max(.22,Math.min(1,(48-(g.hygiene??0))/38));
+  c.save();c.strokeStyle=`rgba(99,170,78,${.32+intensity*.55})`;c.lineWidth=2.4;c.lineCap='round';
+  for(let j=0;j<3;j++){const xx=(j-1)*14+Math.sin(time*1.7+j*2)*2.2;
+   c.beginPath();c.moveTo(xx,-26);c.bezierCurveTo(xx-6,-35,xx+7,-42,xx+Math.sin(time*1.1+j)*5,-57-intensity*7);c.stroke();}
+  c.restore();
+ }
+
  c.fillStyle='#26343c';c.fillRect(-4,-44,1.4,1.8);c.fillRect(3,-44,1.4,1.8);
  if(hasDivine>=2){c.fillStyle=accent;c.beginPath();c.moveTo(-8,-54);c.lineTo(-5,-61);c.lineTo(0,-56);c.lineTo(5,-61);c.lineTo(8,-54);c.closePath();c.fill();c.fillStyle=aura[2];c.beginPath();c.arc(0,-57,2,0,7);c.fill();}
  if(hasDivine===5){c.save();c.strokeStyle=accent;c.lineWidth=2;c.shadowColor=accent;c.shadowBlur=9;c.beginPath();c.ellipse(0,-55,13.5,4,0,0,7);c.stroke();c.restore();text(c,aura[3],0,-70,13,aura[1],900);}
@@ -1299,7 +1351,9 @@ function venueGearArt(c,q,g,time){
   if(goldAudio){const stage=proj(q,2.90,.31);text(c,'♫  ♪  ♫',stage.x,stage.y-s*.9,s*.25,'#ffdb98');}
  }
  if(voice){const p=proj(q,.77,1.2);if(voice.id==='speaker'){for(const v0 of [1.05,1.9]){const p1=proj(q,.22,v0);round(c,p1.x-s*.18,p1.y-s*.90,s*.38,s*.73,4,'#273e50','#bdcae4',2);c.fillStyle='#8da6ae';for(const z of [-.25,0]){c.beginPath();c.arc(p1.x,p1.y-s*(.48+z),s*.105,0,7);c.fill();}}}else{text(c,'📣',p.x,p.y-s*.80,s*.36,'#fff1c8');}}
- if(sign){const p=proj(q,1.92,.38);if(sign.id==='banner'){round(c,p.x-s*.78,p.y-s*1.28,s*1.63,s*.48,5,'#183a62','#66e8ee',2);text(c,`${T[3]} ${(g.chosen||'FAITH').toUpperCase()} ${T[3]}`,p.x,p.y-s*1.04,s*.21,'#f7d9a5',900,'center',s*1.52);}else{round(c,p.x-s*.55,p.y-s*.88,s*1.1,s*.36,3,sign.id==='painted_sign'?'#f0d8b6':'#bdaa92','#6c5146',2);text(c,(g.chosen||'FAITH').toUpperCase(),p.x,p.y-s*.69,s*.17,'#574348',900,'center',s*1.03);}}
+ if(sign){const p=proj(q,1.92,.38);if(sign.id==='banner'){round(c,p.x-s*.78,p.y-s*1.28,s*1.63,s*.48,5,'#183a62','#66e8ee',2);text(c,`${T[3]} ${(g.chosen||'FAITH').toUpperCase()} ${T[3]}`,p.x,p.y-s*1.04,s*.21,'#f7d9a5',900,'center',s*1.52);}else{round(c,p.x-s*.55,p.y-s*.88,s*1.1,s*.36,3,sign.id==='painted_sign'?'#f0d8b6':'#bdaa92','#6c5146',2);const lines=Array.isArray(g.signWriting)?g.signWriting:(window.SP_SIGN_SLOGANS?.[g.chosen]?.[0]||[(g.chosen||'FAITH').toUpperCase(),'WELCOME']);
+  text(c,lines[0],p.x,p.y-s*.78,s*.15,'#574348',900,'center',s*1.03);
+  text(c,lines[1],p.x,p.y-s*.59,s*.13,'#574348',800,'center',s*1.03);}}
  if(collection){const p=proj(q,2.9,3.12);if(collection.id==='card_machine'){box(c,q,2.95,3.02,.45,.35,s*.50,'#3a596a','#8faeb2','#233e51');round(c,p.x-s*.08,p.y-s*.80,s*.32,s*.23,3,'#98d2d0','#f4dfb2');text(c,'💳',p.x+s*.07,p.y-s*.69,s*.22);}else{round(c,p.x-s*.24,p.y-s*.36,s*.5,s*.29,4,collection.id==='tin'?'#dfbc68':'#8b7e78','#f2ddb5',2);text(c,collection.id==='tin'?'$':'¢',p.x,p.y-s*.20,s*.23,'#ffe6af');}}
  if(welcome){const p=proj(q,.58,3.21);furnishing(c,q,g,'food',.45,3.14,.70);if(welcome.id==='donuts')text(c,'🍩 🍩',p.x,p.y-s*.65,s*.24,'#f8e3b3');else text(c,'☕',p.x,p.y-s*.66,s*.26,'#f8e3b3');}
 }
@@ -1369,16 +1423,7 @@ function extendedPavement(c,q,kind,time){
  c.save();c.lineWidth=1;c.strokeStyle='#ffefd04a';
  for(let yy=y;yy<h;yy+=s*.39){c.beginPath();c.moveTo(0,yy);c.lineTo(w,yy);c.stroke();}
  for(let xx=-s;xx<w+s;xx+=s*.63){c.beginPath();c.moveTo(xx,y);c.lineTo(xx+s*.43,h);c.stroke();}c.restore();
- // A surrounding block of pavement, a working road, shop-adjacent street furniture.
- for(let side of [-1,1]){
-  const x=side<0?s*.40:w-s*.40,backY=Math.min(h-45,y+s*1.7);
-  c.strokeStyle='#596d6d';c.lineWidth=Math.max(2.5,s*.055);c.beginPath();c.moveTo(x,backY);c.lineTo(x,backY-s*1.38);c.stroke();
-  round(c,x-s*.24,backY-s*1.43,s*.48,s*.21,5,'#e6c785','#45616c',2);
-  if(h-y>s*3){const yy=h-s*.87,xx=x-side*s*.36;
-   round(c,xx-s*.36,yy-s*.26,s*.74,s*.14,3,'#8a654f','#eed4a8',1.5);
-   c.fillStyle='#644f46';c.fillRect(xx-s*.29,yy-s*.12,s*.06,s*.29);c.fillRect(xx+s*.26,yy-s*.12,s*.06,s*.29);
-  }
- }
+ // Continuous paved foreground; transit furniture is drawn separately outside the central platform.
 }
 function publicForeground(c,q,time,kind){
  const {w,h,s}=q,front=proj(q,4,4).y;
@@ -1392,7 +1437,7 @@ function publicForeground(c,q,time,kind){
  for(const dx of [-.23,0,.21]){c.fillStyle=kind==='outreach'?'#6da28d':'#58896e';c.beginPath();c.arc(planterX+dx*s,yy-s*(.53+Math.abs(dx)*.37),s*.24,0,7);c.fill();}
  // Pedestrians traverse a clear route without obstructing the preacher or the action bar.
  for(let i=0;i<3;i++){const phase=(time*(i===1?.048:.063)+i*.39)%1;const x=i===1?w-s*.65-phase*(w-s*1.3):s*.65+phase*(w-s*1.3);
-  const y=yy+s*(i-1)*.30;person(c,x,y,.68,time+i,['#648a96','#a58c75','#8b7299'][i],null,null);}
+  const y=yy+s*(i-1)*.30;person(c,x,y,.77,time+i,['#3d93be','#d27b57','#8a62c4'][i],['#dca17c','#aa6d55','#f0c29e'][i],['#4b333a','#624235','#262f4b'][i]);}
 }
 
 function extendedInterior(c,q,g,room){
@@ -1544,11 +1589,33 @@ function nyStreetLife(c,q,time){
   person(c,x,y,.61,time+k,['#526d85','#ab856e','#798c75'][k],['#c79675','#a77e64','#dda985'][k],k===0?'#343c49':'#594b49');
  }
 }
+function drawBusShelter(c,q,g){
+ const {w,h,s}=q;const leftX=s*.10,baseY=Math.min(h-s*.90,q.top+s*5.2);
+ const width=s*1.25,height=s*.80;
+ // On the far left perimeter: an open shelter with transparent side panels,
+ // roof, bench and timetable, rather than a signpost through the player zone.
+ round(c,leftX,baseY-height,width,height,3,'#c4d5cf44','#54737e',2);
+ round(c,leftX-s*.07,baseY-height-s*.12,width+s*.14,s*.14,3,'#e2c179','#485f6c',2);
+ round(c,leftX+s*.14,baseY-s*.25,width-s*.28,s*.11,2,'#9e795b','#d5b887',1.5);
+ for(let j=0;j<2;j++){c.fillStyle='#62727b';c.fillRect(leftX+s*(.19+j*.83),baseY-height+s*.05,s*.055,height-s*.05);}
+ round(c,leftX+s*.37,baseY-height+s*.10,s*.45,s*.19,4,'#e9d69a','#506779',1.5);
+ text(c,'BUS',leftX+s*.60,baseY-height+s*.20,s*.15,'#324b5d',900);
+}
+function drawSubwayEntrance(c,q){
+ const {w,h,s}=q,xx=w-s*1.85,yy=Math.min(h-s*1.18,q.top+s*5.65);
+ // Two perspective rails and open stair treads descend beneath pavement.
+ poly(c,[[xx-s*.12,yy-s*.44],[xx+s*1.48,yy-s*.44],[xx+s*1.14,yy+s*.17],[xx+s*.22,yy+s*.17]],'#2c404b','#66828a');
+ for(let i=0;i<5;i++){const yy2=yy-s*.34+i*s*.11;round(c,xx+s*.16+i*s*.035,yy2,s*(1.15-i*.09),s*.055,1,'#65737d','#acc0b7',1);}
+ c.strokeStyle='#cad8d0';c.lineWidth=2.6;for(const side of [.02,1.30]){c.beginPath();c.moveTo(xx+side*s,yy-s*.57);c.lineTo(xx+(side+(side<1?.18:-.17))*s,yy+s*.06);c.stroke();}
+ for(const pos of [xx+s*.07,xx+s*1.3]){c.fillStyle='#54906d';c.strokeStyle='#e9db9c';c.lineWidth=2;c.beginPath();c.arc(pos,yy-s*.79,s*.16,0,7);c.fill();c.stroke();}
+ round(c,xx+s*.21,yy-s*1.22,s*.98,s*.23,4,'#253f45','#c9b37f',2);text(c,'SUBWAY',xx+s*.70,yy-s*1.10,s*.15,'#fff0c8',900);
+}
 function street(c,q,g,time,live){
  const s=q.s,t=style(g),w=q.w,h=q.h,alt=g.location===2,market=g.location===1,sky=c.createLinearGradient(0,0,0,h);
  sky.addColorStop(0,alt?'#859dae':market?'#9da3a7':'#808d97');sky.addColorStop(.56,alt?'#b7b1ac':market?'#bfae9b':'#aa9e90');sky.addColorStop(1,alt?'#606f75':market?'#746e63':'#545d5e');c.fillStyle=sky;c.fillRect(0,0,w,h);
+ if(!alt)drawWeatherSky(c,q,g,time);
  extendedPavement(c,q,'street',time);
- if(alt)nySkyline(c,q,time);
+ if(alt){nySkyline(c,q,time);drawWeatherSky(c,q,g,time);}
  // Buildings beyond the square give the scene a real horizon rather than room walls.
  const shopY=Math.max(66,q.top-s*2.45),facadeH=s*1.75;
  if(market){
@@ -1612,8 +1679,8 @@ function street(c,q,g,time,live){
   // Distinct Victorian iron railing and planter.
   c.strokeStyle='#50605d';c.lineWidth=2;for(let j=0;j<7;j++){let xx=w*.69+j*s*.17;c.beginPath();c.moveTo(xx,h*.57);c.lineTo(xx,h*.57-s*.45);c.stroke();}
  }else if(alt){
-  const px=w*.15,py=h*.61;round(c,px-s*.55,py-s*.65,s*1.12,s*.64,4,'#2c485f','#c4a66e',3);text(c,'SUBWAY',px,py-s*.45,s*.21,'#fff3c8',900);
-  round(c,px-s*.35,py-s*.02,s*.71,s*.06,2,'#8ba0a1');
+  // A real descending stairwell with rails and the subway roundel.
+  drawSubwayEntrance(c,q);
  }else{
   // Grit, broken slabs and rubbish make homelessness feel tangible.
   for(const [ux,uy] of [[.55,3.45],[3.55,.70],[3.28,3.63]]){let p=proj(q,ux,uy);c.fillStyle='#515c604c';c.beginPath();c.ellipse(p.x,p.y,s*.33,s*.10,.25,0,Math.PI*2);c.fill();}
@@ -1624,13 +1691,16 @@ function street(c,q,g,time,live){
  const bench=proj(q,3.12,3.15);round(c,bench.x-s*.65,bench.y-s*.40,s*1.24,s*.21,4,'#99644d','#e5bd7d',2);c.fillStyle='#704f48';c.fillRect(bench.x-s*.49,bench.y-s*.20,s*.10,s*.32);c.fillRect(bench.x+s*.35,bench.y-s*.20,s*.10,s*.32);
  if(!alt){const tree=proj(q,.27,3.45);c.fillStyle='#765941';c.fillRect(tree.x-s*.09,tree.y-s*1.44,s*.19,s*1.46);for(const [dx,dy,r] of [[-.22,-1.45,.43],[.22,-1.55,.4],[0,-1.82,.45]]){c.fillStyle=['#668e76','#547a69','#79a184'][Math.round((dx+.22)*3)%3];c.beginPath();c.arc(tree.x+dx*s,tree.y+dy*s,r*s,0,7);c.fill();}}else{const tree=proj(q,.27,3.45);round(c,tree.x-s*.12,tree.y-s*1.38,s*.25,s*1.39,2,'#4c5d56');for(const [dx,dy,r] of [[-.21,-1.47,.26],[.21,-1.47,.26],[0,-1.74,.33]]){c.fillStyle='#50806a';c.beginPath();c.arc(tree.x+dx*s,tree.y+dy*s,r*s,0,7);c.fill();} round(c,tree.x-s*.50,tree.y-s*.08,s*1.0,s*.15,4,'#6d7681','#bec7b6',2);}
  const lamp=proj(q,.42,1.52);c.strokeStyle='#435864';c.lineWidth=Math.max(3,s*.065);c.beginPath();c.moveTo(lamp.x,lamp.y);c.lineTo(lamp.x,lamp.y-s*2.15);c.stroke();round(c,lamp.x-s*.17,lamp.y-s*2.17,s*.34,s*.18,8,'#ffe0a7','#896f59');
- const bus=proj(q,3.52,.30);c.strokeStyle='#5c6b78';c.lineWidth=3;c.beginPath();c.moveTo(bus.x,bus.y);c.lineTo(bus.x,bus.y-s*.91);c.stroke();round(c,bus.x-s*.31,bus.y-s*1.03,s*.62,s*.20,5,'#f0c874','#375c72');text(c,'BUS',bus.x,bus.y-s*.93,s*.17,'#29455c',900);
+ // Actual transit shelters are anchored in the *outer* pavement, not on the square.
+ drawBusShelter(c,q,g);
  // Makeshift donation tin and crates. No property, throne or ornamental indoor stage.
  const tin=proj(q,2.90,1.91),collect=gear(g,'collection');
  if(collect){round(c,tin.x-s*.17,tin.y-s*.28,s*.35,s*.23,4,collect.id==='tin'?'#e1bb6e':'#8b887c','#e9d3a5',2);text(c,collect.id==='tin'?'$':collect.id==='found_bucket'?'🪣':'¢',tin.x,tin.y-s*.17,s*.17,'#ffebac');}
  const pitch=proj(q,1.52,1.66),platform=gear(g,'platform');
  if(platform){round(c,pitch.x-s*.31,pitch.y-s*.19,s*.61,s*.19,3,platform.id==='stool'?'#7c8990':'#92735c','#d4b485');if(platform.id==='stool')c.fillRect(pitch.x-s*.21,pitch.y-s*.07,s*.06,s*.19);}
- const sign=gear(g,'sign');if(sign){const p=proj(q,2.7,.45);round(c,p.x-s*.35,p.y-s*.66,s*.72,s*.50,4,sign.id==='banner'?'#1d5269':sign.id==='painted_sign'?'#f4dfbd':'#b4a187','#80614f',2);text(c,(g.chosen||'FAITH').toUpperCase(),p.x,p.y-s*.45,s*.17,sign.id==='banner'?'#b1e7ee':'#5a3d46',900,'center',s*.66);}
+ const sign=gear(g,'sign');if(sign){const p=proj(q,2.7,.45);round(c,p.x-s*.35,p.y-s*.66,s*.72,s*.50,4,sign.id==='banner'?'#1d5269':sign.id==='painted_sign'?'#f4dfbd':'#b4a187','#80614f',2);const lines=Array.isArray(g.signWriting)?g.signWriting:(window.SP_SIGN_SLOGANS?.[g.chosen]?.[0]||[(g.chosen||'FAITH').toUpperCase(),'BELIEVE!']);
+  text(c,lines[0],p.x,p.y-s*.51,s*.145,sign.id==='banner'?'#b1e7ee':'#5a3d46',900,'center',s*.66);
+  text(c,lines[1],p.x,p.y-s*.31,s*.125,sign.id==='banner'?'#b1e7ee':'#5a3d46',850,'center',s*.66);}
  if(gear(g,'welcome')){const p=proj(q,.61,2.91);round(c,p.x-s*.4,p.y-s*.28,s*.85,s*.22,4,'#bb926c','#f7d8a8');text(c,gear(g,'welcome').id==='donuts'?'☕ 🍩':'☕',p.x,p.y-s*.37,s*.29,'#fff0c5');}
  if(gear(g,'voice')){const p=proj(q,1.55,1.3);text(c,gear(g,'voice').id==='speaker'?'🎙️':'📣',p.x,p.y-s*.56,s*.33,'#fff0c5');}
  if(gear(g,'weather')){const p=proj(q,1.72,.85);text(c,'☂',p.x,p.y-s*1.45,s*.90,'#d7c7b7');}
@@ -1664,6 +1734,7 @@ function street(c,q,g,time,live){
 function openDistrict(c,q,g,time,kind){
  const s=q.s,w=q.w,h=q.h,shopping=kind==='shop',hi=g.location===2,market=g.location===1;
  const sky=c.createLinearGradient(0,0,0,h);sky.addColorStop(0,shopping?'#96b8c7':'#a9c9bf');sky.addColorStop(.65,shopping?'#e4d4b8':'#d2d7b7');sky.addColorStop(1,'#8e9c84');c.fillStyle=sky;c.fillRect(0,0,w,h);
+ drawWeatherSky(c,q,g,time);
  extendedPavement(c,q,kind,time);
  const by=Math.max(49,q.top-s*2.65),building=s*1.98;
  if(hi)nySkyline(c,q,time);
@@ -1870,7 +1941,8 @@ if(room==='venue'){
 function paint(c,g,time,w,h,live){activeActors=[];const q=geometry(w,h),s=scene(g),isStreet=s==='street'||(s==='venue'&&g.venue==='street');if(s==='venue'&&['church','mega'].includes(g.venue))q.wall=q.s*(g.venue==='mega'?3.65:3.28);const theme=style(g);const grad=c.createLinearGradient(0,0,0,h);grad.addColorStop(0,s==='government'?'#354059':s==='home'?'#293b52':'#263b51');grad.addColorStop(.68,'#3d4c54');grad.addColorStop(1,'#182a3a');c.fillStyle=grad;c.fillRect(0,0,w,h);
 // light in the distance, animated particles
 for(let i=0;i<24;i++){const x=((i*163)%Math.max(w,1)),y=(((i*83+time*2)%Math.max(h,1))),r=i%4?1.4:2.1;c.fillStyle=i%3?'#ffefbc1f':theme[0]+'44';c.beginPath();c.arc(x,y,r,0,7);c.fill();}
-if(isStreet){street(c,q,g,time,live);}else if(s==='shop'||s==='outreach'){openDistrict(c,q,g,time,s);}else if(s==='home'&&(!g.v1?.home||g.v1.home==='none')){alley(c,q,g,time);}else indoor(c,q,g,time,s==='venue'?'venue':s);
+if(isStreet){street(c,q,g,time,live);}else if(s==='shop'||s==='outreach'){openDistrict(c,q,g,time,s);}else if(s==='home'&&(!g.v1?.home||g.v1.home==='none')){alley(c,q,g,time);drawWeatherSky(c,q,g,time);}else indoor(c,q,g,time,s==='venue'?'venue':s);
+ if(isStreet||s==='shop'||s==='outreach'||(s==='home'&&(!g.v1?.home||g.v1.home==='none')))drawWeatherFront(c,q,g,time);
 if(live?.running){
  const speaker=live.sermonBubble, listener=live.listenerBubble;
  if(speaker&&time>=Number(speaker.starts||0)&&time<speaker.until){
@@ -1889,6 +1961,7 @@ return q;
 }
 W.draw=function(c,g,time=0,live=null){W._live=live;const {w,h,dpr}=fit(c.canvas);c.setTransform(dpr,0,0,dpr,0,0);const q=paint(c,g,time,w,h,live);W._layout={...q,g,scene:scene(g)};};
 W.hotspots=function(g){const q=W._layout;if(!q||q.scene!==scene(g))return [];return hotspots(g).map(h=>{const p=proj(q,h.u,h.v);return {...h,x:p.x,y:p.y-q.s*.57};});};
+W.weatherForDay=weatherForDay;
 W.hitActor=function(x,y){const a=activeActors.findLast(a=>Math.hypot(a.x-x,a.y-y)<43);return a?.id||null;};W.actors=function(){return activeActors.slice();};W.sceneName=sceneName;W.scenes=SCENES;W.style=style;W.scene=scene;
 window.SPWORLD=W;
 })();
@@ -2480,7 +2553,7 @@ function renderHUD(){const points=unspentPoints();const badge=$('youPointsBadge'
 function screenToast(msg){const t=$('toast');t.textContent=msg;t.classList.remove('hidden');toastTime=Date.now()+3200;}
 function labelOptions(items,current){return Object.entries(items).map(([id,v])=>`<option value="${id}" ${id===current?'selected':''}>${esc(v.name)}</option>`).join('');}
 function mood(){return MOODS[(Math.floor(g.day/3)+1+g.location*2)%MOODS.length];}
-function conditions(){const idx=dayIndex(),seed=(g.day*17+g.location*13+g.rebirths*29)%23;const weather=seed<5?'🌧️ Rainy':seed<9?'☁️ Overcast':seed<11?'💨 Windy':'☀️ Clear';let factor=weather.startsWith('🌧')?.65:weather.startsWith('💨')?.8:weather.startsWith('☁')?.93:1;
+function conditions(){const idx=dayIndex(),seed=(g.day*17+g.location*13+g.rebirths*29)%23;const weather=window.SPWORLD?.weatherForDay(g)|| (seed<5?'🌧️ Rainy':seed<9?'☁️ Overcast':seed<11?'💨 Windy':'☀️ Clear');let factor=weather.includes('Heavy Rain')?.49:weather.startsWith('🌧')?.65:weather.startsWith('💨')?.8:weather.startsWith('☁')?.93:weather.includes('Very Sunny')?1.10:1;
  const busy=idx===5;factor*=idx===5?1.34:idx===6?.73:idx===4?1.15:idx===0?.82:1;
  if(g.venue!=='street')factor=isMainService()?factor*1.65:factor*.62;
  return {weather,factor,busy,day:WEEKDAYS[idx],main:isMainService()};}
@@ -2717,9 +2790,9 @@ function postMoment(kind,choice){if(!session)return;let mod=null;
  };
  if((choice==='question'||choice==='invite'||choice==='thanks'||choice==='reassure')&&session.stopped===0&&session.attendees===0)choice='wave';mod=choices[choice]||choices.continue;session.stopAdj+=mod.stop||0;session.convAdj+=mod.conv||0;session.devoteAdj+=mod.devote||0;session.riskAdj+=g.venue==='street'?(mod.risk||0):0;session.nuisance=g.venue==='street'?clamp(session.nuisance+(mod.risk||0)*(hasPerk('charm_escape')&&mod.risk<0?400:280),0,100):0;session.giftAdj*=mod.gift||1;session.notes.push(mod.note);session.choiceDetails.push({name:choice,kind});if(mod.xp)session.xpgains[mod.xp]+=2;
  if(choice==='switch'||choice==='handbill'){
-  const messages=SIGN_WRITING[g.plan.topic]||SIGN_WRITING.community;
-  g.signVersion=(g.signVersion||0)+1;
-  g.signWriting=messages[(g.signVersion-1)%messages.length];
+  const messages=SIGN_DEITY_SLOGANS[g.chosen]||SIGN_DEITY_SLOGANS.default;
+   g.signVersion=(g.signVersion||0)+1;
+   g.signWriting=messages[(g.signVersion-1)%messages.length];
  }
  const initial=currentMoment?momentSpeaker(currentMoment):['LISTENER',''];
  const reply=chosenReply(choice);
@@ -3329,9 +3402,17 @@ function renderStockCards(list){
 function isHoused(){return (SPV1.st(g).home||'none')!=='none';}
 function dailyPresentationWear(body,clothes,hair){
  const housed=isHoused();
- g.hygiene=clamp(g.hygiene-(housed?0:body),0,100);
- g.clothesClean=clamp(g.clothesClean-(housed?clothes*.12:clothes),0,100);
+ const dayWeather=window.SPWORLD?.weatherForDay(g)||conditions().weather;
+ // Real shelter removes the exposure penalty. Homeless players get grubby
+ // faster in soaking rain and sweaty heat, but the sink remains affordable.
+ const exposure=dayWeather.includes('Heavy Rain')?1.85:dayWeather.includes('Very Sunny')?1.60:dayWeather.includes('Rainy')?1.30:1;
+ g.hygiene=clamp(g.hygiene-(housed?0:body*exposure),0,100);
+ g.clothesClean=clamp(g.clothesClean-(housed?clothes*.12:clothes*(dayWeather.includes('Heavy Rain')?1.30:1)),0,100);
  g.grooming=clamp(g.grooming-(housed?hair*.16:hair),0,100);
+ if(typeof g.hairLength!=='number')g.hairLength=clamp((100-g.grooming)/100,0,1);
+ if(typeof g.beardLength!=='number')g.beardLength=clamp((100-g.grooming)/90,0,1);
+ g.hairLength=clamp(g.hairLength+(housed?.011:.022),0,1);
+ g.beardLength=clamp(g.beardLength+(housed?.023:.035),0,1);
 }
 function presentation(){return Math.round((g.hygiene+g.clothesClean+g.grooming)/3);}
 function busCheck(){const next=g.location+1;const eligible=next<=2&&g.hygiene>=65&&g.clothesClean>=60&&g.grooming>=58&&!!(g.equipped.shirt||g.equipped.jacket)&&g.money>=busFare();
@@ -3350,7 +3431,7 @@ function renderTown(){
  if(['lifestyle','outreach','empire','stories','government'].includes(cur))content=SPV1.renderPage(g,cur);
  else if(cur==='you')content=`<div class="town-top"><div><span class="eyebrow">YOUR PERSONAL JOURNEY</span><h2>🧍 You</h2><p>Your stats, clothing and equipment. Recruited helpers belong under Followers.</p></div></div>${characterHTML()}`;
  else if(cur==='followers')content=followersTeamHTML();
-  else if(cur==='survival')content=`<div class="town-top"><div><span class="eyebrow">KEEP YOURSELF GOING</span><h2>🧼 Survival & grooming</h2><p>Food is paid automatically each day. Meals and grooming cost more in larger cities, but there are also more people to attract. The soup kitchen remains an affordable option. ${isHoused()?'Your home now includes daily washing and laundry upkeep: cleanliness automatically improves after each day.':'Without a home, body and clothing cleanliness gradually fall each day.'}</p></div></div><div class="status-grid"><div><small>BODY CLEANLINESS</small><strong>${Math.round(g.hygiene)}%</strong></div><div><small>CLOTHING CONDITION</small><strong>${Math.round(g.clothesClean)}%</strong></div><div><small>HAIR & SHAVE</small><strong>${Math.round(g.grooming)}%</strong></div></div><div class="stock-grid survival-grid"><div class="stock-card"><span class="icon">🥣</span><h3>Soup Kitchen</h3><p>Queue for a free meal; food for today costs only ${cash(pennies(.12*locationLivingMultiplier()))}.</p><div class="tag">Free · once a day</div><button class="btn" data-survive="food" ${g.foodPreparedDay===g.day?'disabled':''}>${g.foodPreparedDay===g.day?'Meal arranged':'Get a meal'}</button></div><div class="stock-card"><span class="icon">🚿</span><h3>${isHoused()?'Shower at home':'Public Washroom'}</h3><p>${isHoused()?'Included with your home. Take a shower whenever you need a quick reset, once per day.':'Soap, a sink and a fresh start. Available once every three days.'}</p><div class="tag"> ${isHoused()?'Included with home':cash(washCost)} · +50 hygiene, +10 clothes</div><button class="btn" data-survive="wash" ${(g.washedDay>0&&(isHoused()?g.day===g.washedDay:g.day-g.washedDay<3))||g.money<washCost?'disabled':''}>${g.washedDay>0&&(isHoused()?g.day===g.washedDay:g.day-g.washedDay<3)?'Already showered today':`Wash up · ${isHoused()?'Free':cash(washCost)}`}</button></div><div class="stock-card"><span class="icon">🪒</span><h3>Basic Shave</h3><p>Remove the week's stubble. Beard appearance changes on your character.</p><div class="tag"> ${cash(shaveCost)} · +52 grooming</div><button class="btn" data-survive="shave" ${g.money<shaveCost?'disabled':''}>Shave · ${cash(shaveCost)}</button></div><div class="stock-card"><span class="icon">💈</span><h3>Barber</h3><p>A proper haircut and shave gives you a fresher appearance.</p><div class="tag"> ${cash(barberCost)} · +85 grooming</div><button class="btn" data-survive="barber" ${g.money<barberCost?'disabled':''}>Visit barber · ${cash(barberCost)}</button></div><div class="stock-card"><span class="icon">🧺</span><h3>Launder Clothing</h3><p>${isHoused()?'Clothing stays fresher when you have somewhere to wash and store it. Home upkeep now covers everyday laundering.':'Your clothes get grubby every week, even after you\'ve upgraded them.'}</p><div class="tag"> ${cash(laundryCost)} · +55 clothes condition</div><button class="btn" data-survive="laundry" ${g.money<laundryCost?'disabled':''}>Do laundry · ${cash(laundryCost)}</button></div></div><div class="note">Hunger streak: ${g.hunger} · You can always preach or scavenge, even when money runs out. Basic grooming costs a little; the soup kitchen can help with meals.</div>`;
+  else if(cur==='survival')content=`<div class="town-top"><div><span class="eyebrow">KEEP YOURSELF GOING</span><h2>🧼 Survival & grooming</h2><p>Food is paid automatically each day. Meals and grooming cost more in larger cities, but there are also more people to attract. The soup kitchen remains an affordable option. ${isHoused()?'Your home now includes daily washing and laundry upkeep: cleanliness automatically improves after each day.':'Without a home, body and clothing cleanliness gradually fall each day.'}</p></div></div><div class="status-grid"><div><small>BODY CLEANLINESS</small><strong>${Math.round(g.hygiene)}%</strong></div><div><small>CLOTHING CONDITION</small><strong>${Math.round(g.clothesClean)}%</strong></div><div><small>HAIR & SHAVE</small><strong>${Math.round(g.grooming)}%</strong></div></div><div class="stock-grid survival-grid"><div class="stock-card"><span class="icon">🥣</span><h3>Soup Kitchen</h3><p>Queue for a free meal; food for today costs only ${cash(pennies(.12*locationLivingMultiplier()))}.</p><div class="tag">Free · once a day</div><button class="btn" data-survive="food" ${g.foodPreparedDay===g.day?'disabled':''}>${g.foodPreparedDay===g.day?'Meal arranged':'Get a meal'}</button></div><div class="stock-card"><span class="icon">🚿</span><h3>${isHoused()?'Shower at home':'Public Washroom'}</h3><p>${isHoused()?'Included with your home. Take a shower whenever you need a quick reset, once per day.':'Soap, a sink and a fresh start. Come back as often as you need.'}</p><div class="tag"> ${isHoused()?'Included with home':cash(washCost)} · +50 hygiene, +10 clothes</div><button class="btn" data-survive="wash" ${(isHoused()&&g.washedDay===g.day)||g.money<washCost?'disabled':''}>${isHoused()&&g.washedDay===g.day?'Already showered today':`Wash up · ${isHoused()?'Free':cash(washCost)}`}</button></div><div class="stock-card"><span class="icon">🪒</span><h3>Basic Shave</h3><p>Remove the week's stubble. Beard appearance changes on your character.</p><div class="tag"> ${cash(shaveCost)} · +52 grooming</div><button class="btn" data-survive="shave" ${g.money<shaveCost?'disabled':''}>Shave · ${cash(shaveCost)}</button></div><div class="stock-card"><span class="icon">💈</span><h3>Barber</h3><p>A proper haircut and shave gives you a fresher appearance.</p><div class="tag"> ${cash(barberCost)} · +85 grooming</div><button class="btn" data-survive="barber" ${g.money<barberCost?'disabled':''}>Visit barber · ${cash(barberCost)}</button></div><div class="stock-card"><span class="icon">🧺</span><h3>Launder Clothing</h3><p>${isHoused()?'Clothing stays fresher when you have somewhere to wash and store it. Home upkeep now covers everyday laundering.':'Your clothes get grubby every week, even after you\'ve upgraded them.'}</p><div class="tag"> ${cash(laundryCost)} · +55 clothes condition</div><button class="btn" data-survive="laundry" ${g.money<laundryCost?'disabled':''}>Do laundry · ${cash(laundryCost)}</button></div></div><div class="note">Hunger streak: ${g.hunger} · You can always preach or scavenge, even when money runs out. Basic grooming costs a little; the soup kitchen can help with meals.</div>`;
  else if(cur==='learning'){
  const phone=item(g.equipped.phone),plan=DATA_PLANS[g.dataPlan]||DATA_PLANS.none,phoneTier=phone?.phone||0;
  const bookButtons=g.books.length?g.books.map(id=>{const it=item(id),reads=g.readCounts[id]||0;return it?`<button class="btn" data-study-book="${id}">📖 ${esc(it.name)} <small>· read ${reads}× · ${esc(SKILLS.filter(k=>it.xp?.[k]).map(k=>SKILL_INFO[k].label).join(' + '))}</small></button>`:'';}).join(''):'<div class="note">No books yet. The thrift store has a rotating shelf of cheap parody books each day.</div>';
@@ -3441,10 +3522,10 @@ function scavenge(mode='quick'){
 }
 function survive(id){if(g.phase!=='town'||g.townPage!=='survival')return;
  if(id==='food'){if(g.foodPreparedDay===g.day)return;g.foodPreparedDay=g.day;screenToast('Food arranged. Today costs '+cash(mealCost())+'.');}
- else if(id==='wash'){const cost=isHoused()?0:groomingCost(.95);if((g.washedDay>0&&(isHoused()?g.washedDay===g.day:g.day-g.washedDay<3))||g.money<cost)return;g.money=pennies(g.money-cost);g.washedDay=g.day;g.hygiene=clamp(g.hygiene+50,0,100);g.clothesClean=clamp(g.clothesClean+10,0,100);screenToast('Washed up for '+cash(cost)+'. You look a lot better.');}
+ else if(id==='wash'){const cost=isHoused()?0:groomingCost(.95);if((isHoused()&&g.washedDay===g.day)||g.money<cost)return;g.money=pennies(g.money-cost);g.washedDay=g.day;g.hygiene=clamp(g.hygiene+50,0,100);g.clothesClean=clamp(g.clothesClean+10,0,100);screenToast('Washed up for '+cash(cost)+'. You look a lot better.');}
  else {const base={shave:1.5,barber:4,laundry:2}[id];const cost=base?groomingCost(base):0;if(!cost||g.money<cost)return;g.money=pennies(g.money-cost);
-  if(id==='shave')g.grooming=clamp(g.grooming+52,0,100);
-  if(id==='barber')g.grooming=100;
+  if(id==='shave'){g.grooming=clamp(g.grooming+52,0,100);g.beardLength=.04;}
+  if(id==='barber'){g.grooming=100;g.beardLength=.02;g.hairLength=.03;}
   if(id==='laundry')g.clothesClean=clamp(g.clothesClean+55,0,100);
   screenToast(id==='shave'?'Freshly shaved!':id==='barber'?'New haircut!':'Clothes are clean again.');
  }
@@ -3818,6 +3899,15 @@ CONVERT.push(
  'I am not convinced yet, but I will listen again.',
  'I think your ideas are worth discussing.',
  'Count me in. For now.');
+// Appearance matters in the live street scene, not just the hidden stop rate.
+const ODOUR_REACTIONS=[
+ 'Has someone left a bin open? Oh. It is you.',
+ 'I would listen, but the smell is preaching louder.',
+ 'Mate, there is a public sink two streets away.',
+ 'Is that incense, or have you not showered?',
+ 'Your message is interesting. Your aroma less so.',
+ 'I think your socks have started their own religion.'
+];
 DECLINE.push(
  'I am not ready to commit.',
  'I need to think about what you said.',
@@ -3938,6 +4028,11 @@ function updateSimulation(dt){if(!running||pausedForChoice)return;const speed=wi
   nextAmbientSpawn=clock+rand(g.location===0?4.2:3.2,g.location===0?5.7:4.6);
  }
  if(clock>=nextSpeech){sermonBubble={text:sermonText(),starts:clock,until:clock+4.8};nextSpeech=clock+rand(4.6,6.0);if(Math.random()<.16)addFeed('normal',g.leader,sermonBubble.text);}
+ if((g.hygiene??100)<34&&g.venue==='street'&&clock>=nextReaction&&Math.random()<.075){
+  const passer=people.find(p=>p.status==='listen')||people.find(p=>p.checked&&!p.visualOnly);
+  if(passer){bubble(passer,pick(ODOUR_REACTIONS),'negative',5.3);nextReaction=clock+7.5;addFeed('negative','PASSER-BY',listenerBubble.text);}
+ }
+
  const cutoff=RUN_SECS-1.4;let loops=0;
  const budget=Math.min(2500,Math.max(90,Math.ceil(a.crowd*dt*speed/RUN_SECS)*3));
  while(animTime>=spawnAt&&a.processed<a.crowd&&loops++<budget){rollVisitor();spawnAt+=cutoff/Math.max(1,a.crowd);}
@@ -4331,6 +4426,17 @@ function drawMan(x,y,p,isPreacher=false){
  ctx.restore();
 }
 
+// Satirical, short, two-line messages fit both the cheapest cardboard board and
+// late-game digital banner. The same text appears in the gameplay scene.
+const SIGN_DEITY_SLOGANS={
+ odin:[['ODIN SEES','YOUR SECRETS'],['OBEY ODIN','OR ELSE'],['RAVENS ARE','WATCHING'],['ODIN NEEDS','YOUR COINS'],['VALHALLA','NO REFUNDS'],['ONE EYE','ON YOU']],
+ venus:[['VENUS LOVES','DONATIONS'],['TRUE LOVE','HAS A FEE'],['BEAUTY IS','DIVINE'],['HUGS FREE','ADVICE EXTRA'],['GIVE LOVE','AND CASH'],['VENUS HAS','STANDARDS']],
+ zeus:[['ZEUS IS','WATCHING'],['THUNDER','NO REFUNDS'],['PLEASE THE','SKY BOSS'],['ZEUS WANTS','YOUR SUPPORT'],['BAD WEATHER?','BLAME ZEUS'],['LIGHTNING','IS PREMIUM']],
+ anubis:[['ANUBIS KNOWS','YOUR HEART'],['AFTERLIFE','APPLY HERE'],['SCALES OF','DESTINY'],['LIFE IS','A TRIAL'],['BE GOOD','OR BE WEIGHED'],['ETERNITY','TERMS APPLY']],
+ hades:[['HADES HAS','VACANCIES'],['UNDERWORLD','OPEN DAILY'],['DARKNESS','WELCOME'],['NO REFUNDS','AFTER DEATH'],['PAY NOW','REST LATER'],['HELL HAS','A WAITLIST']],
+ default:[['GOOD NEWS','NO REFUNDS'],['FAITH TODAY','BILLS LATER'],['BELIEVE','AND TIP']]
+};
+window.SP_SIGN_SLOGANS=SIGN_DEITY_SLOGANS;
 const SIGN_WRITING={
  prosperity:[['WEALTH IS','COMING'],['JOIN THE','GOLDEN AGE']],
  community:[['YOU BELONG','WITH ME'],['FIND YOUR','PEOPLE']],
