@@ -1,7 +1,7 @@
 {
   "name": "Street Pastor: Living World",
   "short_name": "Street Pastor",
-  "description": "Street Pastor v1.4.0: realistic online growth, media advertising, church office and furnished homes; expanded Chinese localization.",
+  "description": "Street Pastor v1.5.0: original soundtrack, ambient sound and settings; cinematic transitions and English/Chinese UI.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
@@ -26,5 +26,5 @@
       "purpose": "any maskable"
     }
   ],
-  "version": "1.4.0"
+  "version": "1.5.0"
 }
